@@ -16,21 +16,36 @@ html, body {
 body {
     position: relative;
     font-family: "Heebo", sans-serif;
-    font-weight: 200;
     background-color: #FFFFFF;
     box-sizing: border-box;
     overflow: hidden;
     min-height: 100%;
 }
 
-h4 {
-  font-family: "Muli", sans-serif;
+h1 {
+  font-family: "Muli";
+    font-size: 2em;
+}
+
+h2 {
+    font-family: "Heebo";
+    font-size: 2em;
+}
+
+h3{ 
+    font-family: "Roboto";
+    font-size: 1.5em;
+}
+
+h4{
+    font-family: "Roboto";
+    font-size: 2em;
     
 }
 
 p{
-  font-family: "Roboto", sans-serif;   
-    
+    font-family: "Roboto"; 
+    font-size: 20px;
 }
 
 #aboutme {
@@ -50,7 +65,7 @@ p{
    top: 35%;
    position: absolute;
    left: 20%;
-    width: 30px
+   transform: translateX(-50%);
    z-index: 400;
 }
 
