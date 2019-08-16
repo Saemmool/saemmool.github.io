@@ -28,18 +28,18 @@ h1 {
 }
 
 h2 {
-    font-family: "Heebo";
-    font-size: 2em;
+    font-family: "Lato";
+    font-size: 20px;
 }
 
 h3{ 
     font-family: "Roboto";
-    font-size: 1.5em;
+    font-size: 25px;
 }
 
-h4{
-    font-family: "Roboto";
-    font-size: 2em;
+.ul-interests{
+    font-family: "Lato";
+    font-size: 18px;
     
 }
 
