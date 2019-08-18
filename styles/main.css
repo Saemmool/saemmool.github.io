@@ -43,13 +43,22 @@ h3{
     
 }
 
-.storylist{
+.publication{
+    font-family: "Oswald";
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    
+}
+
+.stories{
     font-family: "Lato";
-    font-size: 18px;
+    font-size: 16px;
 }
 
 p{
-    font-family: "Roboto"; 
+    font-family: "Lato"; 
     font-size: 20px;
 }
 
@@ -190,7 +199,7 @@ button.menu img {
     bottom: 0;
     width: 250px;
     height: 100%;
-    background-color: royalblue;
+    background-color: whitesmoke;
     color: #fefefe;
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
@@ -209,9 +218,9 @@ button.menu img {
 
 .navdrawer-container h4,
 .navdrawer-container ul li a {
-    height: 60px;
+    height: 50px;
     padding: 0 20px;
-    line-height: 60px;
+    line-height: 50px;
 }
 
 .navdrawer-container h4 {
@@ -228,8 +237,8 @@ button.menu img {
 .navdrawer-container ul li a {
     display: block;
     text-decoration: none;
-    font-family: "Muli", sans-serif;  
-    color: white;
+    font-family: "Lato", sans-serif;  
+    color: black;
     transition: background-color 0.2s ease-out;
 }
 
