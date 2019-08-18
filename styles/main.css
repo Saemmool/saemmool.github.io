@@ -45,7 +45,7 @@ h3{
 
 .publication{
     font-family: "Oswald";
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 10px;
@@ -55,6 +55,15 @@ h3{
 .stories{
     font-family: "Lato";
     font-size: 16px;
+}
+
+.videotitle{
+    font-family: "Oswald";
+    font-size: 20px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    
 }
 
 p{
