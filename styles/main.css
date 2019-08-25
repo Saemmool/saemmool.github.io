@@ -1,9 +1,7 @@
 /*
  * Web Starter Kit
  *
- * Multi-screen layout styles for your page. Brought to you by the
- * Web Starter Kit team.
- *
+ * 
  */
 
 html, body {
@@ -11,6 +9,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
@@ -18,7 +17,6 @@ body {
     font-family: "Heebo", sans-serif;
     background-color: #FFFFFF;
     box-sizing: border-box;
-    overflow: hidden;
     min-height: 100%;
 }
 
