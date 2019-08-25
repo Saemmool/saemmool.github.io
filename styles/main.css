@@ -66,7 +66,7 @@ h3{
 
 @media only screen and (min-width: 620px) {
   .featured-list__item {
-    min-height: 338px;
+    min-height: 600px;
     padding: 52px 32px;
   }
 }
@@ -81,7 +81,7 @@ h3{
 .featured-list__img-wrapper {
   display: block;
   position: relative;
-  padding-top: 20px;
+  padding-top: 5px;
   padding-left: 10px;
   margin: 0 -5%;
 
@@ -90,24 +90,25 @@ h3{
   .featured-list__img-wrapper {
     display: block;
     padding-top: 0;
+    padding-right:100px;
     margin: 0;
   }
 }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 500px) {
   .featured-list__img {
-    padding-top: 50%;
-    padding-bottom: 50%;
-    padding-right: 20%;
-    height: 0;
+    padding-top: 100%;
+    padding-bottom: 100%;
+    padding-right: 100%;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     position: absolute;
-    width: 100%;
   }
 }
 .featured-list__img img {
   display: block;
-  margin: 0 auto;
+  margin: 0 20px;
   max-width: 100%;
 }
 @media only screen and (min-width: 620px) {
@@ -115,8 +116,8 @@ h3{
     margin: 0;
     position: absolute;
     top: 0;
-    height: 100%;
     width: 100%;
+    height:auto;
     left: 0;
   }
 }
