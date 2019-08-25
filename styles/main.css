@@ -83,7 +83,8 @@ h3{
   position: relative;
   padding-top: 5px;
   padding-left: 10px;
-  margin: 0 -5%;
+    padding-right: 10px;
+  margin: 0;
 
 }
 @media only screen and (min-width: 620px) {
