@@ -81,8 +81,8 @@ h3{
 .featured-list__img-wrapper {
   display: block;
   position: relative;
-  padding-top: 26px;
-  padding-left: 50px;
+  padding-top: 20px;
+  padding-left: 10px;
   margin: 0 -5%;
 
 }
@@ -98,6 +98,7 @@ h3{
   .featured-list__img {
     padding-top: 50%;
     padding-bottom: 50%;
+    padding-right: 20%;
     height: 0;
     overflow: hidden;
     position: absolute;
