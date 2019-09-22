@@ -248,8 +248,7 @@ p{
     margin: 0 16px;
     padding: 0;
     color: black;
-    float: left;
-    display: block;
+    float: none;
     max-width: none;
     font-family: "Merriweather";;
     font-weight: 300;
@@ -322,9 +321,6 @@ button.menu img {
     font-size: 19px;
 }
 
-a
-}
-
 .navdrawer-container {
     z-index: 1;
     position: fixed;
@@ -361,26 +357,6 @@ a
     color: #3367D6;
 }
 
-.navdrawer-container .menu{
-    clear:both;
-    max-height:0;
-    transition:max-height .2s ease-out;
-}
-
-.navdrawer-container .menu-icon{
-    outline: 1px solid black;
-    padding: 28px 20px;
-    position: relative;
-}
-
-.navdrawer-container .menu-icon .nav-icon{
-    background: black;
-    display:block;height:2px;
-    width: 18px;
-    position: relative;
-    transition: background .2x ease-out;
-}
-
 .navdrawer-container ul {
     padding: 0;
     margin: 0;
@@ -389,10 +365,6 @@ a
 
 .navdrawer-container ul li a {
     display: block;
-/*
-    outline: 1px solid black;
-    border-right: 1px solid black;
-*/
     text-decoration: none;
     font-family: "Lato", sans-serif;  
     color: black;
@@ -404,10 +376,6 @@ a
     border-width: 1px;
     border-color: white;
     padding: 0;
-    margin: 0;
-    list-style: none;
-    overflow:hidden;
-    background-color:#edeff2;
 }
 
 .navdrawer-container ul li:before {
@@ -415,7 +383,7 @@ a
 }
 
 .navdrawer-container ul li a:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .navdrawer-container ul li a:focus {
@@ -474,7 +442,7 @@ main {
     }
 
     nav {
-        display: flex;
+        display: block;
         margin-top: 130px;
     }
 
