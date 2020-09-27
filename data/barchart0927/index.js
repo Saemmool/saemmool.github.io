@@ -9,8 +9,8 @@ import {
   format
 } from 'd3';
 
-const titleText = 'Top 10 Most Populous Countries';
-const xAxisLabelText = 'Population';
+const titleText = '국가별 불법체류자 현황(2018)';
+const xAxisLabelText = '인원';
 
 const svg = select('svg');
 
@@ -18,8 +18,8 @@ const width = +svg.attr('width');
 const height = +svg.attr('height');
 
 const render = data => {
-  const xValue = d => d['population'];
-  const yValue = d => d.country;
+  const xValue = d => d['인원'];
+  const yValue = d => d.국가;
   const margin = { top: 50, right: 40, bottom: 77, left: 180 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
@@ -73,9 +73,9 @@ const render = data => {
       .text(titleText);
 };
 
-csv('data.csv').then(data => {
+csv('mydata.csv').then(data => {
   data.forEach(d => {
-    d.population = +d.population * 1000;
+    d.인원 = +d.인원;
   });
   render(data);
 });
