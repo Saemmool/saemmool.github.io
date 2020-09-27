@@ -10,6 +10,7 @@ import {
 } from 'd3';
 
 const titleText = '국가별 불법체류자 현황(2018)';
+
 const xAxisLabelText = '인원';
 
 const svg = select('svg');
@@ -37,7 +38,7 @@ const render = data => {
     .attr('transform', `translate(${margin.left},${margin.top})`);
   
   const xAxisTickFormat = number =>
-    format('.3s')(number)
+    format(',d')(number)
       .replace('G', 'B');
   
   const xAxis = axisBottom(xScale)

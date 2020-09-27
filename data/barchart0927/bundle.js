@@ -29,7 +29,7 @@
       .attr('transform', `translate(${margin.left},${margin.top})`);
     
     const xAxisTickFormat = number =>
-      d3.format('.3s')(number)
+      d3.format(',d')(number)
         .replace('G', 'B');
     
     const xAxis = d3.axisBottom(xScale)
