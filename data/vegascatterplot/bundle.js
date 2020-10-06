@@ -44,7 +44,7 @@
       opacity: 0.1
     })
     .encode(
-      vl.x().fieldQ('year').scale({ zero: false }),
+      vl.x().fieldN('year'),
       vl.y().fieldQ('population').scale({ zero: false }),
       vl.tooltip().fieldN('country')
     );
