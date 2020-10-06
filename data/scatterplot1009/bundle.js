@@ -25,7 +25,7 @@
     }
   };
 
-  const csvUrl = 'https://gist.githubusercontent.com/curran/8c131a74b85d0bb0246233de2cff3f52/raw/194c2fc143790b937c42bf086a5a44cb3c55340e/auto-mpg.csv';
+  const csvUrl = 'https://gist.githubusercontent.com/Saemmool/cd0b5768282d0bdb5f0e00921ae26da9/raw/e967ef049f2194e6f18c51689f6e5f994d734ef2/Refugeeapplicants.csv';
 
   const getData = async () => {
     const data = await d3.csv(csvUrl);
@@ -44,9 +44,9 @@
       opacity: 0.1
     })
     .encode(
-      vl.x().fieldQ('displacement').scale({ zero: false }),
-      vl.y().fieldQ('horsepower').scale({ zero: false }),
-      vl.tooltip().fieldN('name')
+      vl.x().fieldQ('year').scale({ zero: false }),
+      vl.y().fieldQ('population').scale({ zero: false }),
+      vl.tooltip().fieldN('country')
     );
 
   vl.register(vega, vegaLite, {
