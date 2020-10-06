@@ -40,8 +40,8 @@
     .markPoint({
       fill: true,
       stroke: false,
-      size: 900,
-      opacity: 0.1
+      size: 100,
+      opacity: 1
     })
     .encode(
       vl.x().fieldN('year'),
