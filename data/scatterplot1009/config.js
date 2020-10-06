@@ -8,11 +8,11 @@ export const config = {
   },
   style: {
     "guide-label": {
-      fontSize: 20,
+      fontSize: 10,
       fill: dark
     },
     "guide-title": {
-      fontSize: 30,
+      fontSize: 20,
       fill: dark
     }
   }
