@@ -25,7 +25,7 @@
     }
   };
 
-  const csvUrl = 'https://gist.githubusercontent.com/Saemmool/cd0b5768282d0bdb5f0e00921ae26da9/raw/76e296e84615b46dde2ba37f1a0759164b12e709/Refugeeapplicants.csv';
+  const csvUrl = 'https://gist.githubusercontent.com/Saemmool/cd0b5768282d0bdb5f0e00921ae26da9/raw/659925e674a33f0a0bec2cb1fd4b4ac57dd16620/Refugeeapplicants.csv';
 
   const getData = async () => {
     const data = await d3.csv(csvUrl);
@@ -40,7 +40,7 @@
     .markPoint({
       fill: true,
       stroke: false,
-      size: 100,
+      size: 150,
       opacity: 1
     })
     .encode(
