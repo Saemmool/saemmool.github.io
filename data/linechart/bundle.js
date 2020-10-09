@@ -15,7 +15,7 @@
     const yValue = d => d.population;
     const yAxisLabel = 'Population';
     
-    const margin = { top: 60, right: 40, bottom: 88, left: 105 };
+    const margin = { top: 120, right: 40, bottom: 88, left: 150 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
     
@@ -45,7 +45,7 @@
     
     yAxisG.append('text')
         .attr('class', 'axis-label')
-        .attr('y', -60)
+        .attr('y', -100)
         .attr('x', -innerHeight / 2)
         .attr('fill', 'black')
         .attr('transform', `rotate(-90)`)
@@ -73,10 +73,12 @@
         .attr('class', 'line-path')
         .attr('d', lineGenerator(data));
     
-    g.append('text')
-        .attr('class', 'title')
-        .attr('y', -10)
-        .text(title);
+   g.append('text')
+      .attr('class', 'title')
+      .attr('x', width / 2)
+      .attr('y', -40)
+      .text(title);
+      
   };
 
   d3.csv('https://gist.githubusercontent.com/Saemmool/74a550f7de4852b6a4026e69afd07ae3/raw/e3f324445e23548890ebaf4893f0a110cab38c60/Foreign%2520Residents%2520in%2520South%2520Korea')

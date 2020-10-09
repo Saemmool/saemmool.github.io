@@ -8,7 +8,8 @@ import {
   axisLeft,
   axisBottom,
   line,
-  curveBasis
+  curveBasis,
+  format,
 } from 'd3';
 
 const svg = select('svg');
@@ -26,10 +27,10 @@ const render = data => {
   const circleRadius = 6;
   const yAxisLabel = 'Population';
   
-  const margin = { top: 60, right: 40, bottom: 88, left: 105 };
+  const margin = { top: 80, right: 40, bottom: 88, left: 150 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
-  
+    
   const xScale = scaleTime()
     .domain(extent(data, xValue))
     .range([0, innerWidth])
@@ -42,7 +43,6 @@ const render = data => {
   
   const g = svg.append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
-  
 
   const lineGenerator = line()
     .x(d => xScale(xValue(d)))
@@ -56,10 +56,14 @@ const render = data => {
   const xAxis = axisBottom(xScale)
     .tickSize(-innerHeight)
     .tickPadding(15);
+    
+  const yAxisTickFormat = number => 
+  format('.s')(number);
   
   const yAxis = axisLeft(yScale)
     .tickSize(-innerWidth)
-    .tickPadding(10);
+    .tickPadding(10)
+    .tickFormat(yAxisTickFormat);
   
   const yAxisG = g.append('g').call(yAxis);
   yAxisG.selectAll('.domain').remove();
@@ -85,10 +89,10 @@ const render = data => {
       .attr('fill', 'black')
       .text(xAxisLabel);
   
-  svg.append('text')
+   g.append('text')
       .attr('class', 'title')
       .attr('x', width / 2)
-      .attr('y', -45)
+      .attr('y', -20)
       .text(title);
 };
 
