@@ -7,7 +7,7 @@
   const height = +svg.attr('height');
 
   const render = data => {
-    const title = 'Foreign Residents in Korea';
+    const title = 'Foreign Residents in South Korea';
     
     const xValue = d => d.year;
     const xAxisLabel = 'Year';
@@ -68,14 +68,14 @@
       .x(d => xScale(xValue(d)))
       .y(d => yScale(yValue(d)))
       .curve(d3.curveBasis);
-    
+  40
     g.append('path')
         .attr('class', 'line-path')
         .attr('d', lineGenerator(data));
     
    g.append('text')
       .attr('class', 'title')
-      .attr('x', width / 2)
+      .attr('x', 400)
       .attr('y', -40)
       .text(title);
       
