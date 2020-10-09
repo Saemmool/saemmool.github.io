@@ -4,6 +4,7 @@ import {
   scaleLinear,
   scaleTime,
   extent,
+  max,
   axisLeft,
   axisBottom,
   line,
@@ -35,12 +36,22 @@ const render = data => {
     .nice();
   
   const yScale = scaleLinear()
-    .domain(extent(data, yValue))
+    .domain([0, d3.max(data, yValue)])
     .range([innerHeight, 0])
     .nice();
   
   const g = svg.append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
+  
+
+  const lineGenerator = line()
+    .x(d => xScale(xValue(d)))
+    .y(d => yScale(yValue(d)))
+    .curve(curveBasis);
+  
+  g.append('path')
+      .attr('class', 'line-path')
+      .attr('d', lineGenerator(data));
   
   const xAxis = axisBottom(xScale)
     .tickSize(-innerHeight)
@@ -74,18 +85,10 @@ const render = data => {
       .attr('fill', 'black')
       .text(xAxisLabel);
   
-  const lineGenerator = line()
-    .x(d => xScale(xValue(d)))
-    .y(d => yScale(yValue(d)))
-    .curve(curveBasis);
-  
-  g.append('path')
-      .attr('class', 'line-path')
-      .attr('d', lineGenerator(data));
-  
-  g.append('text')
+  svg.append('text')
       .attr('class', 'title')
-      .attr('y', -10)
+      .attr('x', width / 2)
+      .attr('y', -45)
       .text(title);
 };
 

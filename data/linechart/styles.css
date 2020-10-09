@@ -9,7 +9,7 @@ circle {
 
 .line-path {
   fill: none;
-  stroke: maroon;
+  stroke: orange;
   stroke-width: 5;
   stroke-linejoin: round;
 }

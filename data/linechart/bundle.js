@@ -25,7 +25,7 @@
       .nice();
     
     const yScale = d3.scaleLinear()
-      .domain(d3.extent(data, yValue))
+      .domain([0, d3.max(data, yValue)])
       .range([innerHeight, 0])
       .nice();
     
