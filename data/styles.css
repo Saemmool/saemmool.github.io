@@ -25,15 +25,6 @@ h1 {
     font-size: 2em;
 }
 
-h2 {
-    font-family: "Lato";
-    font-size: 20px;
-}
-
-h3{ 
-    font-family: "Roboto";
-    font-size: 25px;
-}
 
 .powered-by{
     font-family: "Lato";
@@ -147,26 +138,6 @@ p{
     font-size: 20px;
 }
 
-#aboutme {
-   line-height: 150%;
-   width: 45%;
-   top: 35%;
-   margin: 0 auto;
-   left: 60%;
-   transform: translateX(-50%);
-   position: absolute;
-   z-index: 300;
-   font-family: "Roboto";
-    font-size: 1em;
-}
-
-#profpic {
-   top: 35%;
-   position: absolute;
-   left: 20%;
-   transform: translateX(-50%);
-   z-index: 400;
-}
 
 .app-bar {
     display: block;
@@ -478,6 +449,8 @@ main {
 /* from here I inserted data projects*/
 
 
+
+
 .big-container {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -509,12 +482,14 @@ main {
     float: left;
 }
 
+
 .name-container {
     border-top: 1px solid #282828;
 }
 
 .note {
     margin: 4px;
+    font-family: "Heebo", sas-serif;
     font-size: 12px;
     display: block;
     color: #282828;
