@@ -109,7 +109,7 @@
       yValue(d.values[d.values.length - 1]);
     
     const nested = d3.nest()
-      .key(d => d.country)
+      .key(colorValue)
       .entries(data)
       .sort((a, b) =>
         d3.descending(lastYValue(a), lastYValue(b))
