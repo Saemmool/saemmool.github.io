@@ -140,7 +140,7 @@
       });
   };
 
-  d3.csv('https://gist.githubusercontent.com/Saemmool/b9ef336aff7c307325e105422585b03d/raw/8da0203a659dd81e9a0e80a514491bea8ee9fbf7/foreign%2520spouses')
+  d3.csv('spouses.csv')
     .then(data => {
       data.forEach(d => {
         d.population = +d.population;
