@@ -109,7 +109,7 @@
       yValue(d.values[d.values.length - 1]);
     
     const nested = d3.nest()
-      .key(colorValue)
+      .key(function (d){ return d[colorValue]; })
       .entries(data)
       .sort((a, b) =>
         d3.descending(lastYValue(a), lastYValue(b))
@@ -123,7 +123,7 @@
       .enter().append('path')
         .attr('class', 'line-path')
         .attr('d', d => lineGenerator(d.values))
-        .attr('stroke', d => colorscale(d.key));
+        .attr('stroke', d => colorScale(d.key));
     
     g.append('text')
         .attr('class', 'title')
@@ -140,7 +140,7 @@
       });
   };
 
-  d3.csv('spouses.csv')
+  d3.csv('spouses.csv ')
     .then(data => {
       data.forEach(d => {
         d.population = +d.population;

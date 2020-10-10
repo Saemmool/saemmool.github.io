@@ -93,7 +93,7 @@ const render = data => {
     yValue(d.values[d.values.length - 1]);
   
   const nested = nest()
-    .key(colorValue)
+    .key(function (d){ return d[colorValue]; })
     .entries(data)
     .sort((a, b) =>
       descending(lastYValue(a), lastYValue(b))
@@ -124,7 +124,7 @@ const render = data => {
     });
 };
 
-  csv('https://gist.githubusercontent.com/Saemmool/b9ef336aff7c307325e105422585b03d/raw/8da0203a659dd81e9a0e80a514491bea8ee9fbf7/foreign%2520spouses')
+  csv('spouses.csv')
   .then(data => {
     data.forEach(d => {
       d.population = +d.population;
