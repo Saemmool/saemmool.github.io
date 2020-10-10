@@ -33,7 +33,7 @@ const render = data => {
   
   const colorValue = d => d.country;
   
-  const margin = { top: 60, right: 160, bottom: 88, left: 105 };
+  const margin = { top: 70, right: 160, bottom: 88, left: 105 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
   
@@ -111,14 +111,14 @@ const render = data => {
   
   g.append('text')
       .attr('class', 'title')
-      .attr('y', -10)
+      .attr('y', -20)
       .text(title);
   
   svg.append('g')
     .attr('transform', `translate(790,121)`)
     .call(colorLegend, {
       colorScale,
-      circleRadius: 13,
+      circleRadius: 10,
       spacing: 30,
       textOffset: 15
     });

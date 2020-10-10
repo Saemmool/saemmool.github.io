@@ -26,6 +26,6 @@ export const colorLegend = (selection, props) => {
   groupsEnter.append('text')
     .merge(groups.select('text'))
       .text(d => d)
-      .attr('dy', '0.32em')
+      .attr('dy', '0.3em')
       .attr('x', textOffset);
 }
