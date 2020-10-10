@@ -93,7 +93,7 @@ const render = data => {
     yValue(d.values[d.values.length - 1]);
   
   const nested = nest()
-    .key(function (d){ return d[colorValue]; })
+    .key(d => d.country)
     .entries(data)
     .sort((a, b) =>
       descending(lastYValue(a), lastYValue(b))

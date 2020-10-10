@@ -109,7 +109,7 @@
       yValue(d.values[d.values.length - 1]);
     
     const nested = d3.nest()
-      .key(function (d){ return d[colorValue]; })
+      .key(d => d.country)
       .entries(data)
       .sort((a, b) =>
         d3.descending(lastYValue(a), lastYValue(b))
@@ -120,7 +120,7 @@
     colorScale.domain(nested.map(d => d.key));
     
     g.selectAll('.line-path').data(nested)
-      .enter().append('path')
+        .enter().append('path')
         .attr('class', 'line-path')
         .attr('d', d => lineGenerator(d.values))
         .attr('stroke', d => colorScale(d.key));
