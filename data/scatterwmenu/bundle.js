@@ -51,6 +51,8 @@
     yScale,
     xValue,
     yValue,
+    colorScale,
+    colorValue,
     tooltipFormat,
     circleRadius
   }) =>
@@ -105,6 +107,8 @@
     const yValue = d => d[yAttribute];
     const yAxisLabel = getLabel(yAttribute);
 
+    const colorValue = (d) => d.species;
+      
     if (!data) {
       return React$1__default.createElement( 'pre', null, "Loading..." );
     }
@@ -123,6 +127,10 @@
       .domain(d3.extent(data, yValue))
       .range([0, innerHeight]);
 
+     const colorScale = d3.scaleOrdinal()
+      .domain(data.map(colorValue))
+      .range(['grey']);
+      
     return (
       React$1__default.createElement( React$1__default.Fragment, null,
         React$1__default.createElement( 'div', { className: "menus-container" },

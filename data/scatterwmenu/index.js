@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { csv, scaleLinear, max, format, extent } from 'd3';
+import { csv, scaleLinear, scaleOrdinal, max, format, extent } from 'd3';
 import ReactDropdown from 'react-dropdown';
 import { useData } from './useData';
 import { AxisBottom } from './AxisBottom';
@@ -41,6 +41,8 @@ const App = () => {
   const yValue = d => d[yAttribute];
   const yAxisLabel = getLabel(yAttribute);
 
+  const colorvalue = d => d.country;
+    
   if (!data) {
     return <pre>Loading...</pre>;
   }
@@ -58,6 +60,10 @@ const App = () => {
   const yScale = scaleLinear()
     .domain(extent(data, yValue))
     .range([0, innerHeight]);
+    
+  const colorScale = scaleOrdinal()
+    .domain(data.map(colorValue))
+    .range(['grey']);
 
   return (
     <>
@@ -104,8 +110,10 @@ const App = () => {
             data={data}
             xScale={xScale}
             yScale={yScale}
+            colorScale={colorScale}
             xValue={xValue}
             yValue={yValue}
+            colorValue={colorValue}
             tooltipFormat={xAxisTickFormat}
             circleRadius={7}
           />
