@@ -1,18 +1,18 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { csv, scaleLinear, max, format, extent } from 'd3';
+import ReactDropdown from 'react-dropdown';
 import { useData } from './useData';
 import { AxisBottom } from './AxisBottom';
 import { AxisLeft } from './AxisLeft';
 import { Marks } from './Marks';
-import { Dropdown } from './Dropdown';
 
-const width = 800;
-const menuHeight = 10;
+const width = 960;
+const menuHeight = 80;
 const height = 500 - menuHeight;
-const margin = { top: 20, right: 20, bottom: 70, left: 150 };
-const xAxisLabelOffset = 55;
-const yAxisLabelOffset = 70;
+const margin = { top: 20, right: 30, bottom: 65, left: 90 };
+const xAxisLabelOffset = 50;
+const yAxisLabelOffset = 45;
 
 const attributes = [
   { value: 'outflows', label: 'Outflows' },
@@ -22,7 +22,7 @@ const attributes = [
 
 const getLabel = value => {
   for(let i = 0; i < attributes.length; i++){
-    if(attributes[i].value === value){
+    if (attributes[i].value === value){
       return attributes[i].label;
     }
   }
@@ -61,20 +61,20 @@ const App = () => {
 
   return (
     <>
-      <label for="x-select">X:</label>
-      <Dropdown
+      <div className="menus-container">
+      <span className="dropdown-label">X</span>
+      <ReactDropdown
         options={attributes}
-        id="x-select"
-        selectedValue={xAttribute}
-        onSelectedValueChange={setXAttribute}
+        value={xAttribute}
+        onChange={({value}) =>setYattribute(value)}
       />
-      <label for="y-select">Y:</label>
-      <Dropdown
+      <span className="dropdown-label">Y</label>
+      <ReactDropdown
         options={attributes}
-        id="y-select"
-        selectedValue={yAttribute}
-        onSelectedValueChange={setYAttribute}
+        value={yAttribute}
+        onChange={({value}) =>setYattribute(value)}
       />
+     </div>
       <svg width={width} height={height}>
         <g transform={`translate(${margin.left},${margin.top})`}>
           <AxisBottom
