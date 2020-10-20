@@ -63,13 +63,8 @@
   const loadAndProcessData = () => 
     Promise
       .all([
-        d3.csv('https://vizhub.com/curran/datasets/un-population-estimates-2017-medium-variant.csv'),
-        d3.csv('https://vizhub.com/curran/datasets/un-population-estimates-2017.csv'),
-      ])
-      .then(([unDataMediumVariant, unDataEstimates]) => {
-        return melt(unDataEstimates, 1950, 2014)
-          .concat(melt(unDataMediumVariant, 2015, 2100));
-      });
+        d3.csv('worldrefugees.csv'),
+      ]);
 
   const lineChart = (selection, props) => {
     const {
@@ -218,7 +213,7 @@
   const height = +svg.attr('height');
 
   // State
-  let selectedYear = 2018;
+  let selectedYear = 2010;
   let data;
 
   const setSelectedYear = year => {
