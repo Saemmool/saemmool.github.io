@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta chartset="UTF=8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>First Chart with Chart.js</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" defer></script>
-    <script src="main.js" defer></script>
-
-    </head>
-    
-    <body>
-        <canvas id="myChart" width="400" height="400"></canvas>
-        <script>
-            var ctx = document.getElementById('myChart').getContext('2d');
+ var ctx = document.getElementById('chart').getContext('2d');
             var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -51,6 +35,3 @@
         }
     }
 });
-        </script>
-    </body>
-</html>
