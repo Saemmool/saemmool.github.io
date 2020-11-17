@@ -455,36 +455,43 @@ main {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px;
+    display: block;
 }
 
 .landing {
     max-width: 400px;
+    display: block;
 }
 
 .center-ele {
     margin-left: auto;
     margin-right: auto;
+    display: block;
 }
 
 .wrapper {
     max-width: 1160px;
     margin-bottom: 30px;
-    margin-top:30px;     
+    margin-top:30px; 
+    display: block;
 }
 
 .landing-wrapper {
     max-width: 1160px;
+    display: block;
 }
 
 .grid-item {
     width: 180px;
     margin-bottom: 15px;
     float: left;
+    display: block;
 }
 
 
 .name-container {
     border-top: 1px solid #282828;
+     display: block;
 }
 
 .note {
@@ -494,6 +501,7 @@ main {
     display: block;
     color: #282828;
     padding: 0px;
+    display: block;
 }
 
 .pub{
@@ -502,6 +510,7 @@ main {
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.28em;
+    
 }
 
 .name{
