@@ -1,78 +1,8 @@
 /*
- * Web Starter Kit
+ * Nav Part
  *
  * 
  */
-
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-}
-
-body {
-    position: relative;
-    font-family: "Heebo", sans-serif;
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-    min-height: 100%;
-}
-
-h1 {
-  font-family: "Muli";
-    font-size: 2em;
-}
-
-.grid story {
-        max-width: 864px;
-        margin-left:auto; 
-        margin-right:auto; 
-        display:block;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-}
-
-.powered-by{
-    font-family: "Lato";
-    font-size: 1em;
-    text-align: center;
-}
-
-@media only screen and (min-width: 620px) {
-  .container-medium {
-    -ms-box-sizing: content-box;
-    box-sizing: content-box;
-    position: relative;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media only screen and (min-width: 620px) and (min-width: 620px) {
-  .container-medium {
-    padding-left: 4.8%;
-    padding-right: 4.8%;
-    max-width: 688px;
-  }
-}
-@media only screen and (min-width: 620px) and (min-width: 800px) {
-  .container-medium {
-    padding-left: 4.4%;
-    padding-right: 4.4%;
-    max-width: 864px;
-  }
-}
-
-
-
-p{
-    font-family: "Lato"; 
-    font-size: 20px;
-}
-
 
 .app-bar {
     display: block;
@@ -336,16 +266,6 @@ main {
         border: none;
     }
 
-    main {
-        max-width: 864px;
-        padding-top: 0;
-        min-height: initial;
-    }
-
-    body {
-        overflow-y: scroll;
-    }
-
     .navdrawer-container {
         position: relative;
         margin-top: 0;
@@ -381,28 +301,62 @@ main {
     }
 }
 
+
+/*
+ * Main
+ *
+ * 
+ */
+
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    position: relative;
+    font-family: "Heebo", sans-serif;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+h1 {
+  font-family: "Muli";
+    font-size: 2em;
+}
+
+.story {
+        max-width: 864px;
+        margin-left:auto; 
+        margin-right:auto; 
+        display:block;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+}
+
+.powered-by{
+    font-family: "Lato";
+    font-size: 1em;
+    text-align: center;
+}
+
+
+p{
+    font-family: "Lato"; 
+    font-size: 20px;
+}
+
+
+
 /* from here I inserted data projects*/
 
 
 
-
-.big-container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    display: block;
-}
-
-.landing {
-    max-width: 400px;
-    display: block;
-}
-
-.center-ele {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
 
 .wrapper {
     max-width: 1160px;
@@ -486,58 +440,6 @@ img {
     box-shadow: 0px, 5px, 7px, -2px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 1160px) {
-    
-    .wrapper {
-        max-width: 970px;
-    }
-    
-    .landing-wrapper{
-        max-width: 970px;
-    }
-}
-
-
-@media (max-width: 980px) {
-    .wrapper {
-        max-width: 770px;
-    }
-    
-    .landing-wrapper{
-        max-width: 770px;
-    }
-}
-
-@media (max-width: 845px) {
-    .wrapper{
-        max-width: 570px;
-    }
-    
-    .landing-wrapper{
-        max-width: 570px;
-    }
-}
-
-@media (max-width: 585px) {
-    .wrapper {
-        max-width:380px;
-    }
-    .landing-wrapper{
-        max-width: 380px;
-    }
-}
-
-@media (max-width: 390px) {
-    .wrapper{
-        max-width: 300px;
-    }
-    .landing-wrapper{
-        max-width: 300px;
-    }
-    .grid-item { 
-	width: 300px;
- }
-}
 
 .name-wrapper h1{
     font-size: 2.3em;
