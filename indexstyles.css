@@ -345,15 +345,16 @@ h1 {
 }
 
 
-p{
-    font-family: "Lato"; 
-    font-size: 20px;
-}
-
-
 
 /* from here I inserted data projects*/
 
+
+p{
+    font-family: "Lato"; 
+    font-size: 20px;
+    text-align: left;
+    display: block;
+}
 
 
 img {
