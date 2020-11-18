@@ -334,7 +334,6 @@ h1 {
         max-width: 864px;
         margin-left:auto; 
         margin-right:auto; 
-        display:block;
         -webkit-flex-direction: row;
         flex-direction: row;
 }
@@ -357,18 +356,6 @@ p{
 
 
 
-
-.wrapper {
-    max-width: 1160px;
-    margin-bottom: 30px;
-    margin-top:30px; 
-    display: block;
-}
-
-.landing-wrapper {
-    max-width: 1160px;
-    display: block;
-}
 
 .grid-item {
     width: 180px;
