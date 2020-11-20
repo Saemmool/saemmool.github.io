@@ -1,216 +1,8 @@
 /*
- * Web Starter Kit
+ * Nav Part
  *
  * 
  */
-
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-}
-
-body {
-    position: relative;
-    font-family: "Heebo", sans-serif;
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-    min-height: 100%;
-}
-
-h1 {
-  font-family: "Muli";
-    font-size: 2em;
-}
-
-h2 {
-    font-family: "Lato";
-    font-size: 20px;
-}
-
-h3{ 
-    font-family: "Roboto";
-    font-size: 25px;
-}
-
-.booktitle{
-    font-family:"Lato";
-    font-size: 23px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0em;
-}
-
-.storelist{
-    font-family: "Lato";
-    font-size: 20px;
-}
-
-.ul-storenames{
-    font-family: "Lato";
-    font-size: 18px;
-    margin: 0;
-    padding: 0.5em;
-    
-}
-
-.publication{
-    font-family: "Oswald";
-    font-size: 25px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    
-}
-
-.stories{
-    font-family: "Lato";
-    font-size: 16px;
-}
-
-.videotitle{
-    font-family: "Oswald";
-    font-size: 20px;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    
-}
-
-.powered-by{
-    font-family: "Lato";
-    font-size: 1em;
-    text-align: center;
-}
-
-.featured-section {
-  background: #f0f0f0;
-}
-
-@media only screen and (min-width: 620px) {
-  .container-medium {
-    -ms-box-sizing: content-box;
-    box-sizing: content-box;
-    position: relative;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media only screen and (min-width: 620px) and (min-width: 620px) {
-  .container-medium {
-    padding-left: 4.8%;
-    padding-right: 4.8%;
-    max-width: 688px;
-  }
-}
-@media only screen and (min-width: 620px) and (min-width: 800px) {
-  .container-medium {
-    padding-left: 4.4%;
-    padding-right: 4.4%;
-    max-width: 864px;
-  }
-}
-
-
-/*==========  FEATURED LIST  ==========*/
-.featured-list {
-  padding-top: 78px;
-  padding-bottom: 78px;
-    padding-right:0px;
-    padding-left:0px;
-}
-
-@media only screen and (min-width: 620px) {
-  .featured-list__item {
-    min-height: 600px;
-    padding: 50px 60px;
-  }
-}
-
-.featured-list__item:first-child {
-  margin-top: 0;
-    margin-left: 20;
-}
-.featured-list__item p {
-  margin-bottom: 0px;
-}
-
-
-.featured-list__img-wrapper {
-  display: block;
-  position: relative;
-  padding-top: 5px;
-  padding-left: 10px;
-    padding-right: 10px;
-  margin: 0;
-
-}
-@media only screen and (min-width: 620px) {
-  .featured-list__img-wrapper {
-    display: block;
-    padding-top: 0;
-    padding-right:100px;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-width: 500px) {
-  .featured-list__img {
-    padding-top: 100%;
-    padding-bottom: 100%;
-    padding-right: 100%;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: absolute;
-  }
-}
-.featured-list__img img {
-  display: block;
-  margin: 0 20px;
-  max-width: 100%;
-}
-@media only screen and (min-width: 620px) {
-  .featured-list__img img {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height:auto;
-    left: 0;
-  }
-}
-
-
-p{
-    font-family: "Lato"; 
-    font-size: 20px;
-}
-
-#aboutme {
-   line-height: 150%;
-   width: 45%;
-   top: 35%;
-   margin: 0 auto;
-   left: 60%;
-   transform: translateX(-50%);
-   position: absolute;
-   z-index: 300;
-   font-family: "Roboto";
-    font-size: 1em;
-}
-
-#profpic {
-   top: 35%;
-   position: absolute;
-   left: 20%;
-   transform: translateX(-50%);
-   z-index: 400;
-}
 
 .app-bar {
     display: block;
@@ -518,3 +310,66 @@ main {
         text-align: center;
     }
 }
+
+
+
+/*
+ * Main
+ *
+ * 
+ */
+
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    position: relative;
+    font-family: "Heebo", sans-serif;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+h1 {
+  font-family: "Muli";
+    font-size: 2em;
+}
+
+.story {
+        max-width: 864px;
+        margin-left:auto; 
+        margin-right:auto; 
+        -webkit-flex-direction: row;
+        flex-direction: row;
+}
+
+.powered-by{
+    font-family: "Lato";
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
+/* from here I inserted data projects*/
+
+
+p{
+    font-family: "Lato"; 
+    font-size: 20px;
+    text-align: left;
+    display: block;
+}
+
+
+img {
+    width: 100%;
+}
+
+
