@@ -4,9 +4,7 @@ export default function define(runtime, observer) {
   const fileAttachments = new Map([["waiting.csv",new URL("waiting.csv",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
-md`# Inline Labels
-
-This [multi-line chart](/@d3/multi-line-chart) places a label at each data point to show the value in lieu of a *y*-axis. Inspired by [Ann K. Emery’s Excel tutorial](https://depictdatastudio.com/how-to-place-labels-directly-through-your-line-graph-in-microsoft-excel/).`
+md``
 )});
   main.variable(observer("chart")).define("chart", ["d3","width","height","xAxis","series","z","x","y","labelPadding"], function(d3,width,height,xAxis,series,z,x,y,labelPadding)
 {
@@ -14,8 +12,8 @@ This [multi-line chart](/@d3/multi-line-chart) places a label at each data point
       .attr("viewBox", [0, 0, width, height]);
 
   svg.append("g")
-      .call(xAxis);
-
+      .call(xAxis); 
+      
   const serie = svg.append("g")
     .selectAll("g")
     .data(series)
@@ -54,16 +52,24 @@ This [multi-line chart](/@d3/multi-line-chart) places a label at each data point
   return svg.node();
 }
 );
-  main.variable(observer("data")).define("data", ["FileAttachment"], function(FileAttachment){return(
+    
+  main.variable(observer("data"))
+      .define("data", ["FileAttachment"], function(FileAttachment){return(
 FileAttachment("waiting.csv").csv({typed: true})
 )});
-  main.variable(observer("series")).define("series", ["data"], function(data){return(
+    
+  main.variable(observer("series"))
+      .define("series", ["data"], function(data){return(
 data.columns.slice(1).map(key => data.map(({[key]: value, date}) => ({key, date, value})))
 )});
-  main.variable(observer("xAxis")).define("xAxis", ["height","margin","d3","x","width"], function(height,margin,d3,x,width){return(
+    
+  main.variable(observer("xAxis"))
+      .define("xAxis", ["height","margin","d3","x","width"], function(height,margin,d3,x,width){return(
 g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
+    .call(d3.axisBottom(x)
+    .ticks(width / 80)
+    .tickSizeOuter(0))
 )});
   main.variable(observer("x")).define("x", ["d3","data","margin","width"], function(d3,data,margin,width){return(
 d3.scaleUtc()
