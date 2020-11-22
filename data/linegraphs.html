@@ -88,5 +88,45 @@
       <p>
           Methodology: I followed an instruction from <a href=https://www.tutorialspoint.com/d3js/d3js_graphs.htm>Tutorials Point</a> and switched the data into one from the Ministry of Justice of South Korea. 
       </p>
+      
+      <br>
+      
+      <p> Challenges and Troubleshooting:
+          <br><br>
+          The example from the page had scaled the range of the data with the following way:
+      <br><br>
+        // Set the ranges
+        <br>
+        var x = d3.scaleTime().range([0, width]);
+        <br><br>
+        // Scale the range of the data
+        <br>
+            x.domain(d3.extent(data, function(d) { return d.year; }));
+      <br><br>
+      However, that didn't work for me since the "ticks" in the X axis were in inadequate format. I searched ways to change the tick format(such as setting tick format without changing initial scaleTime), which did not work. I finally changed the tick format into appropriate ones, by changing "scaleTime" into "scaleBand," and fixing the way to scale the range of the data as below: 
+      <br><br>
+        // Scale the range of the data
+        <br>
+      x.domain(data.map(function(d) { return d.year; }));
+      </p>
+      
+    
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
