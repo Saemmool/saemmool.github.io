@@ -110,7 +110,7 @@ text {
   const render = data => {
     const xValue = d => d['population'];
     const yValue = d => d.country;
-    const margin = { top: 40, right: 40, bottom: 77, left: 180 };
+    const margin = { top: 40, right: 40, bottom: 10, left: 180 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
     
@@ -186,5 +186,19 @@ text {
             
         </div>
     </div>
-      
+
+ <p><b>Methodology</b>: The first mockup came from <a href="https://youtu.be/NlBt-7PuaLk">Curran Kelleher's Youtube tutorial</a>that explains how to make a bar chart using D3. I imported my own data which is unauthorized immigrant population in South Korea, while following the tutorial.<br><br> The challenge was to add a tooltip on the bar. For that, I benchmarked an example from <a href=https://bl.ocks.org/alandunning/274bf248fd0f362d64674920e85c1eb7>another bar chart</a>. I added below code along with some css. <br><br>
+    var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+    <br><br>
+           .on("mousemove", function(d){<br>
+            tooltip<br>
+              .style("left", d3.event.pageX - 50 + "px")<br>
+              .style("top", d3.event.pageY - 70 + "px")<br>
+              .style("display", "inline-block")<br>
+              .html((d.population) + "<br>" + (d.country));<br>
+        })
+    		.on("mouseout", function(d){ tooltip.style("display", "none");<br>
+    });
+    <br><br>Along with that, I added some styles, utilizing <a href="https://sunlightfoundation.com/2014/03/12/datavizguide/">The Sunlight Foundation’s Data Visualization Style Guidelines</a>.
+    </p>
   </body>
