@@ -18,11 +18,11 @@
     .toolTip {
         position: absolute;
         display: none;
-        min-width: 80px;
+        min-width: 40px;
         height: auto;
         background: none repeat scroll 0 0 #ffffff;
         border: 1px solid #6F257F;
-        padding: 14px;
+        padding: 4px;
         text-align: center;
     }
     
@@ -90,7 +90,7 @@ svg.selectAll("mybar")
     .style("left", d3.event.pageX - 50 + "px")
               .style("top", d3.event.pageY - 70 + "px")
               .style("display", "inline-block")
-              .html((d.year) + "<br>" + (d.population));
+              .html((d.year) + "<br>" + (d.population) +" "+"people");
         })
     		.on("mouseout", function(d){ tooltip.style("display", "none");});
 
@@ -98,6 +98,20 @@ svg.selectAll("mybar")
 
 </script>
     
-    <p> Methodology: Using <a href=https://www.d3-graph-gallery.com/graph/barplot_basic.html>D3.js Graph Gallery</a>'s example, I imported brain deaths data in South Korea. I changed y axis domain into '.domain([0, 600]) so that it matches with the domain of my dataset.</p>
+    <p> Methodology: Using <a href=https://www.d3-graph-gallery.com/graph/barplot_basic.html>D3.js Graph Gallery</a>'s example, I imported brain deaths data in South Korea. I changed y axis domain into '.domain([0, 600]) so that it matches with the domain of my dataset.
+        <br><br>
+    But then I wanted to add tooltip on the bar. While looking for options, I found an example from <a href=https://bl.ocks.org/alandunning/274bf248fd0f362d64674920e85c1eb7>this</a> chart. I added below code along with some css. <br><br>
+    var tooltip = d3.select("body").append("div").attr("class", "toolTip");<br>
+           .on("mousemove", function(d){
+            tooltip <br>
+              .style("left", d3.event.pageX - 50 + "px") <br>
+              .style("top", d3.event.pageY - 70 + "px") <br>
+              .style("display", "inline-block") <br>
+              .html((d.area) + "<br>" + (d.value)); <br>
+        }) <br>
+    		.on("mouseout", function(d){ tooltip.style("display", "none");}); <br>
+    }); <br>
+    <br>
+    </p> 
     
 </body>
