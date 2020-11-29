@@ -35,6 +35,13 @@ h3{
     font-size: 25px;
 }
 
+.datatitle{
+    font-family: "Lato";
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
 .booktitle{
     font-family:"Lato";
     font-size: 23px;
