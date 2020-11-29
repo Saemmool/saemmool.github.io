@@ -148,6 +148,8 @@ text {
         .attr('fill', 'black')
         .text(xAxisLabelText);
     
+    var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+      
     g.selectAll('rect').data(data)
       .enter().append('rect')
         .attr('y', d => yScale(yValue(d)))
@@ -158,16 +160,14 @@ text {
               .style("left", d3.event.pageX - 50 + "px")
               .style("top", d3.event.pageY - 70 + "px")
               .style("display", "inline-block")
-              .html((d.population) + "<br>" + "£" + (d.country));
+              .html((d.population) + "<br>" + (d.country));
         })
-    		.on("mouseout", function(d){ tooltip.style("display", "none");});
-    		.on("mouseout", function(d){ tooltip.style("display", "none");});
+    		.on("mouseout", function(d){ tooltip.style("display", "none");
     });
     
     g.append('text')
         .attr('class', 'title')
         .attr('y', -10)
-        .text(titleText);
   };
 
   d3.csv("https://gist.githubusercontent.com/Saemmool/b99022276d9fd38b8e3ef34cf4cd23d5/raw/f2420ff0843af7e672985b7774cd70654c34d609/unauthorized%2520immigrants").then(data => {
