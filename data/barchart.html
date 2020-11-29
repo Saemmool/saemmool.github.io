@@ -4,11 +4,29 @@
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 
 <!-- Create a div where the graph will take place -->
     
 <h1> Brain Deaths in South Korea</h1>
+
+<style>
+    .bar:hover {
+        fill: brown;
+    }
+    
+    .toolTip {
+        position: absolute;
+        display: none;
+        min-width: 80px;
+        height: auto;
+        background: none repeat scroll 0 0 #ffffff;
+        border: 1px solid #6F257F;
+        padding: 14px;
+        text-align: center;
+    }
+    
+</style>
     
 </head>
 <body>
@@ -53,6 +71,8 @@ var y = d3.scaleLinear()
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
+    
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 // Bars
 svg.selectAll("mybar")
@@ -64,6 +84,15 @@ svg.selectAll("mybar")
     .attr("width", x.bandwidth())
     .attr("height", function(d) { return height - y(d.population); })
     .attr("fill", "#69b3a2")
+    .attr("class", "bar")
+    .on("mousemove", function(d) {
+    tooltip 
+    .style("left", d3.event.pageX - 50 + "px")
+              .style("top", d3.event.pageY - 70 + "px")
+              .style("display", "inline-block")
+              .html((d.year) + "<br>" + (d.population));
+        })
+    		.on("mouseout", function(d){ tooltip.style("display", "none");});
 
 })
 
