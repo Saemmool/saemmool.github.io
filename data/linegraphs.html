@@ -8,6 +8,9 @@
             stroke: green;
             stroke-width: 5px;
         }
+        
+
+        
     </style>
       
       
@@ -48,6 +51,8 @@
         d3.csv('https://gist.githubusercontent.com/Saemmool/74a550f7de4852b6a4026e69afd07ae3/raw/e3f324445e23548890ebaf4893f0a110cab38c60/Foreign%2520Residents%2520in%2520South%2520Korea', function(error, data) {
             if (error) throw error;
         
+                /* add tooltip */
+ 
         /* format the data */
                
         data.forEach(function(d) {
@@ -59,14 +64,14 @@
         
         x.domain(data.map(function(d) { return d.year; }));
         y.domain([0, d3.max(data, function(d) { return d.population; })]);
-          
+    
         /* append path*/
           
         svg.append("path")
           .data([data])
           .attr("class", "line")
-          .attr("d", valueline);
-          
+          .attr("d", valueline)
+            
          /* add X-axis */
         
         svg.append("g")
@@ -77,6 +82,10 @@
         
         svg.append("g")
           .call(d3.axisLeft(y));
+        
+        //
+            
+                                                 
             
           });
       </script>
