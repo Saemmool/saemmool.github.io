@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+<style> /* set the CSS */
+
+.bar { fill: steelblue; }
+    
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+</style>
+
+</head>
+
+<body>
+	
+<!-- load the d3.js library -->    	
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script>
+
+
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// set the ranges
+var x = d3.scaleBand()
+          .range([0, width])
+          .padding(0.1);
+var y = d3.scaleLinear()
+          .range([height, 0]);
+          
+// append the svg object to the body of the page
+// append a 'group' element to 'svg'
+// moves the 'group' element to the top left margin
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv('https://gist.githubusercontent.com/Saemmool/b6f9ca339534c34e697d363225f5a0c8/raw/48e72a9192996f43e4d5b9526237547829206b53/organ%2520waiting').then(function(data) {
+
+  // format the data
+  data.forEach(function(d) {
+    d.population = +d.population;
+  });
+
+  // Scale the range of the data in the domains
+  x.domain(data.map(function(d) { return d.organ; }));
+  y.domain([0, d3.max(data, function(d) { return d.population; })]);
+
+    
+    var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);    
+    
+    
+  // append the rectangles for the bar chart
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.organ); })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { return y(d.population); })
+      .attr("height", function(d) { return height - y(d.population); })
+    .on("mouseover", function(event,d) {
+       div.transition()
+         .duration(200)
+         .style("opacity", .9);
+       div.html(d.organ + "<br/>" + d.population)
+         .style("left", (event.pageX) + "px")
+         .style("top", (event.pageY - 28) + "px");
+       })
+     .on("mouseout", function(d) {
+       div.transition()
+         .duration(500)
+         .style("opacity", 0);
+       })
+    ;
+
+  // add the x Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // add the y Axis
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+});
+
+</script>
+
+<p>Methodology: <br><br>
+The initial framework came from this <a href="https://bl.ocks.org/d3noob/d805555ee892425cc582dcb245d4fc59">simple bar graph</a>. I changed the data into mine, which represents the number of people who's waiting organs to be transplanted by organs. The challenge was to add tooltips on the bars, given that this used D3 "v6." <br><br>
+I found an example of tooltips from <a href="https://bl.ocks.org/d3noob/180287b6623496dbb5ac4b048813af52">here</a>, which used D3 v6. I added the following code, benchmarking the example. <br><br>
+    div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+    <br><br>
+    var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);    
+    <br><br>
+       .on("mouseover", function(event,d) {
+       div.transition()
+         .duration(200)
+         .style("opacity", .9);
+       div.html(d.organ + "<br/>" + d.population)
+         .style("left", (event.pageX) + "px")
+         .style("top", (event.pageY - 28) + "px");
+       })
+     .on("mouseout", function(d) {
+       div.transition()
+         .duration(500)
+         .style("opacity", 0);
+       })
+    
+</body>
