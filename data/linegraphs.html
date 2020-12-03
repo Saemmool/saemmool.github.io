@@ -85,6 +85,23 @@
         
         //
             
+          const tooltip = svg.append("g");
+
+  svg.on("touchmove mousemove", function() {
+    const {year, population} = bisect(d3.mouse(this)[0]);
+
+    tooltip
+        .attr("transform", `translate(${x(year)},${y(population)})`)
+        .call(callout, `${formatValue(d3.format("$.2s")(population))}
+${(year)}`);
+  });
+
+  svg.on("touchend mouseleave", () => tooltip.call(callout, null));
+
+  return svg.node();
+}
+);
+            
                                                  
             
           });
