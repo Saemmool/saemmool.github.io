@@ -25,6 +25,8 @@ body {
 </style>
 <body>
 <script src="https://d3js.org/d3.v3.js"></script>
+    
+<h1> Organ Transplant from Living People by Relationship</h1>
 <script>
 
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
@@ -60,6 +62,7 @@ var line = d3.svg.line()
     .interpolate("basis")
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.price); });
+    
 
 
 var svg = d3.select("body").append("svg")
@@ -75,7 +78,7 @@ d3.csv('https://gist.githubusercontent.com/Saemmool/9be97fb40da45f7faac766a14576
     d.year = parseDate(d.year);
   });
 
-  var companies = color.domain().map(function(name) {
+  var relationship = color.domain().map(function(name) {
     return {
       name: name,
       values: data.map(function(d) {
@@ -83,13 +86,13 @@ d3.csv('https://gist.githubusercontent.com/Saemmool/9be97fb40da45f7faac766a14576
       })
     };
   });
-
-
+    
+    
   x.domain(d3.extent(data, function(d) { return d.year; }));
 
   y.domain([
-    d3.min(companies, function(c) { return d3.min(c.values, function(v) { return v.price; }); }),
-    d3.max(companies, function(c) { return d3.max(c.values, function(v) { return v.price; }); })
+    d3.min(relationship, function(c) { return d3.min(c.values, function(v) { return v.price; }); }),
+    d3.max(relationship, function(c) { return d3.max(c.values, function(v) { return v.price; }); })
   ]);
 
   svg.append("g")
@@ -119,7 +122,7 @@ d3.csv('https://gist.githubusercontent.com/Saemmool/9be97fb40da45f7faac766a14576
 
 
   var company = svg.selectAll(".company")
-      .data(companies)
+      .data(relationship)
     .enter().append("g")
       .attr("class", "company");
 
@@ -132,8 +135,7 @@ d3.csv('https://gist.githubusercontent.com/Saemmool/9be97fb40da45f7faac766a14576
                                         {return "rgb(255,178,102)"}
                                       else {return "#000";}
                                          });
-
-
+    
 
   //var totalLength = path.node().getTotalLength();
 /*
@@ -168,5 +170,5 @@ console.log(totalLength);
 </script>
     
     <p>Methodology:<br><br>
-    The original motivation came from this <a href="http://bl.ocks.org/atmccann/8966400">animated bar chart</a>. I changed the data into organ transplant from living people by relationship in South Korea, and the data came from Konos. I also changed the total number of ticks from 5 to 10. 
+    The original motivation came from this <a href="http://bl.ocks.org/atmccann/8966400">animated bar chart</a>. I changed the data into organ transplant from living people by relationship in South Korea, and the data came from Konos. I also changed the total number of ticks from 5 to 10. The orange color represents "relatives," and the black one represents "others."
     </p>

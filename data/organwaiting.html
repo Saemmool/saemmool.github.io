@@ -4,7 +4,7 @@
 <head>
 <style> /* set the CSS */
 
-.bar { fill: steelblue; }
+.bar { fill: #F6B656; }
     
 div.tooltip {
   position: absolute;
@@ -27,6 +27,8 @@ div.tooltip {
 	
 <!-- load the d3.js library -->    	
 <script src="https://d3js.org/d3.v6.min.js"></script>
+    
+<h1> Number of People Waiting Organs in South Korea(2020)</h1>
 <script>
 
 
@@ -107,7 +109,7 @@ d3.csv('https://gist.githubusercontent.com/Saemmool/b6f9ca339534c34e697d363225f5
 
 </script>
 
-<p>Methodology: <br><br>
+<p><b>Methodology:</b><br><br>
 The initial framework came from this <a href="https://bl.ocks.org/d3noob/d805555ee892425cc582dcb245d4fc59">simple bar graph</a>. I changed the data into mine, which represents the number of people who's waiting organs to be transplanted by organs. The challenge was to add tooltips on the bars, given that this used D3 "v6." <br><br>
 I found an example of tooltips from <a href="https://bl.ocks.org/d3noob/180287b6623496dbb5ac4b048813af52">here</a>, which used D3 v6. I added the following code, benchmarking the example. <br><br>
     div.tooltip {
