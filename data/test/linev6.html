@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+</style>
+<div class="chart"></div>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script>
+    var margin = 200,
+    width = 1000 - margin,
+    height = 1000 - margin;
+
+	const drawlines = (g, country, emission, x, y, color) => {
+		value = emission[0]
+		year = value['Year']
+		v = value['Emissions.Type.CO2']
+		last_x = x(parseInt(year));
+		last_y = y(parseInt(v));
+
+		g.append('circle')
+			.attr('r', 1)
+			.attr('cx', last_x)
+			.attr('cy', last_y)
+			.attr('fill', color)
+
+		for (var i = 1; i < emission.length; i++) {
+			r = emission[i]
+
+			this_x = x(parseInt(r['Year']))
+			this_y = y(parseInt(r['Emissions.Type.CO2']))
+
+			g.append('circle')
+				.attr('r', 1)
+				.attr('cx', this_x)
+				.attr('cy', this_y)
+				.attr('cy', this_y)
+				.attr('fill', color)
+
+			g.append('line')
+				.attr('x1', this_x)
+				.attr('x2', last_x)
+				.attr('y1', this_y)
+				.attr('y2', last_y)
+				.attr('stroke', color)
+				.attr('stroke-width',  '2')
+				.attr('stroke-opacity', '0.5')
+			last_x = this_x
+			last_y = this_y
+		}
+
+		if (last_y < 265) {
+			g.append('text')
+				.attr("x", last_x + 10)
+				.attr("y", last_y + 5)
+				.text(country)
+				.attr("font-size", '11px')
+		}
+	};
+
+	d3.csv("https://gist.githubusercontent.com/Simonl07/812d1e922e6c0557ed4965aba6967496/raw/fd0267879388a591eb076dc247c7cf8cb192ed28/emissions.csv", function(d) {
+	  	return d;
+	}).then(function(data) {
+
+		d3.select(".chart")
+			.append("svg")
+			.attr("width", width)
+			.attr("height", height)
+
+		var color = d3.scaleOrdinal(d3.schemeAccent);
+
+		var svg = d3.select("svg")
+
+		let co2_values = data.map(d => parseInt(d['Emissions.Type.CO2']));
+
+		let years = data.map(d => parseInt(d['Year']));
+
+		var countries = Array.from(d3.group(data, d => d['Country']));
+
+
+		var x = d3.scaleLinear()
+			.domain([d3.min(years), d3.max(years)])
+			.range([0, 600]);
+
+		var y = d3.scaleLinear()
+			.domain([d3.max(co2_values) + 20, d3.min(co2_values) - 20])
+			.range([0, 300]);
+
+		var g = svg.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
+
+
+		emission = countries[37][1]
+		country = countries[37][0]
+		drawlines(g, country, emission, x, y, color(30));
+
+		g.append("g")
+         .attr("transform", "translate(0,300)")
+         .call(d3.axisBottom(x).tickFormat(x => x));
+		g.append("g")
+			.attr("transform", "translate(0,0)")
+			.call(d3.axisLeft(y).tickFormat(x => x));
+
+	});
+</script>
+
+<!--https://bl.ocks.org/Simonl07/91615c799b1808297323d8e53d371740-->
