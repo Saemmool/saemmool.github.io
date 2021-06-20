@@ -1,213 +1,105 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Saemmool Lee's website.">
-        <meta name="author" content ="Saemmool Lee">
-        <meta name="keywords" content="Saemmool">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <meta http-equiv="cleartype" content="on">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <title>Saemmool Lee</title>
+    <script src="https://kit.fontawesome.com/821911b01b.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+    <!-- Nav Container -->
 
+    <nav class="navbar">
+        <!-- Logo with test -->
+        <div class="navbar_logo">
+            <i class="fas fa-laptop-code"></i>
+            <a href="/index.html">Journalism with Code</a>
+        </div>
         
-<!-- Follow up later
-        <meta name="keywords" content="Saemmool, data, journalism">
--->
-        <title>Saemmool Lee</title>
-
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-
-        <!-- iOS icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
-
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
-
-        <!-- Generic Icon -->
-        <link rel="shortcut icon" href="images/touch/touch-icon-57x57.png">
-
-        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-        <!--
-        <link rel="canonical" href="http://www.example.com/">
-        -->
-
-        <!-- Chrome Add to Homescreen -->
-        <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
-
-        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-        <!--
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
-        -->
-
-        <!-- build:css styles/components/main.min.css -->
-        <link rel="stylesheet" href="styles/h5bp.css">
-        <link rel="stylesheet" href="styles/components/components.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-    </head>
-    
-    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    
-    
-    <body>
-        
- <header class="app-bar promote-layer">
-            <div class="app-bar-container">
-                <button class="menu"><img src="images/hamburger.svg"></button>
-                <h1 class="logo">SAEMMOOL LEE</h1>
-                <section class="app-bar-actions">
-<!--                 Put App Bar Buttons Here -->
-                </section>
-            </div>
-        </header>
-
-        <nav class="navdrawer-container promote-layer">
-            <h4>Menu</h4>
-            <ul>
-                <li><a href="index.html">Data Visualization</a></li>
-                <li><a href="writing.html">Writing</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            
-<!--from here I inserted something-->
-            
-    <div class="container">
-
-    
-<div class="row" id="graphics">
-    
-
-    <a class="blocklink" href="data/organwaiting.html" target="_blank" alt="Brain Deaths in South Korea">
-		<div class="block graphics">
-			<p class="datatitle">Organ Waitings in Korea</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Organ Waiting" src="data/dataimage/organwaiting.png">
-			</div>
-		</div>
-    
-    <a class="blocklink" href="data/transplantbyliving.html" target="_blank" alt="organ transplant by relationship">
-		<div class="block graphics">
-			<p class="datatitle">Organ Transplant by Relationships</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Organ Waiting" src="data/dataimage/livingtransplant.png">
-			</div>
-		</div>
-        
-    <a class="blocklink" href="data/braindeaths.html" target="_blank" alt="Brain Deaths in South Korea">
-		<div class="block graphics">
-			<p class="datatitle">Brain Deaths in South Korea</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Brain Deaths" src="data/dataimage/braindeaths.png">
-			</div>
-		</div>
-    
-    <a class="blocklink" href="data/linechart/index.html" target="_blank" alt="The Most Detailed Map of Auto Emissions in America">
-		<div class="block graphics">
-			<p class="datatitle">Foreign Residents</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Foreign Residents" src="data/linechart/foreignresidents.png">
-			</div>
-		</div>
-                    
-	</a>
-        
-	<a class="blocklink" href="data/vegabar/index.html" target="_blank" alt="Refugee Applicants">
-		<div class="block graphics">
-			<p class="datatitle">Refugee Applicants</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Refugee Applicants" src="data/vegabar/stackedbar.png">
-			</div>
-		</div>
-	</a>
-        
-	<a class="blocklink" href="data/unauthorized.html" target="_blank" alt="Unauthorized Immigrants">
-		<div class="block graphics">
-			<p class="datatitle">Unauthorized Immigrants</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Unauthorized Immigrants" src="data/dataimage/unauthorized.png">
-			</div>
-		</div>
-	</a>
-        
-	<a class="blocklink" href="data/vegascatterplot/index.html" target="_blank" alt="Refugees">
-		<div class="block graphics">
-			<p class="datatitle">Refugees</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Refugees" src="data/vegascatterplot/refugees.png">
-			</div>
-		</div>
-	</a>
-        
-	<a class="blocklink" href="data/multiplelines/index.html" target="_blank" alt="Immigrants with Korean Spouses">
-		<div class="block graphics">
-			<p class="datatitle">Immigrants with Korean Spouses</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Immigrants with Korean Spouses" src="data/multiplelines/spouses.png">
-			</div>
-		</div>
-	</a>
-        
-	<a class="blocklink" href="data/scatterwmenu/index.html" target="_blank" alt="Immigrants' Remittances Worldwide">
-		<div class="block graphics">
-			<p class="datatitle">Immigrants' Remittances Worldwide</p>
-			<div class="imgwrap">
-				<div class="mask"></div>
-				<img alt="Immigrants' Remittances Worldwide" src="data/scatterwmenu/scatterwmenu.png">
-			</div>
-		</div>
-	</a>
-	
-
-    
-    
-<br>
+    <!-- Menu -->
+    <div class="navbar_menu">
+        <li><a href="/personal.html">Personal</a></li>
+        <li><a href="/professional.html">Professional</a></li>
+        <li><a href="/about.html">About</a></li>
     </div>
-        
-        <br>
-        <p class="powered-by">
-        &copy; 2020 Saemmool Lee</p>
-            
-        </main>
 
-        <!— build:js scripts/main.min.js —>
-        <script src="scripts/main.js"></script>
-        <!— endbuild —>
+    <!-- Toggle button -->
+    <a href="#" class="navbar_toggleBtn">
+        <i class="fas fa-bars"></i>
+    </a>
+    </nav>
+    </header>
 
-        <!— Google Analytics: change UA-XXXXX-X to be your site's ID. —>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-148474343-1');ga('send','pageview');
-        </script>
-   
 
-        <!-- Built with love using Web Starter Kit -->
-    </body>
+    <div class="content">
+
+<!-- Intro -->
+    <section class="intro">
+        <h2>Welcome to the future</h2>
+        <span class="introduction">I believe that the future of journalism lies in tech. I explore, experiment, and pioneer ways to deliever quality journalism using code.</span>
+    </section>
+
+<!-- Main Tabs -->
+    <section class="tabs">
+        <!-- Tab Menu -->
+        <div class="tab-container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fab fa-html5"></i>
+                <p class="tab-name">HTML5</p>
+            </div>
+            <div id="tab-2" class="tab-item">
+                <i class="fab fa-css3-alt"></i>
+                <p class="tab-name">CSS</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fab fa-js"></i>
+                <p class="tab-name">JavaScript</p>
+            </div>
+        </div>
+    <!-- Tab content -->
+    <div class="tab-content">
+        <div class="container">
+            <div id="tab-1-content" class="tab-content-item show">
+                <p class="tab-writing">HTML is backbone of a web document.</p>
+            </div> 
+            <div id="tab-2-content" class="tab-content-item">
+                <p class="tab-writing">CSS enhances design of a document.</p>
+            </div>
+            <div id="tab-3-content" class="tab-content-item">
+                <p class="tab-writing"> JavaScript gives lives to a document.</p>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+
+</div>
+<!-- content end -->
+<!-- Footer -->
+    <footer>
+    <section class="backtotop">
+        <a href="#"><span>Back to Top</span></a>
+    </section>
+    <ul class="socialmedia">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+            <i class="fas fa-envelope"></i>
+    </ul>
+    </footer>
+    
+
+</body>
 </html>

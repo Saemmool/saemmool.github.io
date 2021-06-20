@@ -1,149 +1,80 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Saemmool Lee's website.">
-        <meta name="author" content ="Saemmool Lee">
-        <meta name="keywords" content="Saemmool">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <meta http-equiv="cleartype" content="on">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <title>Saemmool Lee</title>
+    <script src="https://kit.fontawesome.com/821911b01b.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+    <!-- Nav Container -->
 
+    <nav class="navbar">
+        <!-- Logo with test -->
+        <div class="navbar_logo">
+            <i class="fas fa-laptop-code"></i>
+            <a href="/index.html">Journalism with Code</a>
+        </div>
         
-<!-- Follow up later
-        <meta name="keywords" content="Saemmool, data, journalism">
--->
-        <title>Saemmool Lee</title>
-
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-
-        <!-- iOS icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
-
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
-
-        <!-- Generic Icon -->
-        <link rel="shortcut icon" href="images/touch/touch-icon-57x57.png">
-
-        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-        <!--
-        <link rel="canonical" href="http://www.example.com/">
-        -->
-
-        <!-- Chrome Add to Homescreen -->
-        <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
-
-        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-        <!--
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
-        -->
-
-        <!-- build:css styles/components/main.min.css -->
-        <link rel="stylesheet" href="styles/h5bp.css">
-        <link rel="stylesheet" href="styles/components/components.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-    </head>
-    
-    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    
-    
-    <body>
-        
- <header class="app-bar promote-layer">
-            <div class="app-bar-container">
-                <button class="menu"><img src="images/hamburger.svg"></button>
-                <h1 class="logo">SAEMMOOL LEE</h1>
-                <section class="app-bar-actions">
-<!--                 Put App Bar Buttons Here -->
-                </section>
-            </div>
-        </header>
-
-        <nav class="navdrawer-container promote-layer">
-            <h4>Menu</h4>
-            <ul>
-                <li><a href="index.html">Data Visualization</a></li>
-                <li><a href="writing.html">Writing</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            <h1></h1>
-            
-<!--from here I inserted something-->
-            
-    <section id="about" class="home-section">
-    <div class="container">
-      
-<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email person-telephone person-address">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-        <img src="images/profile.jpeg" style="width:230px" vspace="30">
-      
-
-      <div class="portrait-title">
-
-      </div>
-
+    <!-- Menu -->
+    <div class="navbar_menu">
+        <li><a href="/personal.html">Personal</a></li>
+        <li><a href="/professional.html">Professional</a></li>
+        <li><a href="/about.html">About</a></li>
     </div>
-  </div>
 
-    <p>Saemmool Lee is a multimedia journalist and published author based in Seoul, South Korea.
-        <br><br>She started her career as a beat reporter at the <a href="http://www.donga.com/en/Docs" target="_blank">Dong-A Ilbo</a>, one of the biggest and oldest daily newspapers in Seoul, covering a wide range of beats from crime to business for six years. Then she earned her master's degree from the <a href="https://journalism.berkeley.edu/" target="_blank">UC Berkeley Graduate School of Journalism</a>('19) with a concentration on multimedia. During her graduate studies, she worked at the <a href="https://citris-uc.org" target="_blank">Center for Information Technology Research in the Interest of Society (CITRIS) and the Banatao Institute</a> communications team for a year, where she produced various content about startups, technologies and research initiatives. 
-        <br><br>
-        Currently, she is managing digital media strategies and for the <a href="http://web.donga.com/damg/introduce.php#" target="_blank">Dong-A Media Group</a>, and leading the Dong-A Ilbo's flagship multimedia projects at the company's strategy office. Her works includes "<a href="https://original.donga.com/2020/lost1">Jeungbal(Evaporation)</a>", which won the Grand Prize of the "Digital Journalism Awards" in Korea as well as the "Journalist of the Month Award" by the Journalist Association of Korea.
-        <br><br>She has authored four books, which you can find more about <a href="books.html" target="_blank">here</a>.</p>
+    <!-- Toggle button -->
+    <a href="#" class="navbar_toggleBtn">
+        <i class="fas fa-bars"></i>
+    </a>
+    </nav>
+    </header>
 
-    <div class="row">
-      
-<br>
-      </div>
-    
-    
-<br>
-    </div>
-  </div>
+
+    <div class="content">
+
+<!-- Intro -->
+    <section class="intro">
+        <h2>About</h2>
+        <span class="introduction">Saemmool Lee is a multimedia journalist and published author based in Seoul, South Korea.
+                <br><br>She started her career as a beat reporter at the <a href="http://www.donga.com/en/Docs" target="_blank">Dong-A Ilbo</a>, one of the biggest and oldest daily newspapers in Seoul, covering a wide range of beats from crime to business for six years. Then she earned her master's degree from the <a href="https://journalism.berkeley.edu/" target="_blank">UC Berkeley Graduate School of Journalism</a>('19) with a concentration in multimedia. During her graduate studies, she worked at the <a href="https://citris-uc.org" target="_blank">Center for Information Technology Research in the Interest of Society (CITRIS) and the Banatao Institute</a> communications team, where she produced various content about startups, technologies and research initiatives. 
+                <br><br>
+                Currently, she is leading the Dong-A Ilbo's flagship multimedia projects. Her works include "<a href="https://original.donga.com/2020/lost1">Jeungbal(Evaporation)</a>", which won the Grand Prize of the "Digital Journalism Awards" in Korea as well as the "Journalist of the Month Award" by the Journalist Association of Korea.
+                <br><br>She has authored four books, and published numerous stories which you can find <a href="writing.html" target="_blank">here</a>.</p>
         
-        <br>
-        <p class="powered-by">
-        &copy; 2020 Saemmool Lee</p>
-  </section>
-            
-        </main>
 
-        <!— build:js scripts/main.min.js —>
-        <script src="scripts/main.js"></script>
-        <!— endbuild —>
 
-        <!— Google Analytics: change UA-XXXXX-X to be your site's ID. —>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-148474343-1');ga('send','pageview');
-        </script>
-   
+        </span>
+    </section>
 
-        <!-- Built with love using Web Starter Kit -->
-    </body>
+
+
+</div>
+<!-- content end -->
+<!-- Footer -->
+    <footer>
+    <section class="backtotop">
+        <a href="#"><span>Back to Top</span></a>
+    </section>
+    <ul class="socialmedia">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+            <i class="fas fa-envelope"></i>
+    </ul>
+    </footer>
+    
+
+</body>
 </html>
