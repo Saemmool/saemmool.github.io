@@ -25,6 +25,24 @@ h1 {
     font-size: 60px;
     line-height: 1.2;
     margin-bottom: 15px;
+    background: url('../images/text-bg.jpg') no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveBg 90s linear infinite;
+    -webkit-animation: animation: moveBg 90s linear infinite;
+}
+
+/* text background animation */
+
+@keyframes moveBg {
+    0% {
+        background-position: 0% 30%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .showcase {
