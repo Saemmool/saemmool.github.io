@@ -182,7 +182,7 @@ h2 {
 }
 
 /* Tabs */
-.tabs {
+/* .tabs {
     background: lightgrey;
     padding-top: 1rem;
     width: 700px;
@@ -225,25 +225,25 @@ h2 {
 
 .tab-border {
     border-bottom: #d10000 4px solid;
-}
+} */
 
 /* Tab Content */
 
-.tab-content {
+/* .tab-content {
     padding: 3rem 0;
     background: #f2f2f2;
     color: black;
-}
+} */
 
 /* Hide content initially */
 
-#tab-1-content, 
+/* #tab-1-content, 
 #tab-2-content, 
 #tab-3-content {
     display: none;
     align-items: center; 
     justify-content: center;
-}
+} */
 
 .show {
     display: block !important;
