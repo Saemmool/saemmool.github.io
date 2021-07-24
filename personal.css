@@ -221,14 +221,7 @@ h2 {
 h2 span {
     transition: 0.5s;
 }
-/* h2:hover span:nth-child(1)
-{
-    margin-right: 10px;
-} */
-/* h2:hover span:nth-child(1)::after
-{
-    content: "'";
-} */
+
 h2:hover span:nth-child(2)
 {
     color: black;
@@ -243,6 +236,54 @@ h2:hover span
                  0 0 120px #fff,
                  0 0 160px #fff;
 }
+
+/* CSS Animation Play State */
+.playstate {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    cursor: pointer;
+}
+
+.playstate span {
+    position: relative;
+    font-size: 3.5rem;
+    color: #fff;
+    display: inline-block;  
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    animation-play-state: paused;
+}
+
+.playstate:hover span {
+    animation-play-state: running;
+}
+
+@keyframes animate {
+    0%,40%,100%
+    {
+        transform: translateY(0);
+    }
+    20%
+    {
+        transform: translateY(-50px);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .playstate span {
+        font-size: 1.5rem;
+    }
+}
+
+
 
 /* Design and programming */
 
