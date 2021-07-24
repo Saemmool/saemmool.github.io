@@ -246,7 +246,7 @@ h2:hover span
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #000;
+    background: #111;
     cursor: pointer;
 }
 
@@ -283,6 +283,92 @@ h2:hover span
     }
 }
 
+/* Ghost Text2 Hover Effects */
+
+.ghosttext2 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghostcontainer {
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.ghostcontainer span {
+    transition: 1.5s;
+}
+
+.ghostcontainer:hover span {
+    filter: blur(20px);
+    opacity: 0;
+    transform: scale(2);
+}
+
+.ghostcontainer span:nth-child(10n+1)
+{
+    transition-delay: 0s;
+}
+.ghostcontainer span:nth-child(10n+2)
+{
+    transition-delay: 0.1s;
+}
+.ghostcontainer span:nth-child(10n+3)
+{
+    transition-delay: 0.2s;
+}
+.ghostcontainer span:nth-child(10n+4)
+{
+    transition-delay: 0.3s;
+}
+.ghostcontainer span:nth-child(10n+5)
+{
+    transition-delay: 0.4s;
+}
+.ghostcontainer span:nth-child(10n+6)
+{
+    transition-delay: 0.5s;
+}
+.ghostcontainer span:nth-child(10n+7)
+{
+    transition-delay: 0.6s;
+}
+.ghostcontainer span:nth-child(10n+8)
+{
+    transition-delay: 0.7s;
+}
+.ghostcontainer span:nth-child(10n+9)
+{
+    transition-delay: 0.8s;
+}
+.ghostcontainer span:nth-child(10n+10)
+{
+    transition-delay: 0.9s;
+}
+.ghostcontainer span:nth-child(10n+11)
+{
+    transition-delay: 1s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .ghostcontainer span {
+        font-size: 1.5rem;
+    }
+}
 
 
 /* Design and programming */

@@ -8,7 +8,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 // 3D text
-var text = document.getElementById('text')
+var text = document.getElementById('introtext')
 var shadow = '';
     for(var i = 0; i < 30; i++)
     {

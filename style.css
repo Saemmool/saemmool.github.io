@@ -176,7 +176,7 @@ header {
     margin: 50px 0 50px 0;
 }
 
-#text {
+#introtext {
     position: relative;
     color: grey;
     font-weight: 700;
@@ -192,7 +192,7 @@ header {
     margin-right: 2rem;
 }
  
-#text:before {
+#introtext:before {
     content: attr(data-text);
     position: absolute;
     top: 30px;
@@ -201,6 +201,14 @@ header {
     text-shadow: none;
     filter: blur(8px);
     z-index: -1;
+}
+
+
+@media screen and (max-width: 768px) {
+    #introtext {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
 
