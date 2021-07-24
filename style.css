@@ -176,10 +176,36 @@ header {
     margin: 50px 0 50px 0;
 }
 
-h2 {
+#text {
+    position: relative;
+    color: grey;
+    font-weight: 700;
+    font-size: 5.5rem;
+    font-family: Poppins;
+    line-height: 6rem;
+    letter-spacing: 2px;
+    text-align: center;
+    transform: rotate(0deg) skew(10deg);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+ 
+#text:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    color: rgba(0,0,0,0.3);
+    text-shadow: none;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+
+/* h2 {
     font-size: 22px;
     margin: 20px 0 20px 0;
-}
+} */
 
 /* Tabs */
 /* .tabs {

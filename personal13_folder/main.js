@@ -1,15 +1,15 @@
-const musicContainer = document.getElementByID('music-container');
-const playBtn = document.getElementByID('play');
-const prevBtn = document.getElementByID('prev');
-const nextBtn = document.getElementByID('next');
+const musicContainer = document.querySelector('.music-container');
+const playBtn = document.querySelector('#play');
+const prevBtn = document.querySelector('#prev');
+const nextBtn = document.querySelector('#next');
 
-const audio = document.getElementByID('audio');
-const progress = document.getElementByID('progress');
-const progressContainer = document.getElementByID('progress-container');
-const title = document.getElementByID('title');
-const cover = document.getElementByID('cover');
-const currTime = document.querySelector('#currTime');
-const durTime = document.querySelector('#durTime');
+const audio = document.querySelector('#audio');
+const progress = document.querySelector('.progress');
+const progressContainer = document.querySelector('.progress-container');
+const title = document.querySelector('#title');
+const cover = document.querySelector('#cover');
+// const currTime = document.querySelector('#currTime');
+// const durTime = document.querySelector('#durTime');
 
 //Song titles
 const songs = ['hey', 'summer', 'mymusic'];
@@ -23,8 +23,8 @@ loadSong(songs[songIndex]);
 // Update song details 
 function loadSong(song) {
     title.innerText = song;
-    audio.src = `music/${mymusic}.mp3`;
-    cover.src = `../images/${jeungbal}.png`;
+    audio.src = `music/${song}.mp3`;
+    cover.src = `images/${song}.png`;
 }
 
 function playSong() {
@@ -65,7 +65,6 @@ function nextSong() {
     loadSong(songs[songIndex]);
 
     playSong();
-
 }
 
 function updateProgress(e) {
@@ -90,16 +89,16 @@ function setProgress(e) {
     const clickX = e.offsetX;
     const duration = audio.duration;
     
-    audio.currentTime = (clickX / width) * duration
+    audio.currentTime = (clickX / width) * duration;
 }
 
 // Change song events
 
-prevBtn.addEventListener('click', prevSong)
-nextBtn.addEventListener('click', nextsong)
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
 
-audio.addEventListener('timeupdate', updateProgress)
+audio.addEventListener('timeupdate', updateProgress);
 
-progressContainer.addEventListener('click', setProgress)
+progressContainer.addEventListener('click', setProgress);
 
-audio.addEventListener('ended', nextSong)
+audio.addEventListener('ended', nextSong);
