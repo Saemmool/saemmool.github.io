@@ -188,6 +188,8 @@ header {
     transform: rotate(0deg) skew(10deg);
     margin-top: 4rem;
     margin-bottom: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
  
 #text:before {

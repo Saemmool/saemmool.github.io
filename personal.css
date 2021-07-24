@@ -214,6 +214,8 @@ h2 {
     color: #222;
     letter-spacing: 5px;
     cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 h2 span {
