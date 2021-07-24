@@ -197,6 +197,51 @@ footer {
     margin-top: 50px;
 } */
 
+/* Impossible */
+
+.glowingeffect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 100vh;
+}
+ 
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+h2 span {
+    transition: 0.5s;
+}
+/* h2:hover span:nth-child(1)
+{
+    margin-right: 10px;
+} */
+/* h2:hover span:nth-child(1)::after
+{
+    content: "'";
+} */
+h2:hover span:nth-child(2)
+{
+    color: black;
+}
+h2:hover span 
+{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,
+                 0 0 160px #fff;
+}
+
 /* Design and programming */
 
 .designprogramming {
