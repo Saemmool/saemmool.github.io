@@ -405,11 +405,18 @@ h2:hover span
     background: #fff;
     font-size: 10vw;
     font-weight: 900;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     text-transform: uppercase;
     color: #000;
     line-height: 100vh;
     mix-blend-mode: screen;
+}
+
+@media screen and (max-width: 768px) {
+    .videotext .insidetext {
+        font-size: 1.5rem;
+    }
 }
 
 /* Design and programming */
