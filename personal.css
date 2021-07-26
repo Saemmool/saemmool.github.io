@@ -188,10 +188,16 @@ footer {
     margin-right: auto;
     padding: 0 10px;
     font-family: Lato, Helvetica, sans-serif;
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
 }
 
 
 /* portfolio */
+
+/* .portfolio {
+    scroll-snap-align: start;
+} */
 
 /* .portfolio {
     margin-top: 50px;
@@ -370,6 +376,41 @@ h2:hover span
     }
 }
 
+/* Video inside text */
+
+.videotext {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videotext video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videotext .insidetext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    font-size: 10vw;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 100vh;
+    mix-blend-mode: screen;
+}
 
 /* Design and programming */
 
