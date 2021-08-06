@@ -195,13 +195,12 @@ footer {
 
 /* portfolio */
 
-/* .portfolio {
-    scroll-snap-align: start;
-} */
-
-/* .portfolio {
-    margin-top: 50px;
-} */
+.portfolio {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
 
 /* Impossible */
 
@@ -212,7 +211,7 @@ footer {
     background: #000;
     min-height: 100vh;
 }
- 
+
 h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 4rem;
@@ -236,11 +235,11 @@ h2:hover span
 {
     color: #fff;
     text-shadow: 0 0 10px #fff,
-                 0 0 20px #fff,
-                 0 0 40px #fff,
-                 0 0 80px #fff,
-                 0 0 120px #fff,
-                 0 0 160px #fff;
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 120px #fff,
+                0 0 160px #fff;
 }
 
 /* CSS Animation Play State */
@@ -376,8 +375,92 @@ h2:hover span
     }
 }
 
-/* Video inside text */
+/* clip box */
 
+.clipbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #f3f3f3;
+}
+
+.clipbox h1 {
+    position: absolute;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8em;
+    text-transform: uppercase;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.clipbox h1:nth-child(2) {
+    background: #f3f3f3;
+    color: #fff;
+    overflow: hidden;
+    z-index: 2;
+    transition: 0.5s;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+}
+
+.clipbox h1:nth-child(2):hover {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.clipbox h1:nth-child(1):hover ~ h1 {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+/* Wooden text */
+/* 
+.wooden {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: url(images/text-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.woodentext {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 8rem;
+    text-transform: uppercase;
+    text-align: center;
+    background: url(images/text-bg.jpg);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.woodentext:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    text-shadow: -5px 5px 20px #000,
+                -10px 10px 30px #000,
+                -20px 15px 40px #000,
+                -25px 20px 50px #000; */
+
+/* Video inside text */
+/* 
 .videotext {
     position: relative;
     width: 100%;
@@ -417,7 +500,7 @@ h2:hover span
     .videotext .insidetext {
         font-size: 1.5rem;
     }
-}
+} */
 
 /* Design and programming */
 
