@@ -242,6 +242,72 @@ h2:hover span
                 0 0 160px #fff;
 }
 
+/* Glowing Text Animation Effects 2 */
+
+.glowingeffect2 {
+    font-family: 'Poppins', sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    height: 100vh;
+}
+
+.glowingeffect2 h1 {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 10em;
+}
+
+h1 .glowing2 {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: glowing 2s linear infinite;
+}
+
+.glowing2:nth-child(1) {
+     animation-delay: 0s; 
+}
+.glowing2:nth-child(2) {
+    animation-delay: 0.25s; 
+}
+.glowing2:nth-child(3) {
+    animation-delay: 0.5s; 
+}
+.glowing2:nth-child(4) {
+    animation-delay: 0.75s; 
+}
+.glowing2:nth-child(5) {
+    animation-delay: 1s; 
+}
+.glowing2:nth-child(6) {
+    animation-delay: 1.25s; 
+}
+.glowing2:nth-child(7) {
+    animation-delay: 1.5s; 
+}
+
+@keyframes glowing {
+    0%,100% {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0px 0px 10px #00b3ff,
+                    0px 0px 20px #00b3ff,
+                    0px 0px 40px #00b3ff,
+                    0px 0px 80px #00b3ff,
+                    0px 0px 120px #00b3ff,
+                    0px 0px 200px #00b3ff,
+                    0px 0px 300px #00b3ff;
+    }
+    5%,95% {
+        color: #000;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
 /* CSS Animation Play State */
 .playstate {
     margin: 0;
@@ -374,6 +440,44 @@ h2:hover span
         font-size: 1.5rem;
     }
 }
+
+/* Pure CSS Logo */
+
+.redcolor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+}
+
+.redcolor h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+}
+
+.redcolor h2:nth-child(1) {
+    color: #b00612;
+}
+
+.redcolor h2:nth-child(2) {
+    color: #e50815;
+}
+
+.redcolor h2:nth-child(3) {
+    color: #f32a37;
+}
+
+.redcolor h2:nth-child(4) {
+    color: #ec3c48;
+}
+
+.redcolor h2:nth-child(5) {
+    color: #ec525c;
+}
+
+
 
 /* clip box */
 
