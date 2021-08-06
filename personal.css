@@ -420,6 +420,15 @@ h2:hover span
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
+
+
+@media screen and (max-width: 768px) {
+    .clipbox h1 {
+        font-size: 2rem;
+    }
+}
+
+
 /* Wooden text */
 /* 
 .wooden {
