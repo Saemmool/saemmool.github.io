@@ -532,6 +532,55 @@ h1 .glowing2 {
     }
 }
 
+/* skew text */
+
+.skewtext {
+    display: inline-block;
+    margin: 250px 200px;
+    text-align: center;
+    transition: .5s;
+}
+
+.skewtext span {
+    background: #fff;
+    width: 120px;
+    height: 120px;
+    display: block;
+    line-height: 120px;
+    font-family: arial;
+    font-weight: bold;
+    color: #a0a0a0;
+    font-size: 40px;
+    float: left;
+    transition: .5s;
+}
+
+.skewtext span:nth-child(1) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skewtext span:nth-child(1) {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.skewtext:hover span:nth-child(odd) {
+    transform: skewY(-15deg);
+    color: #b5b5b5;
+    box-shadow: 0 60px 20px rgba(0,0,0,.1);
+}
+
+.skewtext:hover span:nth-child(even) {
+    transform: skewY(10deg);
+    box-shadow: 0 60px 20px rgba(0,0,0,.1),
+    inset 0px 0 30px rgba(0,0,0,.2);
+    color: #b5b5b5;
+}
+
+.skewtext:hover {
+    transform: rotateX(35deg);
+}
 
 /* Wooden text */
 /* 
