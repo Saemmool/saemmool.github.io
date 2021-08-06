@@ -308,6 +308,12 @@ h1 .glowing2 {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .glowingeffect2 h1 {
+        font-size: 3rem;
+    }
+}
+
 /* CSS Animation Play State */
 .playstate {
     margin: 0;
@@ -441,7 +447,7 @@ h1 .glowing2 {
     }
 }
 
-/* Pure CSS Logo */
+/* Color matters */
 
 .redcolor {
     display: flex;
@@ -477,6 +483,52 @@ h1 .glowing2 {
     color: #ec525c;
 }
 
+/* Multiple Shadows */
+
+.multipleshadows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f1f1f1;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+}
+
+.textshadow {
+    position: relative;
+    display: block;
+    font-size: 7rem;
+    text-transform: uppercase;
+    line-height: 0.8;
+    color: darkgrey;
+    text-shadow: 0 15px 5px rgba(0,0,0,.2);
+    letter-spacing: -5px;
+    transform: skewY(1deg);
+    box-shadow: 0 4px 0 rgba(0,0,0,.1), 0 -4px 0 rgba(0,0,0,.5);
+}
+
+.textblock1 {
+    z-index: 3;
+    background:rgba(43, 43, 43, 0.8)
+}
+
+.textblock2 {
+    z-index: 2;
+    background:rgba(0, 0, 0, 0.5)
+}
+
+.textblock3 {
+    z-index: 1;
+    background: rgba(0,0,0,0.1)
+}
+
+@media screen and (max-width: 768px) {
+    .textshadow {
+        font-size: 3rem;
+    }
+}
 
 
 /* clip box */
