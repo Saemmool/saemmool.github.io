@@ -643,6 +643,49 @@ h1:after {
 
 }
 
+/* Fill text */
+
+.filltext {
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.filltext h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: verdana;
+    font-size: 5rem;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.filltext h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #262626;
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+}
+
+h1:hover:before {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .filltext h1 {
+        font-size: 1.5rem;
+    }
+
+}
+
+
 /* Multiple Shadows */
 
 .multipleshadows {
