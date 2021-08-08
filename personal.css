@@ -553,6 +553,96 @@ h1:after {
     color: #ec525c;
 }
 
+
+@media screen and (max-width: 768px) {
+    .redcolor h2 {
+        font-size: 1rem;
+    }
+
+}
+
+/*  Text Layers Typography */
+
+.textlayers {
+    background: #000;
+    min-height: 100vh;
+}
+
+.textlayers h2 {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: verdana;
+    color: lightgrey;
+    text-transform: uppercase;
+}
+
+.textlayers h1 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    color: #ef9a9a;
+    font-size: 5rem;
+    text-align: center;
+    font-family: verdana;
+    text-transform: uppercase;
+    transition: .5s;
+    text-shadow: 0 5px 0 rgba(0,0,0,1),
+    0 10px 40px rgba(0,0,0,.2),
+    0 20px 30px rgba(0,0,0,.2),
+    0 30px 20px rgba(0,0,0,.2);
+}
+
+.textlayers h1:before {
+    content: attr(data-title);
+    position: absolute;
+    top: -5px;
+    left: 0;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5);
+    color: #ffcdd2;
+    transition: .5s;
+}
+
+.textlayers h1:after{
+    content: attr(data-title);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5);
+    color: #e57373;
+    transition: .5s;
+} 
+
+.textlayers h1:hover:before {
+    top: -10px;
+    left: 10px;
+}
+
+.textlayers h1:hover:after {
+    top: -20px;
+    left: 20px;
+}
+
+.textlayers h1:hover {
+    text-shadow: -10px 10px 0 rgba(0,0,0,1),
+    0 10px 40px rgba(0,0,0,.2),
+    0 20px 30px rgba(0,0,0,.5),
+    020px20px 20px rgba(0,0,0,.5);
+}
+
+
+@media screen and (max-width: 768px) {
+    .textlayers h1, h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
 /* Multiple Shadows */
 
 .multipleshadows {
@@ -596,7 +686,7 @@ h1:after {
 
 @media screen and (max-width: 768px) {
     .textshadow {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
 
