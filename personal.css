@@ -429,6 +429,54 @@ h1:after {
 
 }
 
+/* Text Split on Hover */
+
+.textsplit {
+    height: 100vh;
+    font-family: verdana;
+}
+
+.textsplit h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    color: #262626;
+    /* margin: 0;
+    padding: 0; */
+    text-transform: uppercase;
+    z-index: 0;
+}
+
+.textsplit h1:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    height: 50%;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.textsplit h1:after {
+    content: attr(data-title);
+    position: absolute;
+    top: 0; 
+    left: 0;
+    color: #262626;
+    height: 55%;
+    overflow: hidden; 
+    transition: .5s;
+    border-bottom: 0px solid #f00;
+    z-index: 2;
+}
+
+.textsplit h1:hover:after {
+    border-bottom: 20px solid #ff0;
+    top: -20px;
+}
 
 /* Ghost Text2 Hover Effects */
 
@@ -516,6 +564,52 @@ h1:after {
         font-size: 1.5rem;
     }
 }
+
+/* Text Filling */
+
+.textfilling {
+    height: 100vh;
+    background: #111;
+    font-family: arial;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+.textfilling h1 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 8rem;
+    color: rgba(255,255,255,.1);
+    background-image: url(images/sea.jpeg);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: fillingmove 15s linear infinite; 
+}
+
+@keyframes fillingmove {
+    0% {
+        background-position: left 0px top 80px;
+    }
+    40% {
+        background-position: left 800px top -50px;
+    }
+    80% {
+        background-position: left 1800px top -50px;
+    }
+    100% {
+        background-position: left 2400px top 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textflling h1 {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* Color matters */
 
