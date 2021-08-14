@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1628797285815-453c1d0d21e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
+        background-attachment: fixed;
+        clip-path: circle(0px at center);
+    }
+
+    .container {
+        position: relative;
+        margin-top: 200vh;
+        background: #fff;
+        padding: 100px;
+    }
+
+    .container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        position: relative;
+        top: 250px;
+        z-index: 1;
+        font-size: 3em;
+        text-align: center;
+        width: 100%;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h2 class="title">Scroll To See Magic Again...</h2>
+    <section></section>
+    <div class="container">
+        <h2>Also Watch Part 1 and 2... Link in Video Description</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi beatae cumque blanditiis? Animi sunt aspernatur nobis architecto reiciendis aut totam ex recusandae quam labore dolores dolore est quas ipsam natus porro quis accusamus, magnam cupiditate? Eaque neque dolor unde sunt dolorum totam aliquam repellendus, officiis soluta ducimus nostrum quisquam reprehenderit incidunt sed itaque in cum id quasi earum nobis tempora quis mollitia sapiente! In numquam necessitatibus, voluptates, unde, minima culpa voluptatem adipisci accusamus quisquam quae totam reprehenderit sit illum magnam eaque? Commodi architecto ad dolorem quasi incidunt, dicta laudantium, amet vel optio qui dolores officiis consequatur sapiente quia dolor ea!</p>
+        <br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi beatae cumque blanditiis? Animi sunt aspernatur nobis architecto reiciendis aut totam ex recusandae quam labore dolores dolore est quas ipsam natus porro quis accusamus, magnam cupiditate? Eaque neque dolor unde sunt dolorum totam aliquam repellendus, officiis soluta ducimus nostrum quisquam reprehenderit incidunt sed itaque in cum id quasi earum nobis tempora quis mollitia sapiente! In numquam necessitatibus, voluptates, unde, minima culpa voluptatem adipisci accusamus quisquam quae totam reprehenderit sit illum magnam eaque? Commodi architecto ad dolorem quasi incidunt, dicta laudantium, amet vel optio qui dolores officiis consequatur sapiente quia dolor ea!</p>
+        <br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi beatae cumque blanditiis? Animi sunt aspernatur nobis architecto reiciendis aut totam ex recusandae quam labore dolores dolore est quas ipsam natus porro quis accusamus, magnam cupiditate? Eaque neque dolor unde sunt dolorum totam aliquam repellendus, officiis soluta ducimus nostrum quisquam reprehenderit incidunt sed itaque in cum id quasi earum nobis tempora quis mollitia sapiente! In numquam necessitatibus, voluptates, unde, minima culpa voluptatem adipisci accusamus quisquam quae totam reprehenderit sit illum magnam eaque? Commodi architecto ad dolorem quasi incidunt, dicta laudantium, amet vel optio qui dolores officiis consequatur sapiente quia dolor ea!</p>
+        <br>
+    </div>
+
+    <script type="text/javascript">
+    
+        var section = document.querySelector('section');
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+            section.style.clipPath = "circle("+ value+"px at center)"
+        })
+
+    </script>
+
+</body>
+</html>

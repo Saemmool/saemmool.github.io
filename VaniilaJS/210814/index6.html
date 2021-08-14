@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section .navigation {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section .navigation li {
+            list-style: none;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 4px;
+            background: #fff;
+            padding: 3px 3px 0;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        section .navigation li:hover {
+            opacity: 1;
+        }
+
+        section .navigation li img {
+            width: 120px;
+            transition: 0.5s;
+        }
+
+        section .navigation li img:hover {
+            width: 200px;
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <video id="slider" autoplay muted loop>
+            <source src="../images/video1.MOV" type="video/mp4">
+        </video>
+            <ul class="navigation">
+                <li onclick="videoUrl('../images/video1.mov')"><img src="../images/heart.png" alt=""></li>
+                <li onclick="videoUrl('../images/video2.mov')"><img src="../images/heart.png" alt=""></li>
+                <li onclick="videoUrl('../images/video3.mov')"><img src="../images/heart.png" alt=""></li>
+            </ul>
+        
+    </section>
+
+    <script type="text/javascript">
+    
+        function videoUrl(hmm) {
+            document.getElementById("slider").src = hmm;
+        }
+    
+    </script>
+
+
+</body>
+</html>
