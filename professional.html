@@ -44,10 +44,43 @@
 
 
     <div class="content">
+        <div class="bannerText" id="slideshowText">
+            <div class="active">
+                <h2>Project1<br>
+                    Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, numquam!</p>
+                <a href="#">Read More</a>
+            </div>
+            <div>
+                <h2>Project2<br>
+                    Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, numquam!</p>
+                <a href="#">Read More</a>
+            </div>
+            <div>
+                <h2>Project3<br>
+                    Name</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, numquam!</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="Imgs">
+        <div class="bannerImg" id="slideshow">
+            <img src="https://images.unsplash.com/photo-1607082352121-fa243f3dde32?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="active">
+            <img src="https://images.unsplash.com/photo-1624234161254-d02a0f5e63d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1624897527583-7d1c6087ecb8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1325&q=80" alt="">
+        </div>
+        <div class="icons">
+            <ul class="controls">                    
+                <li><a><img src="https://images.unsplash.com/photo-1525081905268-fc0b46e9d786?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="" onclick="prevSlide();prevSlideText();"></a></li>
+                <li><a><img src="https://images.unsplash.com/photo-1525011268546-bf3f9b007f6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="" onclick="nextSlide();nextSlideText();"></a></li>            
+            </ul>
+        </div>
+        </div>
+
 
 <!-- portfolio -->
-    <section class="portfolio">
-
+    <!-- <section class="portfolio">
     <div class="hero1">
         <div class="circle circle1">
             <img src="images/jeungbal.png" alt="">
@@ -60,55 +93,7 @@
             <p class="heroexplanation">Search for people who chose to be disappeared from the society.</p>
         </div>
     </div>
-<!-- 
-    <div class="portfoliobox">
-        <h3>Project 1</h3>
-        <div class="portfolio_top">
-        <h5>Date. June 12, 2021</h5>
-        <ul class="portfolio_actions">
-            <li><i class="fas fa-external-link-alt"></i><span class="portfolio_share">Open</span></li>
-            <li><i class="fas fa-share-alt"></i><span class="portfolio_share">Share</span></li>
-        </ul>
-        </div>
-        <div class="hero-content">
-        <a href="#" class="btn">
-            Enter<i class="fas fa-chevron-right"></i>
-        </a>
-        </div>
-        <span class="portfolio_description">Some text...</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ipsum. Recusandae, eveniet nostrum dolor aperiam cupiditate facilis sit eaque assumenda dicta modi atque provident minus quasi iusto voluptates quae! Quod?</p>
-    </div>
-
-    <div class="portfoliobox">
-        <h3>Project 1</h3>
-        <div class="portfolio_top">
-        <h5>Date. June 12, 2021</h5>
-        <ul class="portfolio_actions">
-            <li><i class="fas fa-external-link-alt"></i><span class="portfolio_share">Open</span></li>
-            <li><i class="fas fa-share-alt"></i><span class="portfolio_share">Share</span></li>
-        </ul>
-        </div>
-        <div class="portfolio_img" style="height: 200px">Image</div>
-        <span class="portfolio_description">Some text...</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ipsum. Recusandae, eveniet nostrum dolor aperiam cupiditate facilis sit eaque assumenda dicta modi atque provident minus quasi iusto voluptates quae! Quod?</p>
-    </div>
-
-    <div class="portfoliobox">
-        <h3>Project 1</h3>
-        <div class="portfolio_top">
-        <h5>Date. June 12, 2021</h5>
-        <ul class="portfolio_actions">
-            <li><i class="fas fa-external-link-alt"></i><span class="portfolio_share">Open</span></li>
-            <li><i class="fas fa-share-alt"></i><span class="portfolio_share">Share</span></li>
-        </ul>
-        </div>
-        <div class="portfolio_img" style="height: 200px">Image</div>
-        <span class="portfolio_description">Some text...</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ipsum. Recusandae, eveniet nostrum dolor aperiam cupiditate facilis sit eaque assumenda dicta modi atque provident minus quasi iusto voluptates quae! Quod?</p>
-    </div> -->
-
-    
-    </section>
+    </section> -->
 
 <!--  -->
 </div>
@@ -124,6 +109,45 @@
             <i class="fas fa-envelope"></i>
     </ul>
     </footer>
+
+    <!-- <script src="professional.js"></script> -->
+    <script type="text/javascript">
+    
+    
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+
+        function nextSlide() {
+            slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            function prevSlide() {
+                slides[index].classList.remove('active');
+                index = (index - 1 + slides.length) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+
+        function nextSlideText() {
+            slidesText[i].classList.remove('active');
+            i = (i + 1) % slidesText.length;
+            slidesText[i].classList.add('active');
+            }
+
+        function prevSlideText() {
+            slidesText[i].classList.remove('active');
+            i = (i - 1 + slidesText.length) % slidesText.length;
+            slidesText[i].classList.add('active');
+            }
+
+        
+    </script>
 
 </body>
 </html>
