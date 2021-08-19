@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        section .bg {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            right: -50px;
+            bottom: -50px;
+        }
+
+        section .bg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section img {
+            position: absolute;
+            max-width: 100%;
+        }
+
+        section img.girl {
+            bottom: -40px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="bg">
+            <img src="https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="layer" data-speed="-2">
+        </div>
+        <img src="../images/chevron_left.png" alt="" class="layer" data-speed="-4">
+        <img src="../images/chevron_left.png" alt="" class="layer" data-speed="4">
+        <img src="https://images.unsplash.com/photo-1438109491414-7198515b166b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="layer girl" data-speed="2">
+    </section>
+
+    <script type="text/javascript">
+        document.addEventListener('mousemove', parallax);
+        function parallax(e){
+            this.querySelectorAll('.layer').
+            forEach(layer => {
+                var speed = layer.getAttribute('data-speed')
+                var x = (window.innerWidth - e.pageX * speed)/100
+                var y = (window.innerWidth - e.pageY * speed)/100
+                layer.style.transform = `translateX(${x}px)
+                                        translateY(${y}px)`
+            })
+        }
+    </script>
+
+</body> 
+</html>
