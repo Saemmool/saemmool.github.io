@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+    }
+
+    .banner {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1629290439635-80e8740a0c7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2500&q=80');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        clip-path: circle(75px at var(--x) var(--y));
+    }
+
+    .banner:active {
+        clip-path: circle(400px at var(--x) var(--y));
+    }
+
+    .content {
+        position: relative;
+        max-width: 1100px;
+        z-index: 1;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .content h2 {
+        position: relative;
+        color: #fff;
+        font-size: 60px;
+    }
+
+    .content p {
+        position: relative;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    </style>
+</head>
+<body>
+    <section class="banner"></section>
+    <div class="content">
+        <h2>CSS Clip-path Mousemove Effects</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, culpa.</p>
+        <script type="text/javascript">
+            var pos = document.documentElement;
+            pos.addEventListener("mousemove", e => {
+                pos.style.setProperty('--x', e.clientX + "px");
+                pos.style.setProperty('--y', e.clientY + "px");
+            })
+        </script>
+    </div>
+
+
+
+
+
+</body>
+</html>
