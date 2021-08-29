@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .zoom {
+            width: 100%;
+            height: 1000px;
+            position: relative;
+            overflow: hidden;
+            background: url('../Images/bg.jpg');
+            background-size: cover;
+        }
+
+        .zoom:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 200px;
+            z-index: 1000;
+            background: linear-gradient(transparent, #fff);
+        }
+
+        .zoom #layer1 {
+            position: absolute;
+            left: 40%;
+            width: 100%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+
+        .zoom #layer2 {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            z-index: 9;
+        }
+
+        .zoom #text {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            transform: translateY(50%);
+        }
+
+        .content {
+            padding: 100px;
+            box-sizing: border-box;
+            font-family: Consolas;
+        }
+
+        .content h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 4rem;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section class="zoom">
+        <img src="../images/mountain1.png" alt="" id="layer1">
+        <img src="../images/mountain2.png" alt="" id="layer2">
+        <img src="../images/text.png" alt="" id="text">
+    </section>
+    <section class="content">
+        <h2>Simple Background Parallax Using Javascript</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod temporibus nostrum porro illo officiis debitis est molestias tempore, a perspiciatis unde ullam quisquam obcaecati ratione quo id architecto quos voluptatum sequi labore? Modi, culpa. Fugit voluptates fuga aut, culpa vero animi! Molestiae deserunt ipsam animi laborum, harum sequi itaque inventore reprehenderit minus dignissimos voluptatibus nisi. Eaque aperiam quo consequatur nobis est, iste maiores! Nulla incidunt molestias dignissimos sapiente vero modi, in numquam sequi quibusdam provident ab labore vel, dolores distinctio blanditiis? Vero asperiores minus, ab, quisquam numquam fugit magnam temporibus officia labore voluptas at quis in, quaerat consequuntur dignissimos facere!</p>
+    </section>
+
+    <script type="text/javascript">
+    
+        var layer1 = document.getElementById('layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function(e) {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer1.style.width = (100 + scroll/5) + '%';
+        })
+
+        var layer2 = document.getElementById('layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function(e) {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll/5) + '%';
+            layer2.style.left = scroll/50 + '%';
+        })
+
+
+        var text = document.getElementById('text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', 
+            function(e) {
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll/5) + '%';
+            text.style.top = - scroll/20 + '%';
+        });
+    
+    
+    </script>
+
+</body>
+</html>

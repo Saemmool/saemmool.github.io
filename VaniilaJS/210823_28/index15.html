@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #607d9b;
+        padding: 0 100px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a {
+        color: #fff;
+        padding: 0 20px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .brand {
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    section {
+        padding: 150px 100px 100px;
+        box-sizing: border-box;
+    }
+
+    section h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+    }
+
+    section h1 span {
+        font-size: 1.5rem;
+        color: #0bacff;
+    }
+
+    section p {
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+    </style>
+
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#" class="brand">Brand Name</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Scroll Award Navigation Bar<br><span>Hide header on scroll down, show on scroll up</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit voluptatem quo ut, commodi ducimus vel labore dolor dolorum soluta adipisci cupiditate, rem quas molestias nam? Praesentium illo incidunt dolores recusandae alias blanditiis aperiam eaque eligendi quae, laudantium impedit commodi iure fuga dicta repellendus sapiente quis! Minima excepturi, enim quasi maxime atque earum deserunt ipsum ex ratione? Ratione asperiores ipsa hic esse cumque aperiam iure, veritatis quas suscipit, sint, adipisci repellat sunt quaerat. Accusantium aliquid, beatae explicabo tempore ut porro! In, nulla laudantium, porro inventore vitae dolor at incidunt fugit consequatur vero harum sint mollitia delectus dolorem rem aperiam numquam!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit voluptatem quo ut, commodi ducimus vel labore dolor dolorum soluta adipisci cupiditate, rem quas molestias nam? Praesentium illo incidunt dolores recusandae alias blanditiis aperiam eaque eligendi quae, laudantium impedit commodi iure fuga dicta repellendus sapiente quis! Minima excepturi, enim quasi maxime atque earum deserunt ipsum ex ratione? Ratione asperiores ipsa hic esse cumque aperiam iure, veritatis quas suscipit, sint, adipisci repellat sunt quaerat. Accusantium aliquid, beatae explicabo tempore ut porro! In, nulla laudantium, porro inventore vitae dolor at incidunt fugit consequatur vero harum sint mollitia delectus dolorem rem aperiam numquam!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit voluptatem quo ut, commodi ducimus vel labore dolor dolorum soluta adipisci cupiditate, rem quas molestias nam? Praesentium illo incidunt dolores recusandae alias blanditiis aperiam eaque eligendi quae, laudantium impedit commodi iure fuga dicta repellendus sapiente quis! Minima excepturi, enim quasi maxime atque earum deserunt ipsum ex ratione? Ratione asperiores ipsa hic esse cumque aperiam iure, veritatis quas suscipit, sint, adipisci repellat sunt quaerat. Accusantium aliquid, beatae explicabo tempore ut porro! In, nulla laudantium, porro inventore vitae dolor at incidunt fugit consequatur vero harum sint mollitia delectus dolorem rem aperiam numquam!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit voluptatem quo ut, commodi ducimus vel labore dolor dolorum soluta adipisci cupiditate, rem quas molestias nam? Praesentium illo incidunt dolores recusandae alias blanditiis aperiam eaque eligendi quae, laudantium impedit commodi iure fuga dicta repellendus sapiente quis! Minima excepturi, enim quasi maxime atque earum deserunt ipsum ex ratione? Ratione asperiores ipsa hic esse cumque aperiam iure, veritatis quas suscipit, sint, adipisci repellat sunt quaerat. Accusantium aliquid, beatae explicabo tempore ut porro! In, nulla laudantium, porro inventore vitae dolor at incidunt fugit consequatur vero harum sint mollitia delectus dolorem rem aperiam numquam!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut impedit voluptatem quo ut, commodi ducimus vel labore dolor dolorum soluta adipisci cupiditate, rem quas molestias nam? Praesentium illo incidunt dolores recusandae alias blanditiis aperiam eaque eligendi quae, laudantium impedit commodi iure fuga dicta repellendus sapiente quis! Minima excepturi, enim quasi maxime atque earum deserunt ipsum ex ratione? Ratione asperiores ipsa hic esse cumque aperiam iure, veritatis quas suscipit, sint, adipisci repellat sunt quaerat. Accusantium aliquid, beatae explicabo tempore ut porro! In, nulla laudantium, porro inventore vitae dolor at incidunt fugit consequatur vero harum sint mollitia delectus dolorem rem aperiam numquam!</p>
+        <br>
+    </section>
+
+    <script type="text/javascript">
+
+        var lastScrollTop = 0;
+        var navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", function() {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    navbar.style.top="-80px";
+                } else {
+                    navbar.style.top="0";
+                } 
+                lastScrollTop = scrollTop;
+            })
+    
+    </script>
+
+</body>
+</html>

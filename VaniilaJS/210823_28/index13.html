@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="odometer-theme-car.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .imgBx {
+            width: 100px;
+            height: 100px; 
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #333;
+            box-shadow: 0 10px 15px rgba(0,0,0,.2);
+        }
+
+        .imgBx img {
+            max-width: 100%;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-family: consolas;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .odometer {
+            font-size: 4rem;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="imgBx">
+            <img src="../Images/heart.png" alt="">
+        </div>
+        <div id="odometer" class="odometer">000000</div>
+        <h2>Subscribers</h2>
+    </div>
+
+    <script src="odometer.min.js"></script>
+    <script type="text/javascript">
+    
+        setTimeout(function() {
+            odometer.innerHTML = 175999;
+        })
+    
+    </script>
+</body>
+</html>

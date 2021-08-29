@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: consolas;
+        }
+
+        .contact {
+            box-sizing: border-box;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+
+        .contact.active:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .contact:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .contact h2 {
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact h2 span {
+            display: inline-block;
+        }
+
+        .contact.active {
+            width: 800px;
+            min-height: 400px;
+        }
+
+        .contact.active h2 span {
+            transform: rotate(45deg);
+            float: right;
+        }
+
+        form {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        form .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        form .row .col-2 {
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        form .row .col-2:nth-child(odd) {
+            margin-right: 10px;
+        }
+
+        form .row .col-2:nth-child(even) {
+            margin-left: 10px;
+        }
+
+        form .row .col-1 {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .contact label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact input .text,
+        .contact textarea {
+            width: 100%;
+            border: 2px solid #000;
+            padding: 10px;
+            outline: none;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: consolas;
+            resize: none;
+        }
+
+        .contact textarea {
+            height: 150px;
+        }
+
+        .contact input[type="submit"] {
+            border: 2px solid #000;
+            padding: 10px;
+            font-size: 18px;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: consolas;
+            outline: none;
+            cursor: pointer;
+            background: #000;
+            color: #fff;
+        }
+
+        .contact form {
+            visibility: hidden;
+            display: none;
+        }
+
+        .contact.active form {
+            visibility: visible;
+            display: block;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="contact" id="contact">
+        <h2 onClick="toggleClass()">Get in touch with us <span>+</span></h2>
+        <form>
+            <div class="row">
+                <div class="col-2">
+                    <label>First Name</label>
+                    <input type="text name="" class="text" placeholder="John">
+                </div>
+                <div class="col-2">
+                    <label>Last Name</label>
+                    <input type="text name="" class="text" placeholder="Doe">
+                </div>
+                <div class="col-2">
+                    <label>Email Address</label>
+                    <input type="text name="" class="text" placeholder="lorem@ipsum.com">
+                </div> 
+                <div class="col-2">
+                    <label>Telephone</label>
+                    <input type="text name="" class="text" placeholder="010-1234-5678">
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label>Your Message</label>
+                    <textarea placeholder="Write your message here..."></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <input type="submit" name="" value="Send message">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+    
+        function toggleClass(){
+            var element = document.getElementById('contact');
+            element.classList.toggle("active")
+        }
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .logo {
+            background: url('../Images/heart.png') no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="logo" id="logo">
+        <div class="netflix">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h3>Netflix</h3>
+    </div>
+
+    <script type="text/javascript">
+    
+        document.onmousemove = function(e){
+            document.getElementById("logo").style.transform = "scale("+e.clientX*0.001+")";
+        }
+    
+    </script>
+
+</body>
+</html>
