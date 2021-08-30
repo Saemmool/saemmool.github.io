@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: #262626;
+            font-family: sans-serif;
+            font-size: 8rem;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Text Rotate on Mousemove</h1>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    
+        $('h1').on('mousemove', function(e){
+            centerX = $(this).width()/2;
+            var moveX = centerX - e.offsetX;
+            $(this).css({
+                'transform': 'perspective(500px) rotateY('+ moveX/20 +'deg)'
+            })
+        })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1459156212016-c812468e2115?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=698&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .content {
+            padding: 50px 100px;
+        }
+
+        .content h2 {
+            margin: 0 0 20px;
+            padding: 0;
+            font-size: 30px;
+        }
+
+        .content p {
+            font-size: 18px;
+        }
+
+        .sidebar-contact {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 350px;
+            height: auto;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(0,0,0,.5);
+            box-sizing: border-box;
+            border: 1px solid rgba(0,0,0,.5);
+            outline: none;
+            transition: 0.5s;
+        }
+
+        .sidebar-contact.active {
+            left: -350px;
+        }
+
+        .sidebar-contact input,
+        .sidebar-contact textarea {
+            width: 100%;
+            height: 36px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-contact textarea {
+            height: 60px;
+            resize: none;
+        }
+
+        .sidebar-contact input[type="submit"] {
+            background: #00bcd4;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            font-style: 18px;
+        }
+
+        .sidebar-contact h2 {
+            margin: 0 0 20px;
+            padding: 0;
+        }
+
+        .toggle {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            cursor: pointer; 
+            background: #f00;
+            top: 0;
+            right: -48px;
+        }
+
+        .toggle:before {
+            content: '';
+            /* font-family; fontAwesome; */
+            color: #fff;
+            font-size: 18px; 
+        }
+/* 
+        .toggle.active:before {
+            content: '\f00d';
+        } */
+
+    </style>
+
+</head>
+<body>
+    <div class="sidebar-contact">
+        <div class="toggle"></div>
+        <h2>Contact Us</h2>
+        <form action="">
+            <input type="text" name="" placeholder="Name">
+            <input type="email" name="" placeholder="Email">
+            <input type="rel" name="" placeholder="Phone Number">
+            <textarea placeholder="Message"></textarea>
+            <input type="submit" name="" value="Send">
+        </form>
+
+    </div>
+    <div class="banner"></div>
+    <div class="content">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas dolores delectus est. Iste neque cumque similique nisi, esse incidunt. Maiores fuga expedita dolores consectetur facere dicta. Fugiat quis consectetur laborum nesciunt provident dolores aperiam quo consequuntur a expedita ipsa praesentium quisquam sint optio molestias quam, perspiciatis sapiente quod rerum architecto nostrum vero! Exercitationem, quo! Fuga deserunt recusandae ut incidunt aliquam expedita natus distinctio suscipit veritatis et, consequuntur quidem, veniam ea? Nobis ad non modi quod, quae officia dicta! In, deserunt pariatur nesciunt illum sunt voluptatibus ipsum corrupti veritatis quod illo expedita error molestiae distinctio sit quis quo! Qui, dolor odio?</p>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.sidebar-contact').toggleClass('active')
+                $('.toggle').toggleClass('active')
+            })
+        })
+    
+    </script>
+
+
+</body>
+</html>
