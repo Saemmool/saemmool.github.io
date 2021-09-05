@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+        }
+
+        .container section {
+            min-width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #fffee1;
+        }
+
+        .container section:nth-child(2) {
+            background: #e2fcff;
+        }
+
+        .container section:nth-child(3) {
+            background: #d0eaff;
+        }
+
+        .container section:nth-child(4) {
+            background: #fce8f4;
+        }
+
+        .container section .content {
+            max-width: 800px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container section .content h2 {
+            font-size: 4rem;
+            color: #111;
+        }
+
+        .container section .content p {
+            font-size: 1.3rem;
+            line-height: 1.4rem;
+            color: #111;
+        }
+
+        @media (max-width: 991px) {
+            .container {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                transform: none !important;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container" data-0="transform:translateX(0%);" data-100="transform:translateX(-300%);">
+        <section>
+            <div class="content">
+                <h2>Section One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis numquam dignissimos nisi amet ratione molestiae repellendus expedita laudantium illum, velit ea quo temporibus repudiandae, nostrum vel id corporis facere. Illo eos, totam maxime numquam ea odit ullam facilis corporis, dolorem dolor explicabo modi nihil quae quidem non aperiam! Iusto repellat alias quis unde ducimus blanditiis, cumque expedita obcaecati sint perferendis praesentium voluptate dignissimos commodi tempora. Officia architecto quas inventore vero soluta, natus nesciunt culpa mollitia? Sunt incidunt quibusdam doloremque eaque perferendis, voluptate beatae quas obcaecati cumque ipsa a temporibus, ducimus adipisci quisquam quis. Nostrum impedit error assumenda blanditiis nihil!</p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h2>Section Two</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis numquam dignissimos nisi amet ratione molestiae repellendus expedita laudantium illum, velit ea quo temporibus repudiandae, nostrum vel id corporis facere. Illo eos, totam maxime numquam ea odit ullam facilis corporis, dolorem dolor explicabo modi nihil quae quidem non aperiam! Iusto repellat alias quis unde ducimus blanditiis, cumque expedita obcaecati sint perferendis praesentium voluptate dignissimos commodi tempora. Officia architecto quas inventore vero soluta, natus nesciunt culpa mollitia? Sunt incidunt quibusdam doloremque eaque perferendis, voluptate beatae quas obcaecati cumque ipsa a temporibus, ducimus adipisci quisquam quis. Nostrum impedit error assumenda blanditiis nihil!</p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h2>Section Three</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis numquam dignissimos nisi amet ratione molestiae repellendus expedita laudantium illum, velit ea quo temporibus repudiandae, nostrum vel id corporis facere. Illo eos, totam maxime numquam ea odit ullam facilis corporis, dolorem dolor explicabo modi nihil quae quidem non aperiam! Iusto repellat alias quis unde ducimus blanditiis, cumque expedita obcaecati sint perferendis praesentium voluptate dignissimos commodi tempora. Officia architecto quas inventore vero soluta, natus nesciunt culpa mollitia? Sunt incidunt quibusdam doloremque eaque perferendis, voluptate beatae quas obcaecati cumque ipsa a temporibus, ducimus adipisci quisquam quis. Nostrum impedit error assumenda blanditiis nihil!</p>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <h2>Section Four</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis numquam dignissimos nisi amet ratione molestiae repellendus expedita laudantium illum, velit ea quo temporibus repudiandae, nostrum vel id corporis facere. Illo eos, totam maxime numquam ea odit ullam facilis corporis, dolorem dolor explicabo modi nihil quae quidem non aperiam! Iusto repellat alias quis unde ducimus blanditiis, cumque expedita obcaecati sint perferendis praesentium voluptate dignissimos commodi tempora. Officia architecto quas inventore vero soluta, natus nesciunt culpa mollitia? Sunt incidunt quibusdam doloremque eaque perferendis, voluptate beatae quas obcaecati cumque ipsa a temporibus, ducimus adipisci quisquam quis. Nostrum impedit error assumenda blanditiis nihil!</p>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="skrollr.js"></script>
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+
+</body>
+</html>  

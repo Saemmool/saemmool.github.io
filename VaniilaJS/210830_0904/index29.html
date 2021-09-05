@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #15212d;
+        }
+
+        .container {
+            position: relative;
+            padding: 100px 150px;
+        }
+
+        .container h2 {
+            font-size: 4rem;
+            font-weight: 500;
+            color: #767f88;
+            margin-bottom: 40px;
+            line-height: 1.1;
+        }
+
+        .container p {
+            font-size: 1.1rem;
+            color: #767f88;
+        }
+
+        .scrollTop {
+            position: fixed;
+            bottom: 800px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: #fff url(../Images/heart.png);
+            border-radius: 50%;
+            background-size: 40px;
+            background-position: center;
+            cursor: pointer;
+            z-index: 10000;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .scrollTop.active {
+            bottom: 40px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+    <div class="container">
+        <h2>Animated Scroll t top button using Vanilla JS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magni quasi aliquid quibusdam eligendi pariatur minus eveniet ratione nesciunt libero id ex ipsam placeat eius inventore vero assumenda, accusamus eum officia temporibus sint? Autem odio nobis ullam, asperiores debitis et necessitatibus veniam obcaecati cupiditate minima quasi quia, animi explicabo vitae eum tempore magnam. Enim error, nisi distinctio commodi veniam recusandae accusamus maiores perspiciatis dolorem nam? Illum libero natus veritatis et molestiae impedit at qui ipsa explicabo quisquam. Ab, perspiciatis voluptas! Repellat sint nulla similique repellendus totam eligendi, ad ratione nisi, sit rerum accusantium perferendis facilis, soluta aperiam ullam atque alias.</p><br>
+    </div>
+
+    <script type="text/javascript">
+    
+        window.addEventListener('scroll', function() {
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500);
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    
+    </script>
+
+</body>
+</html>

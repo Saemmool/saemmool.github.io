@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #000;
+        }
+
+        section {
+            padding: 100px;
+        }
+
+        section h2 {
+            font-size: 3.5rem;
+            color: #555;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        #scrollpath {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: rgba(255,255,255,0.05);
+        }
+
+        #progressbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 50%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate 5s linear infinite;
+        }
+
+        #progressbar:before,
+        #progressbar:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(10px);
+        }
+
+        #progressbar:after {
+            filter: blur(30px);
+        }
+
+        @keyframes animate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #percent {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%) rotateX(180deg) rotateY(180deg);
+            right: 15px;
+            color: #fff;
+            font-size: 2rem;
+            writing-mode: vertical-rl;
+            text-orientation: sideways;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <div id="percent"></div>
+    <section>
+        <h2>Creative Scroll Progress Bar</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sit atque laudantium possimus veniam impedit quasi dolorem illo molestias amet saepe quia cumque adipisci consequatur tempora, labore eius magni. Doloribus officiis hic maiores facilis iusto in, delectus nulla quod eos ex quae omnis cum ab earum quos vitae modi, excepturi laborum aspernatur veritatis quam. Excepturi, possimus libero dolore, recusandae at qui accusamus consequatur enim, cumque sit reprehenderit. Blanditiis odio, corrupti numquam, adipisci dolore quibusdam expedita illo similique mollitia distinctio magni, voluptatibus quos perspiciatis aperiam et ducimus recusandae quis saepe aut dolor? Ab vero officia ullam corrupti ex. Fugiat, libero optio.</p><br>
+    </section>
+
+    <script type="text/javascript">
+    
+        var percent = document.getElementById("progressbar");
+        var percent = document.getElementById("percent");
+
+        var totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            var progress = (window.pageYOffset / totalHeight) * 100;
+            progressbar.style.height = progress + "%";
+            percent.innerHTML = "Page Scrolled " + Math.round(progress) + "%";
+        }
+    
+    </script>
+
+</body>
+</html>

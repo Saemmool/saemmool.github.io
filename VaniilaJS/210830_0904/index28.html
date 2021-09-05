@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .container .box {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .box img {
+            max-width: 80%; 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box"><img src="../Images/chevron_left.png" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80" alt="" cross-origin="anonymous"/> </div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1387&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1553970016-97408710e9c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1456154875099-97a3a56074d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1543719621-92ebcae62483?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1362&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1357&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1352&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80" alt="" cross-origin="anonymous"/></div>
+        <div class="box"><img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80" alt="" cross-origin="anonymous"/></div>
+    </div>
+
+    <script src="https://unpkg.com/grade-js/docs/dist/grade.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            /*
+                A NodeList of all your image containers (Or a single Node).
+                The library will locate an <img /> within each
+                container to create the gradient from.
+             */
+            Grade(document.querySelectorAll('.box'))
+        })
+    </script>
+
+</body>
+</html>

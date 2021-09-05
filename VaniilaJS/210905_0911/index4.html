@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section h2 {
+            font-size: 6rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+        }
+
+        .box h2 {
+            font-size: 3rem;
+        }
+
+        .box .logo {
+            max-width: 300px;
+        } 
+
+        .box2 {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            background: #000;
+        }
+
+        .box2 h2 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <h2>Scroll To Begin</h2>
+    </section>
+    <div class="box">
+        <h2 class="text1">Scrol Trigger is Awesome</h2>
+        <h2 class="text2">This is my first code</h2>
+        <h2 class="text3">Scrol Trigger is Awesome</h2>
+        <img src="../images/heart.png" alt="" class="logo">
+    </div>
+    <div class="box2">
+        <h2 class="text4">Scrol Trigger is Awesome</h2>
+        <h2 class="text5">This is my first code</h2>
+        <h2 class="text6">Scrol Trigger is Awesome</h2>
+        <img src="../images/heart.png" alt="" class="logo">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+    <script type="text/javascript">
+    
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".box",
+                start: "center center", //Animation start at thi point
+                end: "bottom top", //Animation end at this point
+                markers: false,
+                scrub: true,
+                pin : true
+            }
+        })
+        .from(".text1", { x : innerWidth * 1})
+        .from(".text2", { x : innerWidth * -1})
+        .from(".text3", { x : innerWidth * -1})
+        .from(".logo", {
+            y: innerHeight * 1,
+            rotate: 360
+        })
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".box2",
+                start: "center center", //Animation start at thi point
+                end: "bottom top", //Animation end at this point
+                markers: false,
+                scrub: true,
+                pin : true
+            }
+        })
+        .from(".box2", { opacity: 0 })
+        .from(".text4", { y : innerHeight * 1})
+        .from(".text6", { y : innerHeight * 1})
+        .from(".text5", { y : innerHeight * 1})
+    
+    </script>
+
+</body>
+</html>

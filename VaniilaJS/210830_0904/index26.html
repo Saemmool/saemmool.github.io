@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)"></div>
+        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)"></div>
+        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+    
+    var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflow: {
+    rotate: 20,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows : true
+    },
+    loop: true
+});
+    
+    </script>
+</body>
+</html>

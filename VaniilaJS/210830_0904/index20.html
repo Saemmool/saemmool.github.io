@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background: #040d15;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 12px 36px;
+            margin: 10px;
+            color: #fff;
+            background: rgba(0,0,0,0.2);
+            border-radius: 40px;
+            font-size: 18px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            overflow: hidden;
+        }
+
+        span {
+            position: absolute;
+            background: #fff;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius: 50%;
+            animation: animate 1s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.2;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <a href="#">Button</a>
+    <a href="#">Button</a>
+
+    <script type="text/javascript">
+    
+        const buttons = document.querySelectorAll('a');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter',function(e){
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+
+                setTimeout(() => {
+                    ripples.remove();
+                }, 1000);
+            })
+        })
+    
+    </script>
+
+</body>
+</html>
