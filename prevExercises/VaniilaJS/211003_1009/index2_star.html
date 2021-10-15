@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: #fff;
+            min-height: 100vh;
+        }
+
+        #header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        #header .logo {
+            color: #094b65;
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        #header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header ul li {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        #header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #094b65;
+            border-radius: 20px;
+        }
+
+        #header ul li a.active,
+        #header ul li a:hover {
+            background: #095b65;
+            color: #fff;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #094b65, transparent);
+            z-index: 10;
+        }
+
+        section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        section #text {
+            position: absolute;
+            color: #094b65;
+            font-size: 10vw;
+            text-align: center;
+            line-height: 0.55em;
+            transform: translateY(-50%);
+        }
+
+        section #text span {
+            font-size: 0.2em;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        #btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 30px;
+            background: #fff;
+            color: #094b65;
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-radius: 40px;
+            transform: translateY(100px);
+        }
+
+        .sec {
+            position: relative;
+            padding: 100px;
+            background: #094b65;
+        }
+
+        .sec h2 {
+            color: #fff;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .sec p {
+            font-size: 1em;
+            color: #fff;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>adventure</h2>
+        <img src="../Images/bird1.png" id="bird1">
+        <img src="../Images/bird2.png" id="bird2">
+        <img src="../Images/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="../Images/rocks.png" alt="" id="rocks">
+        <img src="../Images/water.png" alt="" id="water">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eum facilis perspiciatis praesentium ipsa eligendi beatae voluptates nobis? Quo nostrum ducimus facere hic iure porro nulla, voluptate dicta deserunt magnam officiis enim repudiandae animi architecto aspernatur totam minus alias explicabo voluptatem doloremque sit iste quasi non. Asperiores quis tenetur modi doloremque, similique consectetur perspiciatis sunt totam mollitia, placeat cum laboriosam quia repellat. Quam reprehenderit quasi eius tempora, est iste ullam consequuntur commodi vitae facilis, neque ut culpa dolores fugit. Optio ex voluptate distinctio officiis, aperiam voluptates fuga quas nisi sint expedita tenetur magni fugit veniam quibusdam temporibus, nulla perferendis quo.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eum facilis perspiciatis praesentium ipsa eligendi beatae voluptates nobis? Quo nostrum ducimus facere hic iure porro nulla, voluptate dicta deserunt magnam officiis enim repudiandae animi architecto aspernatur totam minus alias explicabo voluptatem doloremque sit iste quasi non. Asperiores quis tenetur modi doloremque, similique consectetur perspiciatis sunt totam mollitia, placeat cum laboriosam quia repellat. Quam reprehenderit quasi eius tempora, est iste ullam consequuntur commodi vitae facilis, neque ut culpa dolores fugit. Optio ex voluptate distinctio officiis, aperiam voluptates fuga quas nisi sint expedita tenetur magni fugit veniam quibusdam temporibus, nulla perferendis quo.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eum facilis perspiciatis praesentium ipsa eligendi beatae voluptates nobis? Quo nostrum ducimus facere hic iure porro nulla, voluptate dicta deserunt magnam officiis enim repudiandae animi architecto aspernatur totam minus alias explicabo voluptatem doloremque sit iste quasi non. Asperiores quis tenetur modi doloremque, similique consectetur perspiciatis sunt totam mollitia, placeat cum laboriosam quia repellat. Quam reprehenderit quasi eius tempora, est iste ullam consequuntur commodi vitae facilis, neque ut culpa dolores fugit. Optio ex voluptate distinctio officiis, aperiam voluptates fuga quas nisi sint expedita tenetur magni fugit veniam quibusdam temporibus, nulla perferendis quo.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eum facilis perspiciatis praesentium ipsa eligendi beatae voluptates nobis? Quo nostrum ducimus facere hic iure porro nulla, voluptate dicta deserunt magnam officiis enim repudiandae animi architecto aspernatur totam minus alias explicabo voluptatem doloremque sit iste quasi non. Asperiores quis tenetur modi doloremque, similique consectetur perspiciatis sunt totam mollitia, placeat cum laboriosam quia repellat. Quam reprehenderit quasi eius tempora, est iste ullam consequuntur commodi vitae facilis, neque ut culpa dolores fugit. Optio ex voluptate distinctio officiis, aperiam voluptates fuga quas nisi sint expedita tenetur magni fugit veniam quibusdam temporibus, nulla perferendis quo.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eum facilis perspiciatis praesentium ipsa eligendi beatae voluptates nobis? Quo nostrum ducimus facere hic iure porro nulla, voluptate dicta deserunt magnam officiis enim repudiandae animi architecto aspernatur totam minus alias explicabo voluptatem doloremque sit iste quasi non. Asperiores quis tenetur modi doloremque, similique consectetur perspiciatis sunt totam mollitia, placeat cum laboriosam quia repellat. Quam reprehenderit quasi eius tempora, est iste ullam consequuntur commodi vitae facilis, neque ut culpa dolores fugit. Optio ex voluptate distinctio officiis, aperiam voluptates fuga quas nisi sint expedita tenetur magni fugit veniam quibusdam temporibus, nulla perferendis quo.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eum facilis perspiciatis praesentium ipsa eligendi beatae voluptates nobis? Quo nostrum ducimus facere hic iure porro nulla, voluptate dicta deserunt magnam officiis enim repudiandae animi architecto aspernatur totam minus alias explicabo voluptatem doloremque sit iste quasi non. Asperiores quis tenetur modi doloremque, similique consectetur perspiciatis sunt totam mollitia, placeat cum laboriosam quia repellat. Quam reprehenderit quasi eius tempora, est iste ullam consequuntur commodi vitae facilis, neque ut culpa dolores fugit. Optio ex voluptate distinctio officiis, aperiam voluptates fuga quas nisi sint expedita tenetur magni fugit veniam quibusdam temporibus, nulla perferendis quo.</p><br>
+    </div>
+
+    <script>
+
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+    </script>
+
+</body>
+</html>

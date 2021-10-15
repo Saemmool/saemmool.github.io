@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#8b016a, #6f1159);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        #header .logo {
+            color: #fff; 
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        #header .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header .navigation.active {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background: #6f1159;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #header .navigation li {
+            margin-left: 0;
+        }
+
+        #header .navigation li a {
+            font-size: 1.5em;
+            margin: 5px 0;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        #header .navigation li {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        #header .navigation li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            background: #fff;
+            border-radius: 20px;
+        }
+
+        #header .navigatio li a.active,
+        #header .navigation li a:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        section img#lamp {
+            mix-blend-mode: screen;
+        }
+
+        section img#masjid {
+            transform: translateY(-20px);
+        }
+
+        section img#stars2 {
+                display: none;
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            right: -100%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 10vw;
+            white-space: nowrap;
+            text-shadow: 0 10px 15px rgba(0,0,0,0.25);
+        }
+
+        .sec {
+            position: relative;
+            padding: 100px;
+            background: #96283a;
+        }
+
+        .sec h2 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .sec p {
+            font-size: 1em;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        @media (max-width: 992px) {
+            #header {
+                padding: 20px;
+            }
+
+            #header .logo {
+                font-size: 1.5em;
+            }
+
+            #header .navigation {
+                display: none;
+            }
+
+            .toggle {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background: url(../Images/menu.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 10000;
+            }
+
+            .toggle.active {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: url(../Images/invalid.png);
+                background-size: 25px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .sec {
+                padding: 20px;
+            }
+
+            .sec h2 {
+                font-size: 1.5em;
+            }
+
+            section img#stars2 {
+                display: block;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+
+            section img#masjid {
+                transform: translateY(-5px)
+            }
+
+            #text {
+                font-size: 15vw;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Holiday</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="../Images/stars.png" id="stars">
+        <img src="../Images/stars2.png" alt="" id="stars2">
+        <img src="../Images/moon.png" alt="" id="moon">
+        <h2 id="text">Happy Holiday</h2>
+        <img src="../Images/rocks.png" alt="" id="rock">
+        <img src="../Images/masjid.png" alt="" id="masjid">
+        <img src="../Images/bottom.png" alt="" id="bottom">
+        <img src="../Images/lamp.png" alt="" id="lamp">
+    </section>
+
+    <div class="sec">
+        <h2>Happy holiday to you and your family</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur esse quidem cum asperiores alias consequuntur aliquam eveniet, unde temporibus exercitationem facere sit mollitia deserunt doloribus enim error magni quaerat odio. Aliquam, nulla ex? Explicabo debitis saepe nostrum ipsam, perspiciatis iure doloribus. Veniam, in nam architecto voluptates aliquam ut animi facere sequi eveniet assumenda vitae temporibus corrupti esse reprehenderit! Tempora eveniet cupiditate quis. Eos aut, saepe expedita aliquam iure maxime minima incidunt provident harum officia voluptatibus assumenda impedit ducimus ipsum officiis cumque nemo, fugit quaerat unde at! Deleniti, doloremque nihil ratione et sequi illo veniam voluptatibus, libero labore doloribus magnam.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur esse quidem cum asperiores alias consequuntur aliquam eveniet, unde temporibus exercitationem facere sit mollitia deserunt doloribus enim error magni quaerat odio. Aliquam, nulla ex? Explicabo debitis saepe nostrum ipsam, perspiciatis iure doloribus. Veniam, in nam architecto voluptates aliquam ut animi facere sequi eveniet assumenda vitae temporibus corrupti esse reprehenderit! Tempora eveniet cupiditate quis. Eos aut, saepe expedita aliquam iure maxime minima incidunt provident harum officia voluptatibus assumenda impedit ducimus ipsum officiis cumque nemo, fugit quaerat unde at! Deleniti, doloremque nihil ratione et sequi illo veniam voluptatibus, libero labore doloribus magnam.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur esse quidem cum asperiores alias consequuntur aliquam eveniet, unde temporibus exercitationem facere sit mollitia deserunt doloribus enim error magni quaerat odio. Aliquam, nulla ex? Explicabo debitis saepe nostrum ipsam, perspiciatis iure doloribus. Veniam, in nam architecto voluptates aliquam ut animi facere sequi eveniet assumenda vitae temporibus corrupti esse reprehenderit! Tempora eveniet cupiditate quis. Eos aut, saepe expedita aliquam iure maxime minima incidunt provident harum officia voluptatibus assumenda impedit ducimus ipsum officiis cumque nemo, fugit quaerat unde at! Deleniti, doloremque nihil ratione et sequi illo veniam voluptatibus, libero labore doloribus magnam.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur esse quidem cum asperiores alias consequuntur aliquam eveniet, unde temporibus exercitationem facere sit mollitia deserunt doloribus enim error magni quaerat odio. Aliquam, nulla ex? Explicabo debitis saepe nostrum ipsam, perspiciatis iure doloribus. Veniam, in nam architecto voluptates aliquam ut animi facere sequi eveniet assumenda vitae temporibus corrupti esse reprehenderit! Tempora eveniet cupiditate quis. Eos aut, saepe expedita aliquam iure maxime minima incidunt provident harum officia voluptatibus assumenda impedit ducimus ipsum officiis cumque nemo, fugit quaerat unde at! Deleniti, doloremque nihil ratione et sequi illo veniam voluptatibus, libero labore doloribus magnam.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur esse quidem cum asperiores alias consequuntur aliquam eveniet, unde temporibus exercitationem facere sit mollitia deserunt doloribus enim error magni quaerat odio. Aliquam, nulla ex? Explicabo debitis saepe nostrum ipsam, perspiciatis iure doloribus. Veniam, in nam architecto voluptates aliquam ut animi facere sequi eveniet assumenda vitae temporibus corrupti esse reprehenderit! Tempora eveniet cupiditate quis. Eos aut, saepe expedita aliquam iure maxime minima incidunt provident harum officia voluptatibus assumenda impedit ducimus ipsum officiis cumque nemo, fugit quaerat unde at! Deleniti, doloremque nihil ratione et sequi illo veniam voluptatibus, libero labore doloribus magnam.</p><br>
+    </div>
+
+    <script>
+
+        let stars = document.getElementById('stars');
+        let stars2 = document.getElementById('stars2');
+        let moon = document.getElementById('moon');
+        let rock = document.getElementById('rock');
+        let masjid = document.getElementById('masjid');
+        let text = document.getElementById('text');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.bottom = value * 0.05 + '%';
+            moon.style.bottom = value * -0.5 + 'px';
+            rock.style.bottom = value * -0.75 + 'px';
+            masjid.style.bottom = value * -0.15 + 'px';
+            text.style.right = -100 + value * 0.5 + '%';
+            text.style.top = 50 + value * 0.1 + '%';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+        const toggleMenu = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.onclick = function(){
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+
+</body>
+</html>

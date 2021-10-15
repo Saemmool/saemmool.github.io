@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #641b4e;
+        }
+
+        section {
+            position: relative;
+            padding: 100px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        section .logo {
+            position: fixed;
+            top: 30px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 2rem;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        section .bg {
+            position: absolute;
+            top: 0;
+            right: 60px;
+            height: 100%;
+        }
+
+        section .content {
+            position: relative;
+            max-width: 650px;
+            z-index: 1;
+        }
+
+        section .content h2 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1em;
+        }
+
+        section .content p {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 20px 0 10px;
+        } 
+        
+        section .content a {
+            color: #fff;
+            background: #f60f20;
+            font-size: 1rem;
+            margin: 20px 0;
+            font-weight: 500;
+            padding: 10px 30px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .copyrightText {
+            position: absolute;
+            bottom: 20px;
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 20px 0 10px;
+        }
+
+        .menuToggle {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: #f60f20 url(../Images/invalid.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menuToggle.active {
+            background: #f60f20 url(../Images/valid.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px;
+        }
+
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: calc(100% - 60px);
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        .navigation ul {
+            position: relative;
+        }
+
+        .navigation ul li {
+            position: relative;
+            list-style: none;
+            text-align: center;
+        }
+
+        .navigation ul li a {
+            font-size: 2.5rem;
+            color: #111;
+            text-decoration: none;
+            font-weight: 300;
+        }
+
+        .navigation ul li a:hover {
+            color: #f60f20;
+        }
+
+        .socialBar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 100%;
+            border-right: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navigation.active {
+            left: 0px;
+        }
+
+        .socialBar ul {
+            position: relative;
+        }
+
+        .socialBar ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        .socialBar ul li a {
+            position: relative;
+            display: inline-block;
+            transform: scale(0.6);
+        }
+
+        .socialBar a img {
+            width: 100%;
+        }
+
+        .socialBar .emailBx {
+            position: absolute;
+            bottom: 20px;
+            transform: scale(0.6);
+        }
+
+        @media (max-width: 767px) {
+            section {
+                padding: 100px 40px;
+            }
+
+            section .content h2 {
+                font-size: 2.5rem;
+            }
+
+            .navigation {
+                left: 100%;
+            }
+
+            section .bg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+            }
+
+            section .logo {
+                top: 10px;
+                font-size: 1.5rem;
+            }
+
+            .navigation ul li a {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <section>
+        <div class="logo">Creative</div>
+        <img src="https://images.unsplash.com/photo-1630360316313-89b522bb0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="" class="bg">
+        <div class="content">
+            <h2>Let's Make<br>Something Creative</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis obcaecati alias error corrupti quod est quis eum sequi totam?</p>
+            <a href="#">Get Started</a>
+        </div>
+        <p class="copyrightText">Saemmool Lee</p>
+    </section>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="socialBar">
+            <ul>
+                <li><a href="#"><img src="../Images/invalid.png" alt=""></a></li>
+                <li><a href="#"><img src="../Images/invalid.png" alt=""></a></li>
+                <li><a href="#"><img src="../Images/invalid.png" alt=""></a></li>
+            </ul>
+            <a href="mailto:you@gmail.com" class="emailBx"><img src="../Images/invalid.png" alt=""></a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.menuToggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    
+    </script>
+
+
+</body>
+</html>

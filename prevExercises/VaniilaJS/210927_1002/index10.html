@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            /* justify-content: center;
+            align-items: center;
+            flex-direction: center; */
+            flex-wrap: wrap;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .container .box {
+            position: relative;
+            width: 50%;
+            height: 50vh;
+            filter: grayscale(1);
+            border: 4px solid #000;
+        }
+
+        .container .box:hover {
+            filter: grayscale(0);
+        }
+
+        .container .box video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <video src="../Images/video1.MOV" type="video/MOV" loop class="clip" muted></video>
+        </div>
+        <div class="box">
+            <video src="../Images/video2.MOV" type="video/MOV" loop class="clip" muted></video>
+        </div>
+        <div class="box">
+            <video src="../Images/video3.MOV" type="video/MOV" loop class="clip" muted></video>
+        </div>
+        <div class="box">
+            <video src="../Images/video1.MOV" type="video/MOV" loop class="clip" muted></video>
+        </div>
+    </div>
+
+    <script>
+
+        const clip = document.querySelectorAll('.clip');
+        for (let i = 0; i<clip.length; i++){
+            clip[i].addEventListener('mouseenter', function(e){
+                clip[i].play()
+            })
+            clip[i].addEventListener('mouseout', function(e){
+                clip[i].pause()
+            })
+        }        
+
+    </script>
+
+</body>
+</html>

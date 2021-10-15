@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', san-serif;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background: #130323;
+        }
+
+        section .text {
+            position: relative;
+            text-align: center;
+            color: #00cefe;
+            margin: 40px;
+            max-width: 650px;
+        }
+        
+        section .text span {
+            position: relative;
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum magnam architecto dignissimos dolorem, fugiat aliquam iure molestiae nisi itaque vel illum quos asperiores doloremque cum! Eaque, possimus. Reiciendis harum corrupti facere similique maiores libero iure natus id, ipsam aliquid inventore odit a eum fugiat rerum porro voluptate ut eveniet ab amet aspernatur sapiente unde! Odit suscipit necessitatibus maiores dolorum impedit, quasi alias illo quod incidunt sunt exercitationem fugiat saepe atque cum quaerat, dolorem tempora repellat? Qui laborum in incidunt sed ad quis aspernatur blanditiis quo, dicta ut temporibus, possimus quia provident consequatur suscipit repellat, eius vero voluptates veniam neque recusandae!</p>
+    </section>
+
+    <script src="anime.min.js"></script>
+
+    <script>
+
+        //split words
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>")
+
+        // const animation = anime.timeline({
+        //     targets : '.text span',
+        //     easing : 'easeIntOutExpo',
+        //     loop : true,
+        // });
+
+        anime.timeline({
+            loop: true
+        })
+
+
+            .add({
+                targets: '.text span',
+                rotate : function() {
+                    return anime.random(-360,360)
+                },
+                translateX : function() {
+                    return anime.random(-500,500)
+                },
+                translateY : function() {
+                    return anime.random(-500,500)
+                },
+                duration : 5000,
+                delay: anime.stagger(20),
+            })
+
+            .add({
+                targets: '.text span',
+                rotate: 0,
+                translateX : 0,
+                translateY : 0,
+                duration: 5000,
+                delay: anime.stagger(20),
+            })
+
+    </script>
+
+
+</body>
+</html>

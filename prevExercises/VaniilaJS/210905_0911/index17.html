@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .box {
+            position: relative;
+            width: 29.7px;
+            height: 30px;
+            border: 1px solid #000;
+            background: #00f;
+        }
+
+        .box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container"></div>
+
+
+    <script type="text/javascript">
+    
+        for (let i = 1; i <= 1500; i++) {
+            const box = document.createElement('div');
+            box.classList.add('box');
+            document.querySelector('.container').appendChild(box);
+        }
+
+        const randColorBlock = document.querySelectorAll('.box');
+
+        function addcolors() {
+            randColorBlock.forEach(e=>{
+                e.style.backgroundColor = randomColor();
+            })
+        }
+
+        function randomColor(){
+            var chars = "1234567890abcdef";
+            let colorLength = 6;
+            let color = "";
+
+            for (let i = 1; i <= colorLength; i++) {
+                let randomColor = Math.floor(Math.random() * chars.length);
+                color += chars.substring(randomColor, randomColor+1)
+            }
+            return "#"+color
+        }
+        addcolors();
+    
+    </script>
+
+</body>
+</html>

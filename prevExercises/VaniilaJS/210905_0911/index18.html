@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url(../Images/bg.jpg);
+            background-size: cover;
+            background-position: bottom;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner #text {
+            position: relative;
+            font-size: 12rem;
+            color: #fff;
+        }
+
+        .banner .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .banner .clouds img {
+            position: absolute;
+            bottom: 0;
+            max-width: 100%;
+            animation: animate calc(3s * var(--i)) linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            25%,75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(3);
+            }
+        }
+
+        section { 
+            position: relative;
+            padding: 75px 100px;
+        }
+
+        section h2 {
+            position: relative;
+            font-size: 2.5rem;
+            margin-bottom: 28px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="banner">
+        <h2 id="text">Heaven</h2>
+        <div class="clouds">
+            <img src="../Images/mountain1.png" style="--i:1;">
+            <img src="../Images/mountain1.png" style="--i:2;">
+            <img src="../Images/mountain1.png" style="--i:3;">
+            <img src="../Images/mountain1.png" style="--i:4;">
+            <img src="../Images/mountain1.png" style="--i:5;">
+            <img src="../Images/mountain1.png" style="--i:6;">
+            <img src="../Images/mountain1.png" style="--i:7;">
+            <img src="../Images/mountain1.png" style="--i:8;">
+            <img src="../Images/mountain1.png" style="--i:9;">
+            <img src="../Images/mountain1.png" style="--i:10;">
+            <img src="../Images/mountain1.png" style="--i:11;">
+        </div>
+    </div>
+
+    <section>
+        <h2>Realistic Cloud Banner Effects</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio modi consequuntur laborum quos beatae aliquam minima dicta deleniti animi labore porro alias cupiditate odio delectus repellat laboriosam voluptate, dignissimos eos quisquam ea dolorum ratione nesciunt officia exercitationem! Ut delectus magni, optio voluptatibus sunt corrupti cum dolor eos placeat, aut cumque suscipit aspernatur animi est blanditiis aliquam architecto omnis similique sapiente explicabo id, accusantium ipsa. Iste dolor expedita omnis, quos, nam aspernatur consequuntur tempora earum fugiat tempore iure quaerat nemo animi cumque quasi maiores adipisci! Modi delectus facilis harum a laudantium illum aliquam, quod consequatur doloribus voluptate illo fugiat, quis beatae.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio modi consequuntur laborum quos beatae aliquam minima dicta deleniti animi labore porro alias cupiditate odio delectus repellat laboriosam voluptate, dignissimos eos quisquam ea dolorum ratione nesciunt officia exercitationem! Ut delectus magni, optio voluptatibus sunt corrupti cum dolor eos placeat, aut cumque suscipit aspernatur animi est blanditiis aliquam architecto omnis similique sapiente explicabo id, accusantium ipsa. Iste dolor expedita omnis, quos, nam aspernatur consequuntur tempora earum fugiat tempore iure quaerat nemo animi cumque quasi maiores adipisci! Modi delectus facilis harum a laudantium illum aliquam, quod consequatur doloribus voluptate illo fugiat, quis beatae.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio modi consequuntur laborum quos beatae aliquam minima dicta deleniti animi labore porro alias cupiditate odio delectus repellat laboriosam voluptate, dignissimos eos quisquam ea dolorum ratione nesciunt officia exercitationem! Ut delectus magni, optio voluptatibus sunt corrupti cum dolor eos placeat, aut cumque suscipit aspernatur animi est blanditiis aliquam architecto omnis similique sapiente explicabo id, accusantium ipsa. Iste dolor expedita omnis, quos, nam aspernatur consequuntur tempora earum fugiat tempore iure quaerat nemo animi cumque quasi maiores adipisci! Modi delectus facilis harum a laudantium illum aliquam, quod consequatur doloribus voluptate illo fugiat, quis beatae.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio modi consequuntur laborum quos beatae aliquam minima dicta deleniti animi labore porro alias cupiditate odio delectus repellat laboriosam voluptate, dignissimos eos quisquam ea dolorum ratione nesciunt officia exercitationem! Ut delectus magni, optio voluptatibus sunt corrupti cum dolor eos placeat, aut cumque suscipit aspernatur animi est blanditiis aliquam architecto omnis similique sapiente explicabo id, accusantium ipsa. Iste dolor expedita omnis, quos, nam aspernatur consequuntur tempora earum fugiat tempore iure quaerat nemo animi cumque quasi maiores adipisci! Modi delectus facilis harum a laudantium illum aliquam, quod consequatur doloribus voluptate illo fugiat, quis beatae.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio modi consequuntur laborum quos beatae aliquam minima dicta deleniti animi labore porro alias cupiditate odio delectus repellat laboriosam voluptate, dignissimos eos quisquam ea dolorum ratione nesciunt officia exercitationem! Ut delectus magni, optio voluptatibus sunt corrupti cum dolor eos placeat, aut cumque suscipit aspernatur animi est blanditiis aliquam architecto omnis similique sapiente explicabo id, accusantium ipsa. Iste dolor expedita omnis, quos, nam aspernatur consequuntur tempora earum fugiat tempore iure quaerat nemo animi cumque quasi maiores adipisci! Modi delectus facilis harum a laudantium illum aliquam, quod consequatur doloribus voluptate illo fugiat, quis beatae.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio modi consequuntur laborum quos beatae aliquam minima dicta deleniti animi labore porro alias cupiditate odio delectus repellat laboriosam voluptate, dignissimos eos quisquam ea dolorum ratione nesciunt officia exercitationem! Ut delectus magni, optio voluptatibus sunt corrupti cum dolor eos placeat, aut cumque suscipit aspernatur animi est blanditiis aliquam architecto omnis similique sapiente explicabo id, accusantium ipsa. Iste dolor expedita omnis, quos, nam aspernatur consequuntur tempora earum fugiat tempore iure quaerat nemo animi cumque quasi maiores adipisci! Modi delectus facilis harum a laudantium illum aliquam, quod consequatur doloribus voluptate illo fugiat, quis beatae.</p><br>
+    </section>
+
+    <script type="text/javascript">
+    
+        let text = document.getElementById('text');
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            text.style.marginBottom = value * 2 + 'px';
+        })
+    
+    </script>
+
+</body>
+</html>

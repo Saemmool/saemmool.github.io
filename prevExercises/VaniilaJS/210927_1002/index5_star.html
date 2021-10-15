@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .element {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #000 url('../Images/heart.png');
+            border-radius: 50%;
+            background-size: cover;
+            background-attachment: fixed;
+            border-radius: 50%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+
+        function animateBg(e){
+            let elements = document.createElement('div');
+            elements.setAttribute("class", "element");
+            document.body.appendChild(elements);
+            elements.style.left = e.clientX- 150+'px';
+            elements.style.top = e.clientY- 150+'px';
+
+            //remove element after 2 seconds
+            setTimeout(function(){
+                elements.remove()
+            },2000);
+        }
+
+        document.onmousemove = animateBg;
+
+    </script>
+</body>
+</html>

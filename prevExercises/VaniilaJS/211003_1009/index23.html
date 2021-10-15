@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: consolas;
+        }
+
+        body {
+            background: #000;
+            cursor: context-menu;
+        }
+
+        section {
+            padding: 40px;
+            color: #666;
+        }
+
+        section h2 {
+            font-size: 3.5em;
+        }
+
+        section p {
+            font-size: 1.5em;
+        }
+
+        #cursorMeter {
+            position: fixed;
+            width: 400px;
+            top: 0;
+            height: 80px;
+            /* background: #ff0;  */
+            z-index: 100000;
+        }
+
+        #scrollPath {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: #333;
+        }
+
+        #progressBar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(to left, #008aff, #00ffe7);
+            animation: animate 5s linear infinite;
+        }
+
+        #progressBar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, #008aff, #00ffe7);
+            filter: blur(10px);
+        }
+
+        #progressBar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, #008aff, #00ffe7);
+            filter: blur(30px);
+        }
+
+        @keyframes animate {
+            0%, 100% {
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        #percent {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 2px 5px;
+            background: #fff;
+            color: #333;s
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <h2>Creative Scroll Progress Bar</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit, odit suscipit iusto, nesciunt dolorum quae quisquam dolorem atque inventore molestiae aliquam modi incidunt nisi placeat nobis rerum magni animi officiis maxime sed quas eaque ratione? Adipisci quos, sed saepe necessitatibus odit nesciunt reiciendis consequuntur rem nam sapiente doloremque ipsum praesentium aspernatur ratione, in deleniti architecto maxime. Dolorem numquam consectetur ducimus dolorum, obcaecati minus sunt exercitationem asperiores harum molestiae excepturi maxime odio eaque, quod, eligendi itaque quae voluptates saepe possimus reprehenderit eos! Cumque laborum repellat cupiditate, excepturi similique numquam eos error animi, recusandae, velit id dolorum at doloremque culpa porro?</p><br>
+    </section>
+
+    <div id="cursorMeter">
+        <div id="percent">Page Scrolled</div>
+        <div id="scrollPath">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
+    <script>
+
+        let cursorMeter = document.getElementById('cursorMeter');
+        document.addEventListener('mousemove', function(e){
+            cursorMeter.style.top = e.clientY + 'px';
+            cursorMeter.style.left = e.clientX + 'px';
+        })
+
+        let percent = document.getElementById('percent');
+        let progressBar = document.getElementById('progressBar');
+
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+
+        window.onscroll = function(){
+            let progress = (window.pageYOffset / totalHeight) * 100;
+            progressBar.style.width = progress + '%';
+            percent.innerHTML = "Page Scrolled " + Math.round(progress) + "%";
+        }
+
+    </script>
+
+</body>
+</html>

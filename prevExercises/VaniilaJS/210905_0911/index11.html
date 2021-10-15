@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 900px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .imgBox {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+        }
+
+        .container .imgBox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="imgBox">
+            <img src="https://images.unsplash.com/photo-1630261234670-b9eaa949593e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1630261234670-b9eaa949593e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80" alt="">
+        </div>
+        <div class="imgBox">
+            <img src="https://images.unsplash.com/photo-1630261234670-b9eaa949593e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1630261234670-b9eaa949593e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80" alt="">
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+    <script src="hover-effect.umd.js"></script>
+    <script type="text/javascript">
+    
+        Array.from(document.querySelectorAll('.imgBox')).forEach((e) => {
+            const imgs = Array.from(e.querySelectorAll('img'));
+            new hoverEffect({
+            parent: e,
+            intensity: 0.3,
+            image1: imgs[0].getAttribute('src'),
+            image2: imgs[1].getAttribute('src'),
+            displacementImage: '../Images/bg.jpg'
+    });
+        })
+    
+    </script>
+
+</body>
+</html>

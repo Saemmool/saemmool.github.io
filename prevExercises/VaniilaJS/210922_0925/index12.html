@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: consolas;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #19172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 20%;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background: linear-gradient(#f9d924, #ff2c24);
+            animation: animate 5s ease-in-out infinite;
+        }
+
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            left: 20%;
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            background: linear-gradient(#01d6ff, #0f24f5);
+            animation: animate 5s ease-in-out infinite;
+            animation-delay: -2.5s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(20px);
+            }
+            50% {
+                transform: translateY(-20%);
+            }
+        }
+
+        .clock {
+            position: relative;
+            width: 700px;
+            height: 250px;
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .clock .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .clock .container h2 {
+            font-size: 6em;
+            color: #fff;
+        }
+
+        .clock .container h2:nth-child(odd) {
+            padding: 5px 15px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+            margin: 0 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .clock .container h2#seconds {
+            color: #f9d524;
+        }
+
+        #ampm {
+            position: relative;
+            top: -50px;
+            font-size: 2em;
+            color: #fff;
+            font-weight: 700;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="clock">
+            <div class="container">
+                <h2 id="hour">00</h2>
+                <h2 id="dot">:</h2>
+                <h2 id="minute">00</h2>
+                <h2 id="dot">:</h2>
+                <h2 id="seconds">00</h2>
+                <span id="ampm">AM</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function clock(){
+            let hours = document.getElementById('hour');
+            let minutes = document.getElementById('minute');
+            let seconds = document.getElementById('seconds');
+            let ampm = document.getElementById('ampm');
+
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+            var am = 'AM';
+
+            // Convert 24 hour time to 12 hour format with AM PM Indicaator
+            if ( h > 12){
+                h = h - 12;
+                var am = 'PM';
+            }
+
+            //add 0 to the beginning of number if less than 10 
+            h = (h < 10) ? '0' + h : h;
+            m = (m < 10) ? '0' + m : m;
+            s = (s < 10) ? '0' + s : s;
+
+            hour.innerHTML = h;
+            minute.innerHTML = m;
+            seconds.innerHTML = s;
+        }
+
+        var interval = setInterval(clock,1000);
+
+    </script>
+
+</body>
+</html>

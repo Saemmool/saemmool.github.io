@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #222;
+            min-height: 200vh;
+        }
+
+        section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .side {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        section .side#side1 {
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+
+        section .side#side2 {
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+
+        section .side video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            color: #fff;
+            padding: 50px;
+            margin-top: 150vh;
+        }
+
+        .content h2 {
+            font-size: 3em;
+        }
+
+        .content p {
+            font-size: 1.2em;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="../Images/video1.MOV" type="video/MOV" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="../Images/video1.MOV" type="video/MOV" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="content">
+        <h2>Split Video on Page Scroll</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea unde inventore repellat quos, architecto quisquam itaque delectus? Saepe, perferendis eligendi ullam ducimus vel, accusamus natus quod optio alias illo possimus nobis? Quis fuga officia ex laboriosam pariatur quae ipsa unde quo rem eligendi! Veniam voluptatibus qui vero consequuntur reprehenderit nisi quod provident tempora fugiat nobis, laborum minus ipsam aspernatur quidem corrupti animi, quisquam sunt nam dicta nesciunt? Rem at, nisi provident error eum alias odit voluptate! Consectetur ducimus, unde aut velit deleniti cum facilis pariatur ex impedit perspiciatis atque et tempora aspernatur dolor necessitatibus a? Mollitia, eligendi aliquid? Molestias, distinctio?</p>
+    </div>
+
+    <script>
+
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll', function(){
+            side1.style.left = -window.pageYOffset + 'px';
+            side2.style.left = window.pageYOffset+ 'px';
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1581353890384-b65ced80a9c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        section h2 {
+            font-size: 5rem;
+            color: #fff;
+            pointer-events: none;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        section .glass {
+            position: absolute;
+            pointer-events: none;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            background: transparent;
+            backdrop-filter: blur(10px);
+            transition: 0.2s;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <h2>Frosted Glass</h2>
+        <div class="glass"></div>
+    </section>
+
+    <script type="text/javascript">
+    
+        document.addEventListener("mousemove", function(e) {
+            const glass = document.querySelector('.glass');
+            glass.style.left = e.offsetX + 'px';
+            glass.style.top = e.offsetY + 'px';
+
+        })
+    
+    </script>
+
+</body>
+</html>

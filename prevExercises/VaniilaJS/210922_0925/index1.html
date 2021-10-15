@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 8em;
+        }
+
+        h2 .z-layer:first-child {
+            color: #f44336;
+        }
+
+        h2 .z-layer {
+            color: #b73229;
+        }
+
+        .img {
+            position: relative;
+            max-width: 200px;
+            margin: 30px;
+        }
+
+        .z-layer:first-child {
+            filter: brightness(1);
+        }
+
+        z-layer {
+            filter: brightness(0.7);
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <h2 class="emoji -layers">😀😁</h2>
+    
+    <h2 class="text-layers">Cool</h2>
+
+    <div class="img-layers">
+        <img src="../Images/bg.jpg" alt="" class="img">
+    </div>
+
+    <script src="ztext.min.js"></script>
+
+
+    <script>
+
+        var ztxt = new Ztextify(".text-layers", {
+        depth: "80px",
+        layers: 8,
+        fade: true,
+        direction: "forwards",
+        evenDirection: "reverse",
+        event: "pointer",
+        eventRotation: "35deg"
+        });
+
+        var emoji = new Ztextify(".emoji-layers", {
+        depth: "80px",
+        layers: 8,
+        fade: true,
+        direction: "forwards",
+        evenDirection: "default",
+        event: "pointer",
+        eventRotation: "35deg"
+        });
+
+        var image = new Ztextify(".img-layers", {
+        depth: "100px",
+        layers: 80,
+        fade: true,
+        direction: "forwards",
+        evenDirection: "default",
+        event: "pointer",
+        eventRotation: "35deg"
+        });
+
+
+
+    </script>
+
+</body>
+</html>

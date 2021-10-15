@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 3000px
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            transition: 1s;
+        }
+
+        header.sticky {
+            height: 80px;
+        }
+
+        header .banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1s;
+        }
+
+        header .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15vw;
+            color: #fff;
+            font-weight: 700;
+            transition: 1s;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        header.sticky .logo {
+            position: absolute;
+            font-size: 2em;
+            left: 100px;
+            transform: translate(0,-50%);
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            z-index: 1;
+        }
+
+        nav ul {
+            position: relative;
+            display: flex;
+            transition: 0.25s;
+        }
+
+        header.sticky nav ul {
+            transform: translateX(0);
+            opacity: 1;
+            transition-delay: 0.7s;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #fff;
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #ff275f;
+        }
+
+        section {
+            margin-top: 50vh;
+            padding: 100px;
+        }
+
+        section h2 {
+            font-size: 3em;
+        }
+
+        @media (max-width: 768px) {
+            section, header {
+                padding: 40px;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            header.sticky .logo {
+                left: 40px;
+            }
+
+            header.sticky .banner {
+                opacity: 0;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav.active ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 80px);
+                background: #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            header.sticky nav ul {
+                opacity: 1;
+                visibility: bisible;
+            }
+
+            nav ul li a {
+                font-size: 2em;
+            }
+
+            header.sticky .toggle {
+                position: fixed;
+                top: 15px;
+                right: 40px;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                background: #fff url(../Images/invalid.png);
+                background-size: 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            header.sticky .toggle.active {
+                background: #fff url(../Images/valid.png);
+                background-size: 25px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="../Images/bg.jpg" class="banner">
+        <a href="#" class="logo">Brand.</a>
+        <div class="toggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section>
+        <h2>Creative Fullscreen</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est voluptatem minus voluptatum error tempore non perferendis alias! Quidem at pariatur earum, sit ex ipsum voluptates reiciendis nulla! Ad provident voluptatem cupiditate dicta quis corporis aspernatur iste assumenda maiores obcaecati molestias, laboriosam error expedita soluta qui necessitatibus. Quaerat architecto necessitatibus unde a eum fugiat ad perferendis facere consectetur eius sed recusandae distinctio adipisci expedita reprehenderit earum dolor, consequuntur culpa hic nam veritatis explicabo nobis? Nostrum laudantium debitis fuga odit at, maxime commodi magnam voluptate distinctio dolorem deserunt accusantium quod magni incidunt dolorum error quibusdam neque quia repudiandae nobis. Repudiandae, natus. Vero.</p>
+    </section>
+
+    <script>
+
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+
+</body>
+</html>

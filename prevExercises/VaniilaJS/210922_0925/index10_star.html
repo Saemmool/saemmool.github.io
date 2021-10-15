@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .text {
+            position: relative;
+            transform: rotate(calc(-0.2deg * 100));
+        }
+
+        .text .txtBox {
+            position: absolute;
+            font-size: 10vw;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            cursor: default;
+            user-select: none;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .text .txtBox span {
+            color: #f00;
+            margin: 0 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="text">
+        <!-- <div class="txtBox">Just <span>4</span> Fun</div> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        for (let i = 1; i <= 100; i++) {
+            let box = document.createElement('div');
+            box.classList.add('txtBox');
+            box.innerHTML = "Just <span>4</span> Fun";
+            document.querySelector('.text').appendChild(box)
+        }
+
+        document.body.addEventListener("mousemove", e => {
+            gsap.to('.txtBox', {
+                x : e.clientX,
+                y : e.clientY,
+                stagger: - 0.01,
+                rotate: (i, target) => {
+                    return (i + 1) * 0.2
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>

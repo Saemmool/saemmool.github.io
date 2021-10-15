@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url(../Images/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            cursor: url('../Images/invalid.png'), pointer;
+        }
+
+        section:active {
+            cursor: url('../Images/valid.png'), pointer;
+        }
+
+        .bullet {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: url(../Images/heart.png);
+            pointer-events: none;
+            transform: translate(30px, 30px);
+        }
+
+        .blood {
+            position: absolute;
+            display: inline-block;
+            width: 400px;
+            height: 400px;
+            z-index: 1000;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            animation: fadeOut 4s linear infinite;
+            background-size: cover;
+        }
+
+        @keyframes fadeOut {
+            0%, 50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+
+        <audio src=".." id="audio" autostart="false"></audio>
+
+    </section>
+
+    <script>
+
+        document.addEventListener('click', function(e) {
+            let body = document.querySelector('body');
+            let bullet = document.createElement('span');
+            bullet.classList.add('bullet');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            bullet.style.left = x + 'px';
+            bullet.style.top = y + 'px';
+            body.appendChild(bullet);
+
+        // add bullet sound on click
+            let sound = document.getElementById('audio');
+            sound.play();
+
+            //add random blood image 
+
+            let images = [
+                'url("../Images/heart.png")',
+                'url("../Images/heart.png")',
+                'url("../Images/heart.png")',
+                'url("../Images/heart.png")',
+            ];
+
+            //appear blood on screen after click 
+
+            let blood = document.createElement('span');
+            blood.classList.add('blood');
+
+            let bg = images[Math.floor(Math.random() * images.length)];
+            blood.style.backgroundImage = bg;
+
+            blood.style.left = Math.random() * innerWidth + 'px';
+            blood.style.top = Math.random() * innerHeight + 'px';
+            body.appendChild(blood);
+
+                // remove bullet after a seconds 
+                setTimeout(function(){
+            bullet.remove();
+            blood.remove();
+        },4000);
+
+        })
+
+
+
+    </script>
+
+</body>
+
+
+</html>
