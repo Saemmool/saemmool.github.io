@@ -268,7 +268,7 @@ h1 .glowing2 {
 }
 
 .glowing2:nth-child(1) {
-     animation-delay: 0s; 
+    animation-delay: 0s; 
 }
 .glowing2:nth-child(2) {
     animation-delay: 0.25s; 
@@ -585,7 +585,7 @@ h1:after {
     color: rgba(255,255,255,.1);
     background-image: url(images/sea.jpeg);
     background-repeat: repeat-x;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     animation: fillingmove 15s linear infinite; 
 }
 
