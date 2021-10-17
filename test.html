@@ -11,32 +11,93 @@
 </head>
 <body>
 
-    <div id="toggle"></div>
-    <div id="sidebar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Others</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <header id="logo">Saemmmool Lee (Seoul, South Korea)</header>
+    <div class="side">
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Others</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
+    <div id="toggle"></div>
+
+    <div class="main">
+        <div class="container">
+            <section class="intro">
+                <!-- <a href="#" class="logo" id="logo">Saemmool Lee<br><span>Seoul, South Korea</span></a> -->
+                <div class="story01"><span class="general">I write and code.<br><span>I believe that the future of journalism lies in tech. I explore, experiment, and pioneer ways to deliever quality journalism using code.</span></span></div>
+                <div class="scroll"><ion-icon name="chevron-down-outline"></ion-icon></div>
+            </section>
+
+            <!-- <div class="line-center"></div> -->
+
+            <section class="projects">
+                <div class="story02"><span class="general">Featured Projects</span></div>
+                <div class="content-wrapper">
+                    <div class="contentbox">
+                        <div class="imgbox"></div>
+                        <h2>One-dimensional Men</h2>
+                        <p class="description">Lorem ipsum dolor sit amet.</p>
+
+                    </div>
+                    <div class="contentbox">
+                        <div class="imgbox"></div>
+                        <h2>To Live or To Have</h2>
+                        <p class="description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="contentbox">
+                        <div class="imgbox"></div>
+                        <h2>Thoughtless World</h2>
+                        <p class="description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="contentbox">
+                        <div class="imgbox"></div>
+                        <h2>The Best and the Brightest</h2>
+                        <p class="description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="story03"><p>Saemmool Lee is a multimedia journalist and published author based in Seoul, South Korea.
+                        <br><br>She started her career as a beat reporter at the <a href="http://www.donga.com/en/Docs" target="_blank">Dong-A Ilbo</a>, one of the biggest and oldest daily newspapers in Seoul, covering a wide range of beats from crime to business for six years. Then she earned her master's degree from the <a href="https://journalism.berkeley.edu/" target="_blank">UC Berkeley Graduate School of Journalism</a>('19) with a concentration in multimedia. During her graduate studies, she worked at the <a href="https://citris-uc.org" target="_blank">Center for Information Technology Research in the Interest of Society (CITRIS) and the Banatao Institute</a> communications team, where she produced various content about startups, technologies and research initiatives. 
+                        <br><br>
+                        Currently, she is leading the Dong-A Ilbo's flagship multimedia projects. Her works include "<a href="https://original.donga.com/2020/lost1">Jeungbal(Evaporation)</a>", which won the Grand Prize of the "Digital Journalism Awards" in Korea as well as the "Journalist of the Month Award" by the Journalist Association of Korea.
+                        <br><br>She has authored six books, and published numerous stories which you can find <a href="writing.html" target="_blank">here</a>.</p>
+
+                </p></div>
+            </section>
+    
+        </div>
+    
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
     <script>
 
         const toggle = document.getElementById('toggle');
         const sidebar = document.getElementById('sidebar');
+        const main = document.querySelector('main');
 
         document.onclick = function(e){
             if(e.target.id !=='sidebar' && e.target.id !=='toggle') {
                 toggle.classList.remove('active');
-            sidebar.classList.remove('active');
+                sidebar.classList.remove('active');
+                main.classList.remove('active');
             }
         }
 
         toggle.onclick = function(){
             toggle.classList.toggle('active');
             sidebar.classList.toggle('active');
+            main.classList.toggle('active');
         }
 
     </script>

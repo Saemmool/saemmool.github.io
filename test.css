@@ -1,19 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Raleway:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, "Arial", sans-serif;
+    font-family: Lora, sans-serif;
+    /* overflow-x: hidden; */
 }
 
 body {
+    position: relative;
     background: #FFF;
+}
+
+header {
+    position: fixed;
+    text-decoration: none;
+    font-size: 0.8rem;
+    background: #fff;
+    color: #999;
+    right: 20px;
+    top: 10px;
+    z-index: 1000;
+}
+
+.side {
+    width: 100px;
 }
 
 #toggle {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 10px;
     width: 60px;
     height: 60px;
@@ -63,6 +83,7 @@ body {
     border-right: 0.5px solid lightgrey;
     border-left: 0.5px solid lightgrey;
     transition: 0.5s;
+    z-index: 999;
 }
 
 #sidebar.active {
@@ -71,8 +92,7 @@ body {
 
 #sidebar ul {
     position: relative;
-    transform: translateY(30%);
-    margin-top: 50px;
+    transform: translateY(20vh);
     height: 100vh;
 }
 
@@ -94,18 +114,178 @@ body {
     transition: 0.5s;
 }
 
-#sidebar li:hover::after {
-    width: 50%;
-}
+/* #sidebar li:hover::after {
+    width: 35%;
+} */
 
-#sidebar ul li:hover {
-    border: 1px bottom #999;
+#sidebar ul li a:hover {
+    color: #999;
 }
 
 #sidebar ul li a {
-    color: #999;
+    color: #000;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 2rem;
     letter-spacing: 2px;
+    line-height: 1.5em;
 }
+
+/* main */
+
+.main {
+    position: absolute;
+    width: calc(100% - 100px);
+    left: 100px;
+    /* border: 1px solid; */
+}
+
+
+.main .container {
+    position: relative;
+    top: 0;
+    left: 140px;
+    transition: 0.5s ease-in-out;
+    width: calc(100% - 40px);
+}
+
+.main.active {
+    left: 640px;
+    transition: 0.5s ease-in-out;
+}
+
+.main section {
+    position: relative;
+    min-height: 100vh;
+    width: 70%;
+    margin: 20px;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+/* .line-center {
+    position: relative;
+    left: 40%;
+    height: 180px;
+    width: 1px;
+    background: #999;
+} */
+
+span.general {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+/* story 01 */
+
+.story01 {
+    position: absolute;
+    margin: auto;
+    top: 30vh;
+}
+
+.story01 .general span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #CBCFD3;
+}
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+
+.scroll ion-icon {
+    font-size: 2rem;
+    color: #999;
+}
+
+/* story 02 */
+
+
+.story02 {
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px 0;
+    width: 80%;
+}
+
+.content-wrapper .contentbox {
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    background: #CBCFD3;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content-wrapper .contentbox .imgbox {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.contentbox .imgbox::before {
+    content: 'Coming Soon';
+    display: flex;
+}
+
+.content-wrapper .contentbox img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.contentbox h2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contentbox p {
+    text-align: center;
+}
+
+
+p.description {
+    font-family: 'Lora', sans-serif;
+    font-size: 1rem;
+}
+
+section.about {
+    margin-top: 200px;
+}
+
+
+@media (max-width: 768px) {
+
+
+
+    #sidebar ul li a {
+        font-size: 25px;
+    }
+
+    .story01 {
+        font-size: 25px;
+    }
+
+    .story01 span {
+        font-size: 25px;
+    }
+}
+
 
