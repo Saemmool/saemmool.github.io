@@ -15,6 +15,7 @@
     --grey: #CBCFD3;
     --grey2: #707070;
     --medium: 32px;
+    --midsmall: 24px;
     --small: 18px;
 }
 
@@ -186,7 +187,6 @@ section {
 }
 
 span.black_sentence {
-    position: relative;
     margin: auto;
     font-family: 'Oswald', sans-serif;
     font-size: var(--medium);
@@ -292,6 +292,14 @@ section#about {
     .container.active {
         display: none;
         visibility: hidden;
+    }
+
+    span.black_sentence {
+        font-size: var(--midsmall);
+    }
+    
+    span.grey_sentence {
+        font-size: var(--midsmall);
     }
 
 
