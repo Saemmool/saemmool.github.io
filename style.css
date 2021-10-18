@@ -177,20 +177,22 @@ section {
     background: #999;
 } */
 
-span.general {
+
+/* Home */
+
+.story {
+    position: absolute;
+    top: 40vh;
+}
+
+span.black_sentence {
+    position: relative;
+    margin: auto;
     font-family: 'Oswald', sans-serif;
     font-size: var(--medium);
 }
 
-/* story 01 */
-
-.story01 {
-    position: absolute;
-    margin: auto;
-    top: 30vh;
-}
-
-.story01 .general span {
+span.grey_sentence {
     font-family: 'Oswald', sans-serif;
     font-size: var(--medium);
     color: #CBCFD3;
@@ -207,13 +209,13 @@ span.general {
     color: #999;
 }
 
-/* story 02 */
+/* Projects */
 
-
-.story02 {
-    position: relative;
-    top: 0;
+.projectbox {
+    position: absolute;
     width: 100%;
+    min-height: 100vh;
+    margin: 50px 0;
 }
 
 .content-wrapper {
@@ -270,9 +272,19 @@ p.description {
     font-size: 1rem;
 }
 
-section.about {
+/* about box */
+
+section#about {
     margin-top: 200px;
 }
+
+.aboutbox {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    margin: 100px 0;
+}
+
 
 
 @media (max-width: 768px) {
