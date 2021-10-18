@@ -147,7 +147,7 @@ header {
 }
 
 .container.active {
-    left: 640px;
+    left: 400px;
     transition: 0.5s ease-in-out;
 }
 
@@ -271,6 +271,10 @@ section.about {
 
 @media (max-width: 768px) {
 
+    .container.active {
+        display: none;
+        visibility: hidden;
+    }
 
 
     #sidebar ul li a {
