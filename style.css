@@ -27,8 +27,14 @@ header {
     z-index: 1000;
 }
 
+.main {
+    position: relative;
+    display: flex;
+}
+
 .side {
-    width: 100px;
+    width: 20%;
+    height: 100vh;
 }
 
 #toggle {
@@ -130,30 +136,22 @@ header {
     line-height: 1.5em;
 }
 
-/* main */
+/* rightside */
 
-.main {
-    position: absolute;
-    width: calc(100% - 100px);
-    left: 100px;
-    /* border: 1px solid; */
-}
-
-
-.main .container {
+.container {
     position: relative;
+    width: 80%;
+    min-height: 100vh;
     top: 0;
-    left: 140px;
     transition: 0.5s ease-in-out;
-    width: calc(100% - 40px);
 }
 
-.main.active {
+.container.active {
     left: 640px;
     transition: 0.5s ease-in-out;
 }
 
-.main section {
+section {
     position: relative;
     min-height: 100vh;
     width: 70%;
@@ -194,7 +192,7 @@ span.general {
 .scroll {
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 80%;
 }
 
 .scroll ion-icon {

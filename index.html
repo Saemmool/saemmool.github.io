@@ -12,7 +12,9 @@
 <body>
 
     <header id="logo">Saemmmool Lee (Seoul, South Korea)</header>
+    <div class="main">
     <div class="side">
+        <div id="toggle"></div>
         <div id="sidebar">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -23,9 +25,7 @@
             </ul>
         </div>
     </div>
-    <div id="toggle"></div>
 
-    <div class="main">
         <div class="container">
             <section class="intro">
                 <!-- <a href="#" class="logo" id="logo">Saemmool Lee<br><span>Seoul, South Korea</span></a> -->
@@ -84,20 +84,20 @@
 
         const toggle = document.getElementById('toggle');
         const sidebar = document.getElementById('sidebar');
-        const main = document.querySelector('main');
+        const container = document.querySelector('.container');
 
         document.onclick = function(e){
             if(e.target.id !=='sidebar' && e.target.id !=='toggle') {
                 toggle.classList.remove('active');
                 sidebar.classList.remove('active');
-                main.classList.remove('active');
+                container.classList.remove('active');
             }
         }
 
         toggle.onclick = function(){
             toggle.classList.toggle('active');
             sidebar.classList.toggle('active');
-            main.classList.toggle('active');
+            container.classList.toggle('active');
         }
 
     </script>
