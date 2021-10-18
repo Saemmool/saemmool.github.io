@@ -212,7 +212,7 @@ span.grey_sentence {
 /* Projects */
 
 .projectbox {
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     margin: 50px 0;
@@ -279,7 +279,7 @@ section#about {
 }
 
 .aboutbox {
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     margin: 100px 0;
