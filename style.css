@@ -11,6 +11,13 @@
     /* overflow-x: hidden; */
 }
 
+:root {
+    --grey: #CBCFD3;
+    --grey2: #707070;
+    --medium: 32px;
+    --small: 18px;
+}
+
 body {
     position: relative;
     background: #FFF;
@@ -172,7 +179,7 @@ section {
 
 span.general {
     font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
+    font-size: var(--medium);
 }
 
 /* story 01 */
@@ -185,7 +192,7 @@ span.general {
 
 .story01 .general span {
     font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
+    font-size: var(--medium);
     color: #CBCFD3;
 }
 
@@ -217,39 +224,38 @@ span.general {
     width: 80%;
 }
 
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    margin: 10px 0;
+}
+
 .content-wrapper .contentbox {
     border: 1px solid rgba(0,0,0,0.05);
-    padding: 30px 10px;
+    padding: 20px 20px;
     display: flex;
-    flex-direction: column;
-    background: #CBCFD3;
+    background: #fff;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    flex-direction: column;
+    
 }
 
 .content-wrapper .contentbox .imgbox {
-    position: relative;
     width: 300px;
     height: 300px;
-    background-color: #fff;
 }
+
 
 .contentbox .imgbox::before {
     content: 'Coming Soon';
-    display: flex;
-}
-
-.content-wrapper .contentbox img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
+    text-align: center;
 }
 
 
 .contentbox h2 {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: var(--small);
     text-align: center;
     text-transform: uppercase;
 }
@@ -281,13 +287,13 @@ section.about {
         font-size: 25px;
     }
 
-    .story01 {
-        font-size: 25px;
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+        margin: 10px 0;
     }
 
-    .story01 span {
-        font-size: 25px;
-    }
 }
 
 
