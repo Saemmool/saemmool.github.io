@@ -40,7 +40,7 @@ header {
 }
 
 .side {
-    width: 20%;
+    width: 20vw;
     height: 100vh;
 }
 
@@ -147,7 +147,7 @@ header {
 
 .container {
     position: relative;
-    width: 80%;
+    width: 80vw;
     min-height: 100vh;
     top: 0;
     transition: 0.5s ease-in-out;
@@ -182,7 +182,7 @@ section {
 
 .story {
     position: absolute;
-    top: 40vh;
+    top: 200px;
 }
 
 span.black_sentence {
