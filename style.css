@@ -289,6 +289,23 @@ section#about {
 
 @media (max-width: 768px) {
 
+
+    .main {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        box-sizing: content-box;
+    }
+
+    .side {
+        width: 15vw;
+        height: 100vh;
+    }
+
+    .container {
+        width: 85vw;
+    }
+
+
     .container.active {
         display: none;
         visibility: hidden;
