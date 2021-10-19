@@ -331,6 +331,11 @@ section#about {
         margin: 10px 0;
     }
 
+    .content-wrapper .contentbox .imgbox {
+        width: 250px;
+        height: 250px;
+    }
+
 }
 
 
