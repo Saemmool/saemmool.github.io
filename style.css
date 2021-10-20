@@ -8,13 +8,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Lora, sans-serif;
+    font-family: HelvetiaBold, "Arial", sans-serif;
+    /* font-family: Lora, sans-serif; */
     /* overflow-x: hidden; */
 }
 
 :root {
     --grey: #CBCFD3;
     --grey2: #707070;
+    --large: 45px;
     --medium: 32px;
     --midsmall: 24px;
     --small: 18px;
@@ -23,6 +25,7 @@
 body {
     position: relative;
     background: #FFF;
+    transition: 0.5s ease-in-out;
 }
 
 header {
@@ -97,12 +100,13 @@ header {
     background: #fff;
     border-right: 0.5px solid lightgrey;
     border-left: 0.5px solid lightgrey;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     z-index: 999;
 }
 
 #sidebar.active {
     left: 40px;
+    transition: 0.5s ease-in-out;
 }
 
 #sidebar ul {
@@ -140,8 +144,10 @@ header {
 #sidebar ul li a {
     color: #000;
     text-decoration: none;
-    font-size: 2rem;
-    letter-spacing: 2px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    font-size: var(--medium);
+    color: var(--grey);
     line-height: 1.5em;
 }
 
@@ -157,18 +163,18 @@ header {
 
 .container.active {
     left: 400px;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 section {
     position: relative;
     min-height: 100vh;
     width: 70%;
-    margin: 20px;
+    padding: 50px;
     /* display: flex;
     flex-direction: column; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 /* .line-center {
@@ -187,16 +193,44 @@ section {
     top: 200px;
 }
 
-span.black_sentence {
+h2.black_sentence {
     margin: auto;
-    font-family: 'Oswald', sans-serif;
-    font-size: var(--medium);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    font-size: var(--large);
+}
+
+h2.black_sentence span {
+    color: var(--grey);
+}
+
+h2.darkgrey_sentence {
+    margin: auto;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    font-size: var(--large);
+    color: var(--grey2);
+}
+
+/* span.black_sentence {
+    margin: auto;
+    font-family: HelvetiaBold, "Arial", sans-serif;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    font-size: var(--large);
+} */
+
+/* span.black_sentence span {
+    color: var(--grey2);
 }
 
 span.darkgrey_sentence {
     margin: auto;
-    font-family: 'Oswald', sans-serif;
-    font-size: var(--medium);
+    font-family: HelvetiaBold, "Arial", sans-serif;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    font-size: var(--large);
     color: var(--grey2);
 }
 
@@ -204,7 +238,7 @@ span.grey_sentence {
     font-family: 'Oswald', sans-serif;
     font-size: var(--medium);
     color: #CBCFD3;
-}
+} */
 
 .scroll {
     position: absolute;
@@ -291,39 +325,71 @@ section#about {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    margin: 200px 0;
+    margin: 50px 0;
 }
 
-.story-wrapper {
-    margin: 20px 0;
-    width: 90%;
+
+.profpic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
 }
 
-span.black_smaller {
-    margin: auto;
-    font-family: 'Oswald', sans-serif;
+.profpic img {
+    width: 300px;
+    height: 300px;
+}
+
+ul.experience {
+    position: relative;
+    list-style: none;
+}
+
+li.experience_item {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid var(--grey); */
+    display: flex;
+    flex-direction: row;
+    /* padding: 20px 20px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.experience_number {
+    margin: 0 20px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1;
     font-size: var(--midsmall);
+    color: var(--grey);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-span.darkgrey_smaller {
+h4.experience_title {
     margin: auto;
-    font-family: 'Oswald', sans-serif;
+    letter-spacing: -1.5px;
+    line-height: 1;
     font-size: var(--midsmall);
     color: var(--grey2);
 }
 
-span.grey_smaller {
-    font-family: 'Oswald', sans-serif;
-    font-size: var(--midsmall);
-    color: #CBCFD3;
+.experience_box {
+    display: block;
 }
 
-
-p.black_sentence {
+p.experience_description {
     margin: auto;
-    font-family: 'Lora', sans-serif;
-    font-size: var(--small);
+    padding-top: 20px;
+    line-height: 1;
+    font-size: var(-small);
 }
+
+
 
 
 
