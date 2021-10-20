@@ -446,6 +446,10 @@ p.experience_description {
         height: 225px;
     }
 
+    li.experience_item {
+        flex-direction: column;
+    }
+
 
 }
 
