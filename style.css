@@ -422,17 +422,17 @@ p.experience_description {
     }
 
     h2.black_sentence {
-        font-size: var(--midsmall);
+        font-size: var(--medium);
         font-weight: 500;
     }
     
     h2.grey_sentence {
-        font-size: var(--midsmall);
+        font-size: var(--medium);
         font-weight: 500;
     }
 
     h2.darkgrey_sentence {
-        font-size: var(--midsmall);
+        font-size: var(--medium);
         font-weight: 500;
     }
 
