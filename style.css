@@ -421,12 +421,11 @@ p.experience_description {
         width: 80%;
     }
 
-    span.black_sentence {
+    h2.black_sentence {
         font-size: var(--midsmall);
-        font-weight: 300;
     }
     
-    span.grey_sentence {
+    h2.grey_sentence {
         font-size: var(--midsmall);
     }
 
@@ -447,9 +446,6 @@ p.experience_description {
         height: 225px;
     }
 
-    .story-wrapper {
-        width: 100%;
-    }
 
 }
 
