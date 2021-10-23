@@ -213,6 +213,10 @@ h2.darkgrey_sentence {
     color: var(--grey2);
 }
 
+h2.darkgrey_sentence span {
+    color: var(--grey);
+}
+
 .scroll {
     position: absolute;
     left: 50%;
@@ -346,6 +350,15 @@ li.experience_item:nth-child(2) {
     color: var(--grey2);
 }
 
+.backtotop {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.backtotop a {
+    text-decoration: none;
+    font-size: var(--small);
+}
 
 
 @media (max-width: 768px) {
