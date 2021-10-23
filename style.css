@@ -213,7 +213,7 @@ h2.darkgrey_sentence {
     color: var(--grey2);
 }
 
-h2.darkgrey_sentence span {
+h2.darkgrey_sentence a {
     color: var(--grey);
 }
 
