@@ -169,7 +169,7 @@ header {
 section {
     position: relative;
     min-height: 100vh;
-    width: 100%;
+    width: 80%;
     padding: 100px;
     /* display: flex;
     flex-direction: column; */
@@ -316,17 +316,18 @@ li.experience_item {
     flex-direction: row;
     background: #f1f1f1;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
+    text-align: center;
 }
 
 li.experience_item:nth-child(2) {
     background: #f8f8f8;
 }
 
-.experience_number {
+.experience_title {
     margin: 0;
     padding: 20px;
-    width: 250px;
+    width: 30%;
     font-weight: 300;
     line-height: 1;
     font-size: 20px;
@@ -334,14 +335,16 @@ li.experience_item:nth-child(2) {
 }
 
 .experience_box {
-    max-width: 600px;
+    width: 70%;
     margin: auto;
     display: block;
-    padding: 20px;
-    font-size: var(-small);
+    padding: 20px 40px;
+    font-size: 18px;
 }
 
-
+.experience_box a {
+    color: var(--grey2);
+}
 
 
 
@@ -355,12 +358,12 @@ li.experience_item:nth-child(2) {
     }
 
     .side {
-        width: 15vw;
+        width: 5%;
         height: 100vh;
     }
 
     .container {
-        width: 85vw;
+        width: 95%;
     }
 
 
@@ -370,7 +373,11 @@ li.experience_item:nth-child(2) {
     }
 
     section {
-        width: 80%;
+        width: 100%;
+    }
+
+    .story {
+        padding: 10px;
     }
 
     h2.black_sentence {
@@ -407,6 +414,16 @@ li.experience_item:nth-child(2) {
 
     li.experience_item {
         flex-direction: column;
+    }
+
+    .experience_title {
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .experience_box {
+        width: 100%;
+        padding: 20px;
     }
 
 
