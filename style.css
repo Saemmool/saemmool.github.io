@@ -238,19 +238,20 @@ h2.darkgrey_sentence a {
 }
 
 .content-wrapper {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 10px 0;
     width: 80%;
 }
-
+/* 
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 20px;
     margin: 10px 0;
-}
+} */
 
 .content-wrapper .contentbox {
     border: 1px solid rgba(0,0,0,0.05);
