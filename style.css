@@ -392,11 +392,12 @@ section#contact {
 
     section {
         width: 100%;
-        padding: 35px;
+        margin: 0px;
+        padding: 45px;
     }
 
     .story {
-        padding: 10px;
+        padding: 0px;
     }
 
     h2.black_sentence {
@@ -423,7 +424,6 @@ section#contact {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 20px;
-        margin: 10px 0;
     }
 
     .content-wrapper .contentbox .imgbox {
@@ -431,18 +431,24 @@ section#contact {
         height: 225px;
     }
 
+    .aboutbox {
+        margin: 0px;
+    }
+
     li.experience_item {
         flex-direction: column;
+        padding: 10px;
+        margin:  0;
     }
 
     .experience_title {
-        padding: 20px;
+        padding: 10px;
         width: 100%;
     }
     
     .experience_box {
         width: 100%;
-        padding: 20px;
+        padding: 10px;
     }
 
 
