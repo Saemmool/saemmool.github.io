@@ -299,10 +299,10 @@ section#about {
 }
 
 .aboutbox {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
+    position: absolute;
+    /* width: 100%;
+    min-height: 100vh; */
+    margin: 20px;
 }
 
 ul.experience {
@@ -358,6 +358,11 @@ li.experience_item:nth-child(2) {
 .backtotop a {
     text-decoration: none;
     font-size: var(--small);
+}
+
+section#contact {
+    position: relative;
+    margin-top: 200px;
 }
 
 
