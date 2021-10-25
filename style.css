@@ -218,9 +218,11 @@ h2.darkgrey_sentence a {
 }
 
 .scroll {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 80%;
+    /* background: #fff; */
+    z-index: 1000;
 }
 
 .scroll ion-icon {
@@ -319,14 +321,14 @@ li.experience_item {
     /* border: 1px solid var(--grey); */
     display: flex;
     flex-direction: row;
-    background: #f1f1f1;
+    border: solid 0.1px #f1f1f1;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-li.experience_item:nth-child(2) {
-    background: #f8f8f8;
+li.experience_item:hover {
+    background: #f7f6ff;
 }
 
 .experience_title {
