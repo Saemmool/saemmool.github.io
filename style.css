@@ -345,6 +345,7 @@ li.experience_item:nth-child(2) {
     display: block;
     padding: 20px 40px;
     font-size: 18px;
+    text-align: left;
 }
 
 .experience_box a {
@@ -365,6 +366,17 @@ section#contact {
     position: relative;
     margin-top: 200px;
 }
+
+#contact p {
+    font-size: 20px;
+}
+
+#contact p span a {
+    color: var(--grey2);
+    text-decoration: none;
+}
+
+
 
 
 @media (max-width: 768px) {
