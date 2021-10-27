@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Quattrocento:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -30,13 +31,43 @@ body {
 
 header {
     position: fixed;
-    text-decoration: none;
-    font-size: 0.8rem;
+    width: 100%;
+    height: 100px;
     background: #fff;
-    color: #999;
-    right: 20px;
-    top: 10px;
+    align-items: center;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+header .logo {
+    position: relative;
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #000;
+    align-items: center;
+    text-align: right;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+header ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+header ul li a {
+    color: #000;
 }
 
 .main {
@@ -48,6 +79,8 @@ header {
     width: 5%;
     height: 100vh;
 }
+
+
 
 #toggle {
     position: fixed;
@@ -148,6 +181,8 @@ header {
     letter-spacing: -1.5px;
     font-size: var(--medium);
     color: var(--grey);
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 700;
     line-height: 1.5em;
 }
 
@@ -158,7 +193,7 @@ header {
     width: 95%;
     min-height: 100vh;
     top: 0;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .container.active {
@@ -217,7 +252,7 @@ h2.darkgrey_sentence a {
     color: var(--grey);
 }
 
-.scroll {
+.arrow {
     position: fixed;
     left: 50%;
     top: 80%;
@@ -225,7 +260,11 @@ h2.darkgrey_sentence a {
     z-index: 1000;
 }
 
-.scroll ion-icon {
+.arrow.up ion-icon{
+    transform: rotate(-180deg);
+}
+
+.arrow ion-icon {
     font-size: 2rem;
     color: #999;
 }
