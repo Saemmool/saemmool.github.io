@@ -70,6 +70,10 @@ header ul li a {
     color: #000;
 }
 
+header.active {
+    display: none;
+}
+
 .main {
     position: relative;
     display: flex;

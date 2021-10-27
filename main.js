@@ -6,12 +6,14 @@
     const toggle = document.getElementById('toggle');
     const sidebar = document.getElementById('sidebar');
     const container = document.querySelector('.container');
+    const header = document.querySelector('header');
 
     document.onclick = function(e){
         if(e.target.id !=='sidebar' && e.target.id !=='toggle') {
             toggle.classList.remove('active');
             sidebar.classList.remove('active');
             container.classList.remove('active');
+            header.classList.remove('active');
         }
     }
 
@@ -19,6 +21,7 @@
         toggle.classList.toggle('active');
         sidebar.classList.toggle('active');
         container.classList.toggle('active');
+        header.classList.toggle('active');
     }
 
     // mode
