@@ -33,7 +33,7 @@ header {
     position: fixed;
     width: 100%;
     height: 100px;
-    background: #fff;
+    background: rgb(250, 250, 250);
     align-items: center;
     z-index: 1000;
     display: flex;
