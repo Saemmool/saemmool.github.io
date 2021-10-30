@@ -155,7 +155,7 @@ section {
 .writing_img {
     height: 300px;
     width: 600px;
-    background-image: url('images/img7.JPG');
+    background-image: url('images/img8.jpeg');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -170,7 +170,9 @@ section {
     text-align: center;
 }
 
-.writing_content a {
+.writing a {
+    width: 100%;
+    height: auto;
     text-decoration: none;
     color: #000;
 }
