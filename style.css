@@ -170,6 +170,11 @@ section {
     text-align: center;
 }
 
+.writing_content a {
+    text-decoration: none;
+    color: #000;
+}
+
 .writing_content h2 {
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
@@ -288,6 +293,51 @@ section {
 .storybox a {
     color: #000;
 }
+
+/* Writing */
+
+.writing_container {
+    position: relative;
+    min-height: 100vh;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.writing_box {
+    display: flex;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.writing_box h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 20px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.writing_list {
+    text-align: left;
+}
+
+.writing_list h3 {
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.writing_list ul li {
+    list-style: none;
+    line-height: 25px;
+}
+
+.writing_list ul li a {
+    color: #000;
+}
+
 
 @media(max-width: 768px) {
 
