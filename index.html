@@ -4,120 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saemmool Lee's website."/>
-    <title>Saemmool Lee</title>
-
+    <title>Saemmool Lee's Website</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-
     <header>
-        <h2 class="logo">Saemmool Lee</h2>
-        <ul class="icons">
-            <li><a href="mailto:diasporawriter@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
-            <li><a href="https://www.linkedin.com/in/saemmool/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        </ul>
+        <h4>Home</h4>
+        <h4>About</h4>
     </header>
-    <div class="main">
-    <div class="side">
-        <div id="toggle"></div>
-        <div id="sidebar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-
+    <main>
         <div class="container">
-            <div class="arrow"><ion-icon name="chevron-down-outline"></ion-icon></div>
-            <section id="home">
-                <!-- <a href="#" class="logo" id="logo">Saemmool Lee<br><span>Seoul, South Korea</span></a> -->
-                <div class="story">
-                    <h2 class="black_sentence">I write and code.<br><span>I explore, experiment, and pioneer ways to deliever quality journalism using code.</span></h2>
+            <section class="intro">
+                <h1>Saemmool Lee</h1>
+                <p>I explore, experiment, and pioneer ways to deliver quality journalism using code.</p>
+            </section>
+            <section class="portfolio">
+                <div class="imgbox a"></div>
+                <div class="imgbox b"></div>
+                <div class="imgbox c"></div>
+                <div class="imgbox d"></div>
+                <div class="imgbox e"></div>
+                <div class="imgbox f"></div>
+            </section>
+            <section class="publication">
+                <div class="publication_img"></div>
+                <div class="publication_content">
+                    <h2>Publication</h2>
+                    <p>Published books that I've authored</p>
                 </div>
             </section>
-
-            <!-- <div class="line-center"></div> -->
-
-            <section id="projects">
-
-                <div class="projectbox">
-                    <h2 class="darkgrey_sentence">Featured Projects</h2>
-                    <div class="content-wrapper">
-                        <div class="contentbox">
-                            <div class="imgbox"></div>
-                            <h2>One-dimensional Men</h2>
-                            <p class="description">Lorem ipsum dolor sit amet.</p>
-    
-                        </div>
-                        <div class="contentbox">
-                            <div class="imgbox"></div>
-                            <h2>To Live or To Have</h2>
-                            <p class="description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="contentbox">
-                            <div class="imgbox"></div>
-                            <h2>Thoughtless World</h2>
-                            <p class="description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="contentbox">
-                            <div class="imgbox"></div>
-                            <h2>The Best and the Brightest</h2>
-                            <p class="description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
+            <section class="writing">
+                <div class="writing_content">
+                    <h2>Writing</h2>
+                    <p>Stories that I wrote</p>
                 </div>
-
+                <div class="writing_img"></div>
             </section>
-
-            <section id="about">
-                <div class="aboutbox"> 
-                        <h2 class="black_sentence"><span>I'm a Multimedia Journalist, Published Author, and </span>Interactive Developer.</h2>
-                        <ul class="experience">
-                            <li class="experience_item">
-                                <div class="experience_title">Project<br>Management</div>
-                                <div class="experience_box">As Head of News Innovation at <a href="https://www.donga.com/en/Docs">The Dong-A Ilbo</a>, I have been managing multiple projects on digital transformation, multimedia production, and user experience design.</div>
-                            </li>
-                            <li class="experience_item">
-                                <div class="experience_title">Multimedia<br>Journalism</div>
-                                <div class="experience_box">I lead multimedia project published in <a href="https://original.donga.com/">The Original</a>. Our work won numerous prizes including the Grand Prize of the Digital Journalism Awards in Korea.</div>
-                            </li>
-                            <li class="experience_item">
-                                <div class="experience_title">Professional<br>Writing</div>
-                                <div class="experience_box">I'm a professional writer and journalist. I earned my master's degree from <a href="https://journalism.berkeley.edu/">UC Berkeley Graduate School of Journalism</a>, and I have published six books.</div>
-                            </li>
-                        </ul>
-                </p>
-                </div>
+            <section class="backtotop">
+                <a href="#"><p>Back to Top</p></a>
             </section>
-
-            <section id="contact">
-                <div class="story">
-                    <h2 class="black_sentence">I'm based in Seoul.<br><span>You can find me online.</span></h2>
-                    <br><br><br>
-                    <p>Contact<br><span> <a href="https://www.linkedin.com/in/saemmool/">LinkedIn</a> / <a href="https://twitter.com/saemmool">Twitter</a> / <a href="mailto:diasporawriter@gmail.com">Email</a></span></p>
-    
-                </div>
-
+            <section class="contact">
+                <ul>
+                    <li><a href="mailto:diasporawriter@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/saemmool/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://github.com/saemmool"><ion-icon name="logo-github"></ion-icon></a></li>
+                </ul>
             </section>
-
-            <div class="backtotop">
-                <a href="#home"><span>Back to Top</span></a>
-            </div>
-
         </div>
-    
-
-    </div>
+    </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="main.js"></script>
-
 
 </body>
 </html>
