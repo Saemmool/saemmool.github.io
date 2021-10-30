@@ -367,6 +367,7 @@ section {
     .writing_img {
         height: 200px;
         width: 100%;
+        background-image: url('images/img8.jpeg');
     }
 
     .publication_content {
