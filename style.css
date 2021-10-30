@@ -277,9 +277,10 @@ section {
 .storybox {
     position: relative;
     text-align: left;
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 .storybox h3 {
     font-weight: 600;
+    margin: 5px 0;
 }
