@@ -95,20 +95,20 @@ section {
 }
 
 .imgbox:nth-child(1) {
-    background-image: url('Images/img1.JPG');
+    background-image: url('images/img1.JPG');
 }
 
 .imgbox:nth-child(2) {
-    background-image: url('Images/img2.JPG');
+    background-image: url('images/img2.JPG');
 }
 .imgbox:nth-child(3) {
-    background-image: url('Images/img3.jpeg');
+    background-image: url('images/img3.jpeg');
 }
 .imgbox:nth-child(4) {
-    background-image: url('Images/img4.jpeg');
+    background-image: url('images/img4.jpeg');
 }
 .imgbox:nth-child(5) {
-    background-image: url('Images/img5.jpeg');
+    background-image: url('images/img5.jpeg');
 }
 .imgbox:nth-child(6) {
     background-image: url('images/img6.jpeg');
