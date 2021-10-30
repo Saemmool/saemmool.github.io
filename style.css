@@ -240,12 +240,12 @@ section {
 .profpic {
     position: relative;
     height: 200px;
-    width: 100%;
+    width: 400px;
     background-image: url('images/img9.jpg');
     background-size: cover;
-    background-position: 50% 40%;
+    background-position: 50% 30%;
     background-repeat: no-repeat;
-    /* filter: grayscale(100%); */
+    filter: grayscale(100%);
 }
 
 .proftext {
