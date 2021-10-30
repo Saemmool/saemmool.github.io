@@ -245,7 +245,7 @@ section {
     background-size: cover;
     background-position: 50% 40%;
     background-repeat: no-repeat;
-    filter: grayscale(10%);
+    filter: grayscale(100%);
 }
 
 .proftext {
