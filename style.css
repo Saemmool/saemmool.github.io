@@ -239,11 +239,11 @@ section {
 
 .profpic {
     position: relative;
-    height: 200px;
+    height: auto;
     width: 400px;
     background-image: url('images/profpic.jpg');
     background-size: cover;
-    background-position: 50% 30%;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     filter: grayscale(100%);
 }
@@ -258,7 +258,7 @@ section {
     font-weight: 600;
 }
 
-.about h3 a{
+.about h3 a {
     color: #111;
     font-weight: 600;
 }
@@ -283,6 +283,10 @@ section {
 .storybox h3 {
     font-weight: 600;
     margin: 5px 0;
+}
+
+.storybox a {
+    color: #000;
 }
 
 @media(max-width: 768px) {
