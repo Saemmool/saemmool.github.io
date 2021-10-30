@@ -8,6 +8,10 @@
     font-weight: 200;
 }
 
+body {
+    min-height: 100%;
+}
+
 header {
     position: absolute;
     height: 100px;
@@ -17,15 +21,20 @@ header {
     align-items: center;
 }
 
+header a {
+    text-decoration: none;
+}
+
 header h4 {
     padding: 0 40px;
     text-transform: uppercase;
+    color: #000;
 }
 
 main {
     position: absolute;
     top: 100px;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -34,7 +43,7 @@ main {
 
 .container {
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -199,4 +208,78 @@ section {
 .contact ul li a {
     color: darkgrey;
     font-size: 20px;
+}
+/* copyright*/
+
+.copyright {
+    margin: 50px 0;
+    color: darkgrey;
+    position: relative;
+    text-align: center;
+}
+
+/* about */
+
+.about {
+    position: relative;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.about h1 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.profbox {
+    position: relative;
+    display: flex;
+    margin: 50px 0;
+}
+
+.profpic {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-image: url('images/img9.jpg');
+    background-size: cover;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    filter: grayscale(10%);
+}
+
+.proftext {
+    position: relative;
+    text-align: left;
+    padding: 10px 30px;
+}
+
+.about h3 {
+    font-weight: 600;
+}
+
+.about h3 a{
+    color: #111;
+    font-weight: 600;
+}
+
+.mystory {
+    position: relative;
+    width: 70%;
+    margin: 100px auto;
+}
+
+.mystory h1 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.storybox {
+    position: relative;
+    text-align: left;
+    margin: 50px 0;
+}
+
+.storybox h3 {
+    font-weight: 600;
 }
