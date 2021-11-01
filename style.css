@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 body {
@@ -152,13 +152,10 @@ section {
     margin: 50px auto;
 }
 
-.writing_img {
+
+.writing img {
     height: 300px;
     width: 600px;
-    background-image: url('images/img8.jpeg');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
 }
 
 .writing_content {
