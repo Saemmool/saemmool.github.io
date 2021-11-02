@@ -363,9 +363,14 @@ section {
         flex-direction: column;
     }
     
-    .writing_img {
+    .writing_imgbox {
         height: 200px;
         width: 100%;
+    }
+
+    .writing_imgbox img {
+        width: 100%;
+        height: 100%;
     }
 
     .publication_content {
