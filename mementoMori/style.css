@@ -141,8 +141,14 @@ h2.main-subtitle {
     background-color: rgba(255,255,255,0.2);
 }
 
+.story {
+    max-width: 700px;
+    margin: 0 20px;
+}
+
 .story p {
     color: #fff;
+    text-align: left;
 }
 
 #well {
