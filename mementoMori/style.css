@@ -7,6 +7,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
+
 header .main-nav {
     position: fixed;
     width: 100%;
@@ -21,7 +22,8 @@ header .main-nav {
 
 section {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .first .background-wrap {   
@@ -69,7 +71,9 @@ h2.main-subtitle {
 .background-wrap .explanation {
     position: absolute;
     bottom: 50px;
-    transform: translateX(80%);
+    right: 10px;
+    justify-content: right;
+    /* transform: translateX(80%); */
 }
 
 .background-wrap i {
@@ -112,6 +116,7 @@ h2.main-subtitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     line-height: 1.5;
 }
@@ -134,4 +139,108 @@ h2.main-subtitle {
     width: 120px;
     height: 1px;
     background-color: rgba(255,255,255,0.2);
+}
+
+.story p {
+    color: #fff;
+}
+
+#well {
+    position: absolute;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    /* background: #000; */
+    /* background: transparent; */
+    bottom: 0px;
+    /* right: 50px; */
+}
+
+@media(max-width: 768px) {
+    #well {
+        width: 40vw;
+    }
+}
+
+/* Third section */
+
+.third .background-wrap {   
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000C6F, #2B5BFF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    justify-content: center;
+    /* background: #000; */
+}
+
+/* Fourth section */
+
+.fourth .background-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #2B5BFF, #44ADFF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#coal {
+    position: absolute;
+    width: 100px;
+    /* height: 100px; */
+    bottom: 100px;
+    justify-content: center;
+    /* background: #fff; */
+}
+
+/* fifth section */
+
+.fifth .background-wrap {   
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #44ADFF, #000C6F);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.fifth h3 {
+    position: absolute;
+    color: #F3F3F3;
+    top: 17%;
+    left: 10%;
+    font-family: Dancing Script, sans-serif;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+
+#book {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    justify-content: center;
+    /* background: #000; */
+    bottom: 10px;
 }
