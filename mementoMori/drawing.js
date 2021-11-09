@@ -340,10 +340,150 @@ ctx8.lineWidth = 8;
 ctx8.strokeStyle = 'blue';
 ctx8.stroke();
 
+const circle = document.getElementById('circle');
+const ctx9 = circle.getContext('2d');
 
+circle.width = 240;
+circle.height = 240;
 
-// ctx8.strokeStyle = 'blue';
-// ctx8.stroke();
+// circle
+ctx9.beginPath();
+const centerX9 = circle.width / 2;
+const centerY9 = circle.height / 2;
+ctx9.moveTo(40, centerY9 - 30);
+ctx9.quadraticCurveTo(centerX9, -80, 200, centerY9 - 30);
+ctx9.moveTo(40, centerY9 + 30);
+ctx9.quadraticCurveTo(centerX9, 320, 200, centerY9 + 30);
+ctx9.moveTo(175, centerY9 - 42);
+ctx9.lineTo(200, centerY9 - 30);
+ctx9.lineTo(210, centerY9 - 52);
+ctx9.moveTo(30, centerY9 + 55);
+ctx9.lineTo(40, centerY9 + 25);
+ctx9.lineTo(65, centerY9 + 40);
+ctx9.lineWidth = 5;
+ctx9.strokeStyle = '#999999';
+ctx9.stroke();
+ctx8.closePath();
+
+//circle text
+ctx9.beginPath();
+ctx9.font = '20px Arial';
+ctx9.fillStyle = "black";
+ctx9.fillText('Living', 20, centerY9 + 5);
+ctx9.fillText('Dying', 170, centerY9 + 5);
+ctx9.closePath();
+
+// stone 
+const stone = document.getElementById('stone');
+const ctx10 = stone.getContext('2d');
+
+stone.width = 240;
+stone.height = 240;
+
+ctx10.beginPath();
+const centerX10 = stone.width / 2;
+const centerY10 = stone.height / 2;
+//main stone
+ctx10.moveTo(60, 20);
+ctx10.lineTo(180, 20);
+ctx10.lineTo(180, 180);
+ctx10.lineTo(60, 180);
+ctx10.lineTo(60, 18);
+ctx10.lineWidth = 5;
+ctx10.strokeStyle = '#000000';
+ctx10.stroke();
+ctx10.fillStyle = '#ACACAC';
+ctx10.fill();
+ctx10.closePath();
+
+ctx10.beginPath();
+ctx10.moveTo(60, 20);
+ctx10.lineTo(80, 3);
+ctx10.lineTo(200, 3);
+ctx10.lineTo(180, 20);
+ctx10.lineTo(60, 20);
+ctx10.lineWidth = 5;
+ctx10.strokeStyle = '#000000';
+ctx10.stroke();
+ctx10.fillStyle = '#ACACAC';
+ctx10.fill();
+ctx10.closePath();
+
+ctx10.beginPath();
+ctx10.moveTo(200, 2);
+ctx10.lineTo(200, 160);
+ctx10.lineTo(179, 179);
+ctx10.lineTo(180, 22);
+ctx10.lineWidth = 5;
+ctx10.strokeStyle = '#000000';
+ctx10.stroke();
+ctx10.fillStyle = '#ACACAC';
+ctx10.fill();
+ctx10.closePath();
+
+ctx10.beginPath();
+ctx10.moveTo(60, 160);
+ctx10.lineTo(40, 160);
+ctx10.lineTo(10, 220);
+ctx10.lineTo(230, 220);
+ctx10.lineTo(220, 160);
+ctx10.lineTo(200, 160);
+ctx10.moveTo(10, 220);
+ctx10.lineTo(10, 240);
+ctx10.lineTo(230, 240);
+ctx10.lineTo(230, 220);
+ctx10.lineTo(10, 220);
+ctx10.lineWidth = 5;
+ctx10.strokeStyle = '#000000';
+ctx10.stroke();
+ctx10.closePath();
+
+//circle text
+ctx10.beginPath();
+ctx10.font = '15px Arial';
+ctx10.fillStyle = "black";
+ctx10.fillText('HODDIE MIHI', 70, 60);
+ctx10.fillText('CRAS TIBI', 80, 90);
+ctx10.closePath();
+
+// paper 
+const paper = document.getElementById('paper');
+const ctx11 = paper.getContext('2d');
+
+paper.width = 400;
+paper.height = 300;
+
+ctx11.beginPath();
+const centerX11 = paper.width / 2;
+const centerY11 = paper.height / 2;
+ctx11.arc(20, 30, 10, 0, Math.PI * 2);
+ctx11.moveTo(30, 280);
+ctx11.arc(20, 280, 10, 0, Math.PI * 2);
+ctx11.moveTo(10, 26);
+ctx11.lineTo(10, 280);
+ctx11.moveTo(30, 26);
+ctx11.lineTo(30, 280);
+ctx11.moveTo(380, 26);
+ctx11.lineTo(380, 280);
+ctx11.moveTo(18, 20);
+ctx11.bezierCurveTo(100, -10, 200, 50, 380, 26);
+ctx11.moveTo(20, 290);
+ctx11.bezierCurveTo(120, 250, 200, 300, 380, 280);
+ctx11.strokeStyle = 'white';
+ctx11.lineWidth = 2;
+ctx11.stroke();
+
+//paper text
+ctx11.beginPath();
+ctx11.font = '15px Arial';
+ctx11.fillStyle = "white";
+ctx11.fillText('1. Everybody dies once. No one can avoid it.', 40, 100);
+ctx11.fillText('2. Death does not comes in order.', 40, 130);
+ctx11.fillText('3. You cannot carry anything when you die.', 40, 160);
+ctx11.fillText('4. No one can die behalf of you.', 40, 190);
+ctx11.fillText('5. You cannot experience death until you die.', 40, 220);
+ctx11.closePath();
+
 
 
         //Arc
