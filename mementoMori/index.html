@@ -11,8 +11,19 @@
 <body>
     <header>
         <nav class="main-nav">
-            <div class="hamburger"><ion-icon name="menu-outline"></ion-icon></div>
-            <div class="mysite"><ion-icon name="mail-outline"></ion-icon></div>
+            <div id="toggle"></div>
+            <!-- <div class="toggle" id="toggle"><ion-icon name="menu-outline"></ion-icon></div> -->
+
+            <div class="sidebar" id="sidebar">
+                <!-- <div class="toggle_close" id="toggle_close"><ion-icon name="close-outline"></ion-icon></div> -->
+                <ul>
+                    <li><a href="#part_one">Part 1. When I was Young</a></li>
+                    <li><a href="#part_two">Part 2. What if I Disappear Eternally?</a></li>
+                    <li><a href="#part_three">Part 3. The Biggest Issue in Our Lives</a></li>
+                    <li><a href="#part_four">Part 4. Is Death an End to Everything?</a></li>
+                    <li><a href="#part_five">Part 5. Memento Mori</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -22,12 +33,12 @@
                 <h1 class="main-title">Memento Mori</h1>
                 <h2 class="main-subtitle">Remember that You Die</h2>
                 <div class="explanation">
-                    <p>This project is based on the story by Han Gyu Lee, published on the <a href="http://www.dailytw.kr/news/articleView.html?idxno=21822">Daily Tomorrow(2021)</a>.</p>
+                    <p>This project is based on the story published on the <a href="http://www.dailytw.kr/news/articleView.html?idxno=21822">Daily Tomorrow(2021)</a>.</p>
                     <p>All made with HTML5 canvas</p>
                 </div>
             </div>
         </section>
-        <section class="second">
+        <section class="second" id="part_one">
             <div class="background-wrap">
                 <div class="line"></div>
                 <h3 class="part">Part 1. When I was Young</h3>
@@ -64,7 +75,7 @@
             </div>
         </section>
 
-        <section class="fifth">
+        <section class="fifth" id="part_two">
             <div class="background-wrap">
                 <div class="line"></div>
                 <h3 class="part">Part 2. What if I Disappear Eternally?</h3>
@@ -106,7 +117,7 @@
             </div>
         </section>
         
-        <section class="eightth">
+        <section class="eightth" id="part_three">
             <div class="background-wrap">
                 <div class="line"></div>
                 <h3 class="part">Part 3. The Biggest Issue in Our Lives</h3>
@@ -162,10 +173,10 @@
             </div>
         </section>
 
-        <section class="twelveth">
+        <section class="twelveth" id="part_four">
             <div class="background-wrap">
                 <div class="line"></div>
-                <h3 class="part">Part 4. Is Death Really an End to Everything?</h3>
+                <h3 class="part">Part 4. Is Death an End to Everything?</h3>
                 <div class="story">
                     <p>While I've been thinking about death for long, I realized several facts.
                     </p>
@@ -177,13 +188,83 @@
         <section class="thirteenth">
             <div class="background-wrap">
                 <div class="story">
-                    <p>But I didn't know whether the death is the ultimate end or if there is another world.
+                    <p>I didn't know whether the death is the ultimate end or if there is another world.
                         It would be so vein if I disappear eternally by the time I die.
                         What if there is a world beyond death as many religions say, and also there are trials and punishments?
                         I was not sure if I can go to a good place or would be put into suffering place after the trial.
                     </p>
                 </div>
-                <canvas id="stone"></canvas>
+                <canvas id="wall"></canvas>
+            </div>
+        </section>
+
+        <section class="fourteenth">
+            <div class="background-wrap">
+                <div class="story">
+                    <p>In statistics, almost 85 percent of population globally have religions.
+                        Every religion has three common things:
+                        First, flesh is not the essence of human being. 
+                        There is a spirit and it is much important than flesh.
+                        Second, this world is not everything and there is a life after death.
+                        Third, there will be trials and punishments after death.
+                    </p>
+                </div>
+                <canvas id="anotherwall"></canvas>
+            </div>
+        </section>
+
+        <section class="fifteenth">
+            <div class="background-wrap">
+                <div class="story">
+                    <p>Death takes away everything. 
+                        It takes up all, including our ego, pride, and honor. 
+                        Death makes us let things go and empty ourselves, which are the things we cannot do by ourselves.
+                        Death makes us to think about our lives seriously, and be humble. 
+                    </p>
+                </div>
+                <canvas id="tomb"></canvas>
+            </div>
+        </section>
+
+
+        <section class="sixteenth" id="part_five">
+            <div class="background-wrap">
+                <div class="line"></div>
+                <h3 class="part">Part 5. Memento Mori</h3>
+                <div class="story">
+                    <p>Fyodor Dostoevsky wrote to his brother: <br>
+                        “When I look back at the past and think of all the time I squandered in error and idleness, 
+                        lacking the knowledge I needed to live; when I think of how I sinned against my heart and my soul, 
+                        then my heart bleeds. Life is a gift, life is happiness … 
+                        Every minute could have been an eternity of happiness! If youth only knew. 
+                        Now my life will change, now I will be reborn.”
+                    </p>
+                </div>
+                <canvas id="letter"></canvas>
+            </div>
+        </section>
+
+        <section class="seventeenth">
+            <div class="background-wrap">
+                <div class="story">
+                    <p>"Memento mori" means "remember that you die" in Latin.
+                        In the old days, a victorious general would have someoone standing behind him,
+                        whispering such words and emphasize to "remember you're only a man."
+                    </p>
+                </div>
+                <canvas id="memento"></canvas>
+            </div>
+        </section>
+
+        <section class="eightteenth">
+            <div class="background-wrap">
+                <div class="story">
+                    <p>
+                        If there's an eternal world that our spirits go after deaths, this would be the most important matter in our lives.
+                        If you find an answer to that, you would be very lucky person - like me as of now.
+                    </p>
+                </div>
+                <canvas id="memento"></canvas>
             </div>
         </section>
 

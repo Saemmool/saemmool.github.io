@@ -44,23 +44,6 @@ ctx.lineTo(275, 257);
 ctx.strokeStyle = '#999';
 ctx.stroke();
 
-// ctx.moveTo(0,25);
-// ctx.quadraticCurveTo(centerX, centerY, centerX + 150, 25);
-// ctx.moveTo(0, 25);
-// ctx.lineTo(0, 350);
-// ctx.quadraticCurveTo(150, 420, 300, 350);
-// ctx.lineTo(300, 25);
-// ctx.quadraticCurveTo(150, -20, 0, 25);
-// ctx.strokeStyle= '#999';
-// ctx.stroke();
-
-// ctx.beginPath();
-// ctx.moveTo(0,25);
-// ctx.quadraticCurveTo(centerX, centerY, centerX + 150, 25);
-// ctx.quadraticCurveTo(150, -20, 0, 25);
-// ctx.fillStyle = '#2BA2FF';
-// ctx.fill();
-// ctx.closePath();
 
 //face 
 
@@ -483,6 +466,257 @@ ctx11.fillText('3. You cannot carry anything when you die.', 40, 160);
 ctx11.fillText('4. No one can die behalf of you.', 40, 190);
 ctx11.fillText('5. You cannot experience death until you die.', 40, 220);
 ctx11.closePath();
+
+//wall 
+const wall = document.getElementById('wall');
+const ctx12 = wall.getContext('2d');
+
+wall.width = 400;
+wall.height = 200;
+
+ctx12.beginPath();
+const centerX12 = wall.width / 2;
+const centerY12 = wall.height / 2;
+//wall
+
+ctx12.fillStyle = '#ACACAC';
+ctx12.fillRect(centerX12, 0, 20, 160);
+
+//text
+ctx12.beginPath();
+ctx12.font = '25px Arial';
+ctx12.fillStyle = "white";
+ctx12.fillText('LIFE', 70, 90);
+ctx12.fillStyle = "red";
+ctx12.fillText('DEATH', centerX12 - 40, 190);
+ctx12.closePath();
+
+ctx12.beginPath();
+ctx12.arc(300, 70, 10, 3.5, Math.PI * 2.55, false);
+ctx12.lineTo(298, 95);
+ctx12.moveTo(298, 99);
+ctx12.arc(298, 102, 3, 0, Math.PI * 2);
+ctx12.strokeStyle = '#ACACAC';
+ctx12.lineWidth = 2;
+ctx12.stroke();
+
+//another wall
+const anothewall = document.getElementById('anotherwall');
+const ctx13 = anotherwall.getContext('2d');
+const centerX13 = anotherwall.width / 2;
+const centerY13 = anotherwall.height / 2;
+
+anotherwall.width = 400;
+anotherwall.height = 200;
+
+ctx13.fillStyle = '#ACACAC';
+ctx13.fillRect(centerX13, 0, 20, 160);
+
+//text - life
+ctx13.beginPath();
+ctx13.font = '25px Arial';
+ctx12.fillStyle = "white";
+ctx13.fillText('LIFE', 30, 60);
+ctx13.font = '20px Arial';
+ctx13.fillText('LIFE', 330, 60);
+ctx13.fillText('AFTER', 310, 90);
+ctx13.fillText('DEATH', 310, 120);
+ctx13.fillStyle = "red";
+ctx13.font = '25px Arial';
+ctx13.fillText('DEATH', centerX13 - 40, 190);
+ctx13.closePath();
+
+//person
+ctx13.beginPath();
+ctx13.arc(60, 90, 10, 0, Math.PI * 2);
+ctx13.moveTo(60, 99);
+ctx13.lineTo(60, 150);
+ctx13.moveTo(40, 130);
+ctx13.lineTo(60, 110);
+ctx13.lineTo(80, 130);
+ctx13.moveTo(40, 170);
+ctx13.lineTo(60, 150);
+ctx13.lineTo(80, 170);
+ctx13.strokeStyle = 'blue';
+ctx13.lineWidth = 2;
+ctx13.stroke();
+ctx13.closePath();
+
+//heart
+ctx13.beginPath();
+ctx13.moveTo(centerX13 + 70, centerY13);
+ctx13.quadraticCurveTo(centerX13 + 60, centerY13 - 30, centerX13 + 40, centerY13);
+ctx13.moveTo(centerX13 + 70, centerY13);
+ctx13.quadraticCurveTo(centerX13 + 90, centerY13 - 30, centerX13 + 100, centerY13);
+ctx13.moveTo(centerX13 + 40, centerY13);
+ctx13.quadraticCurveTo(centerX13 + 50, centerY13 + 25, centerX13 + 70, centerY13 + 35);
+ctx13.moveTo(centerX13 + 100, centerY13);
+ctx13.quadraticCurveTo(centerX13 + 90, centerY13 + 25, centerX13 + 68, centerY13 + 35);
+ctx13.strokeStyle = 'blue';
+ctx13.lineWidth = 2;
+ctx13.stroke();
+ctx13.closePath();
+
+//line
+ctx13.beginPath();
+ctx13.moveTo(100, 100);
+ctx13.lineTo(185, 90);
+ctx13.moveTo(160, 80);
+ctx13.lineTo(185, 90);
+ctx13.lineTo(160, 105);
+ctx13.strokeStyle = 'yellow';
+ctx13.lineWidth = 2;
+ctx13.stroke();
+ctx13.closePath();
+
+//tomb
+const tomb = document.getElementById('tomb');
+const ctx14 = tomb.getContext('2d');
+const centerX14 = anotherwall.width / 2;
+const centerY14 = anotherwall.height / 2;
+
+tomb.width = 400;
+tomb.height = 240;
+
+ctx14.beginPath();
+ctx14.moveTo(20, centerY14);
+ctx14.lineTo(380, 20);
+ctx14.lineTo(400, 120);
+ctx14.lineTo(40, 200);
+ctx14.lineTo(20, centerY14);
+ctx14.lineTo(20, centerY14 + 60);
+ctx14.lineTo(40, 240);
+ctx14.lineTo(40, 200);
+ctx14.moveTo(40, 240);
+ctx14.lineTo(380, 180);
+ctx14.lineTo(400, 120);
+ctx14.strokeStyle = 'grey';
+ctx14.lineWidth = 2;
+ctx14.stroke();
+ctx14.closePath();
+
+ctx14.beginPath();
+ctx14.moveTo(300, centerY14 - 15);
+ctx14.lineTo(200, centerY14 + 10);
+ctx14.moveTo(260, 70);
+ctx14.lineTo(280, 120);
+ctx14.strokeStyle = '#6C0000';
+ctx14.lineWidth = 10;
+ctx14.stroke();
+
+//letter
+const letter = document.getElementById('letter');
+const ctx15 = letter.getContext('2d');
+const centerX15 = letter.width / 2;
+const centerY15 = letter.height / 2;
+
+letter.width = 200;
+letter.height = 200;
+
+ctx15.beginPath();
+ctx15.moveTo(10, 10);
+ctx15.lineTo(190, 10);
+ctx15.lineTo(100, 100);
+ctx15.lineTo(10, 10);
+ctx15.lineTo(10, 190);
+ctx15.lineTo(190, 190);
+ctx15.lineTo(190, 10);
+ctx15.strokeStyle = 'white';
+ctx15.lineWidth = 2;
+ctx15.stroke();
+ctx15.closePath();
+
+//memento
+const memento = document.getElementById('memento');
+const ctx16 = memento.getContext('2d');
+const centerX16 = memento.width / 2;
+const centerY16 = memento.height / 2;
+
+memento.width = 250;
+memento.height = 250;
+
+//word 
+ctx16.beginPath();
+ctx16.moveTo(150, 50);
+ctx16.quadraticCurveTo(50, 50, 50, 125);
+ctx16.quadraticCurveTo(50, 200, 100, 200);
+ctx16.quadraticCurveTo(100, 240, 60, 250);
+ctx16.quadraticCurveTo(120, 240, 130, 200);
+ctx16.quadraticCurveTo(250, 200, 250, 125);
+ctx16.quadraticCurveTo(250, 50, 150, 50);
+ctx16.strokeStyle = 'white';
+ctx16.lineWidth = 2;
+ctx16.stroke();
+ctx16.closePath();
+
+//text
+ctx16.beginPath();
+ctx16.font = '25px Arial';
+ctx16.fillStyle = "white";
+ctx16.fillText('MEMENTO', 80, 120);
+ctx16.fillText('MORI', 110, 150);
+ctx16.closePath();
+
+
+// function Circle(x, y, r, c) {
+//         this.x = x;
+//         this.y = y;
+//         this.r = r;
+//         this.c = c;
+
+//         this.dx;
+//         this.dy;
+
+//         this.draw = function() {
+//                 ctx12.beginPath();
+//                 ctx12.fillStyle = this.c;
+//                 ctx12.arc(this.x, this.y, this.r, 3.5, Math.PI * 2.5);
+//                 ctx12.lineTo(280, 130);
+//                 ctx12.moveTo(282, 135);
+//                 ctx12.arc(280, 136, 3, 0, Math.PI * 2);
+//                 ctx12.strokeStyle = 'white';
+//                 ctx12.stroke();
+//         }
+// }
+
+// const balls = [];
+// for (let i = 0; i < 20; i++) {
+//         let r = Math.floor(Math.random() * 30) + 15;
+//         let x = Math.random() * (400 - r * 2 + 220) + r;
+//         let y = Math.random() * (wall.height - r * 2) + r;
+//         let c = 'red';
+//         balls.push(new Circle(x, y, r, c));
+// }
+
+// function Update() {
+//         for (let i = 0; i < balls.length; i++) {
+//         balls[i].draw();
+//         }
+// }
+// Update();
+
+// let ball = new Circle(280, 100, 10, 'white');
+// ball.draw();
+
+
+
+// question mark
+// function drawCircle() {
+//        
+
+// drawCircle();
+
+// function update() {
+//         ctx12.clearRect(220, 0, 400, 0);
+//         drawCircle();
+// }
+
+
+
+// ctx12.strokeStyle = '#ACACAC';
+// ctx12.lineWidth = 2;
+// ctx12.stroke();
+
 
 
 
