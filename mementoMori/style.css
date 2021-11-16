@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -762,7 +763,11 @@ h2.main-subtitle {
 
 
 @media(max-width: 768px) {
-    .line {
+    #part_one .line, #part_two .line {
+        width: 40px;
+    }
+
+    #part_three .line, #part_four .line, #part_five .line {
         width: 40px;
     }
 
