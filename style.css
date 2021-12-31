@@ -8,6 +8,7 @@
     font-weight: 400;
 }
 
+
 body {
     min-height: 100%;
 }
@@ -63,6 +64,10 @@ section {
     display: block;
     align-items: center;
     margin: auto;
+}
+
+section.intro {
+    margin: 50px 0 100px 0;
 }
 
 .intro p {

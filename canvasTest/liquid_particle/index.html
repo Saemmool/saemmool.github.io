@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <canvas id="canvas1"></canvas>
+    <div class="container">
+        <div class="content">
+            <nav>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </nav>
+            <section class="mainBlock">
+                <div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, rerum adipisci. Voluptates, iusto deleniti! Quas, nesciunt a? Incidunt harum possimus deleniti velit perferendis autem, blanditiis libero? Vero tempore nemo earum reprehenderit temporibus, voluptate voluptatibus esse quisquam soluta quaerat dolorum sint praesentium officia, rerum molestias consequatur veritatis. Dolorum nemo laudantium alias, veniam perspiciatis eos atque minus sapiente officiis dolore quidem in esse vel, nesciunt inventore omnis praesentium accusamus dicta soluta architecto distinctio at facere. Repudiandae eveniet possimus ab maxime, error excepturi autem accusamus porro, alias ut ea pariatur natus ullam veniam dolor fuga. Ipsam, totam! Deleniti accusamus ratione ut possimus voluptate.</p>
+                </div>
+                <section class="topBlock">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, eos nam distinctio!</p>
+                    </div>
+                </section>
+                <section class="bottomBlock">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe at debitis dolores nobis quos possimus, inventore animi ipsa sapiente error?</p>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+<svg>
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in='SourceGraphic'
+            stdDeviation='10' result='blur' />
+            <feColorMatrix in='blur' mode='matrix' values='1 0
+            0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9' result='goo'/>
+            <feComposite in='SourceGraphic' in2='goo' operator ='atop'/>
+        </filter>
+    </defs>
+</svg>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: bold 35px helvetica;
+}
+
+body {
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+h1.question {
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+h1.answer {
+    transform: rotateX(0);
+    text-align: right;
+    margin-right: 100px;
+}
+
+input {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+
+label {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    z-index: 10;
+}
+
+.background {
+    background: linear-gradient(#fff, #f6f486, #0c0af3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 1s ease-in;
+    transform-origin: bottom;
+}
+
+.dinosaurs {
+    border: 1px solid black;
+}
+
+#checkbox1:checked ~ .background{
+    transform: scaleY(0);
+}
+
+#checkbox1:checked ~ .question {
+    transform: rotateX(90deg);
+}
+
+#checkbox1:checked ~ .question {
+    transform: rotateX(0);
+}
