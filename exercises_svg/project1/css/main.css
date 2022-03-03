@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #1d1d1d;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+
+svg {
+  background: blue;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: block;
+}
+
+path {
+  stroke: red;
+  fill: none;
+}
+
+h1 {
+  font-size: 5rem;
+  color: red;
+  font-family: 'Playfair Display', serif;
+  pointer-events: none;
+}
+
+h1:before {
+  content: 'WOBBLY';
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  font-size: 20rem;
+  color: #202020;
+  z-index: -2;
+}
+/*# sourceMappingURL=main.css.map */
