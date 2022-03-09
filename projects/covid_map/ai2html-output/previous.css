@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 !important;
+}
+
+.g-swipey-mobile {
+    display: none !important;
+}
+
+
+.g-swipey-mobile #g-graphic-swipey {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.g-swipey-mobile .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.g-swipey-desktop #g-graphic-swipey {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.g-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translate3d(0px, -50%, 0);
+    transform: translate3d(0px, -50%, 0);
+}
+
+.g-swipey-desktop .g-pagination ul {
+    display: block;
+    margin: 0;
+}
+
+.g-pagination .g-step,
+.swiper-pagination-bullet {
+    display: block;
+    margin: 5px 0;
+    background: none;
+    width: 4px;
+    height: 4px;
+    opacity: 0.2;
+    background-color: #000;
+    border-radius: 100%;
+}
+
+.g-pagination .g-step.g-active,
+.swiper-pagination-bullet-active {
+    background: #000;
+    opacity: 0.5;
+    border: solid 1px #000;
+    margin-left: -1px !important;
+}
+
+.g-fixed-dependents {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.g-swipey-active .g-fixed-dependents {
+    visibility: visible;
+}
+
+.g-swipey-desktop .g-fixed-dependents {
+    -webkit-transform: translateZ(0px);
+    -webkit-backface-visibility: hidden;
+    position: fixed;
+    height: 100vh;
+}
+
+.g-swipey-desktop.g-desktop-fixedstate-post .g-fixed-dependents {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+}
+
+.g-slides {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.g-fixed-dependent,
+.g-fixed-dependent-inner {
+    position: relative;
+    height: 100%;
+}
+
+.g-swipey-desktop .g-slde,
+.g-swipey-desktop .swiper-slide {
+    min-height: 100vh;
+}
+
+.g-slide,
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.g-swipey-desktop .g-slide,
+.g-swipey-desktop .swiper-slide {
+    min-height: 100vh;
+}
+
+.s-swipey-active.g-setting-fixedlayout .g-fixed-dependent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.g-slide-ai2html,
+.g-slide-asset {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(https://static01.nyt.com/packages/flash/multimedia/ICONS/transparent.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 100%;
+    background-size: over;
+    background-position: center center;
+}
+
+.g-swipey-active.g-setting-fixedlayout .g-slide-credit,
+.g-swipey-active.g-setting-fixedlayout .g-slide-ai2html,
+.g-swipey-active.g-setting-fixedlayout .g-slide-asset,
+.g-swipey-active.g-setting-fixedlayout .g-slide-custom {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition-property: opacity, visibility;
+            transition-property: opacity, visibility;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+}
+.g-swipey-active.g-setting-fixedlayout .swiper-slide.swiper-slide-active .g-slide-credit,
+.g-swipey-active.g-setting-fixedlayout .swiper-slide.swiper-slide-active .g-slide-ai2html,
+.g-swipey-active.g-setting-fixedlayout .swiper-slide.swiper-slide-active .g-slide-asset,
+.g-swipey-active.g-setting-fixedlayout .swiper-slide.swiper-slide-active .g-slide-custom,
+.g-swipey-active.g-setting-fixedlayout .g-fixed-dependent.g-active .g-slide-credit,
+.g-swipey-active.g-setting-fixedlayout .g-fixed-dependent.g-active .g-slide-ai2html,
+.g-swipey-active.g-setting-fixedlayout .g-fixed-dependent.g-active .g-slide-asset,
+.g-swipey-active.g-setting-fixedlayout .g-fixed-dependent.g-active .g-slide-custom {
+    opacity: 1;
+    visibility: visible;
+}
+.g-swipey-active.g-setting-fixedlayout .g-slide-ai2html,
+.g-swipey-active.g-setting-fixedlayout .g-slide-asset {
+    bottom: auto;
+    top: 0;
+}
+
+.g-slide-ai2html > div {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+.g-slide-credit {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.g-swipey-desktop.g-swipey-active.g-setting-fixedlayout .g-slides {
+    max-width: 100%;
+    }
+
+.g-swipey-desktop.g-swipey-active.g-setting-fixedlayout .g-fixed-dependent-inner {
+    margin: 0 auto;
+    }
+
+.g-swipey-desktop.g-swipey-active.g-setting-fixedlayout .g-slide-type-nonintro.g-arttype-inline .g-slide-asset,
+.g-swipey-desktop.g-swipey-active.g-setting-fixedlayout .g-slide-type-nonintro.g-arttype-inline .g-slide-ai2html {
+    top: 10%;
+    right: auto;
+    bottom: auto;
+    left: 15%;
+    background-size: 100%;
+    height: 80vh;
+    width: 30vw;
+    }

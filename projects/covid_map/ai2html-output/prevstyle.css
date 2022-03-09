@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+main {
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    font: -apple-system-body;
+    font-size: 100%;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+body.dark {
+    color: #888;
+    background-color: black;
+}
+
+body.transparent {
+    color: white;
+    background-color: black;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    -ms-interpolation-mode: bicubic;
+}
+
+.image > img {
+    display: block;
+}
+
+a img {
+    border: none;
+}
+
+/* header */
+* Share tools */
+html:not(.story) #interactive-header .interactive-sharetools,
+html:not(.story) #interactive-header #interactive-standalone-sharetools {
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.g-top-cover html:not(.story) #interactive-header .interactive-sharetools,
+.g-top-cover html:not(.story) #interactive-header #interactive-standalone-sharetools {
+    margin-bottom: 5px;
+}
+
+/* Body */
+html:not(.story) .interactive section a {
+    text-decoration: underline;
+}
+
+/* Footer */
+html:not(.story) #interactive-footer-container {
+    max-width: 100%;
+}
+@media (min-width: 740px) {
+    html:not(.story) #interactive-footer-container {
+        max-width: 600px;
+    }
+}
+@media (min-width: 1024px) {
+    html:not(.story) #interactive-footer-container {
+        max-width: 600px;
+    }
+}
+
+
+
+.g-body {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    width: calc(100% - 40px);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(25px / 2);
+}
+
+.g-body a {
+    text-decoration: underline;
+}
+
+@media (min-width: 740px) {
+    .g-body {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 600px;
+        margin-bottom: calc(30px / 2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .g-body {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 600px;
+        margin-bottom: calc(30px / 2);
+    }
+}
+
+.g-body,
+.g-caption {
+    color: #333333;
+}
+
+.g-caption_heading {
+    margin-top: 5px;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+@media (min-width: 740px) {
+    .g-caption_heading {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .g-caption_heading {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+
+/* slideshow */
+
+.g-scrollinggraphic_wrapper {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.g-scrollinggraphic_sticky {
+    position: sticky;
+    z-index: 1;
+    transform: translate3d(0,0,0);
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-color: #bfbfbf;
+}
