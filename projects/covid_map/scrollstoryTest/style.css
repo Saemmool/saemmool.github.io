@@ -1,0 +1,150 @@
+//imports
+@import url("https://fonts.googleapis.com/css?family=Glegoo|Roboto:300,400");
+
+//variables
+$breakpoint-small: 480px;
+$breakpoint-regular: 768px;
+$breakpoint-medium: 1024px;
+
+//mixins
+@mixin small-screen {
+  @media screen and (max-width: #{$breakpoint-small - 1px}) {
+    @content;
+  }
+}
+
+@mixin regular-screen {
+  @media screen and (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-regular - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (min-width: #{$breakpoint-regular}) and (max-width: #{$breakpoint-medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media screen and (min-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+
+//styles
+* {
+}
+
+html,
+body {
+  min-height: 100%;
+  min-height: 100vh;
+  background-color: darkblue;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  min-height: 100vh;
+  opacity: 0.4;
+  flex: 0 0 auto;
+}
+
+//Effects applied to class added by javascript so content is still visible to people without it
+.scrollStoryItem {
+  filter: blur(20px);
+  transition: all 400ms ease;
+
+  .content {
+    transform: scale(1.1);
+    transition: all 400ms ease;
+  }
+}
+
+.content {
+  @include small-screen {
+    width: 90%;
+  }
+
+  @include regular-screen {
+    width: 90%;
+  }
+
+  @include medium-screen {
+    width: 70%;
+  }
+
+  @include large-screen {
+    width: 60%;
+  }
+}
+
+.active {
+  opacity: 1;
+  filter: none;
+
+  .content {
+    transform: scale(1);
+  }
+}
+
+.quote {
+  font-family: "Glegoo", serif;
+  font-weight: 400;
+  color: #fff;
+
+  @include small-screen {
+    font-size: 2.5rem;
+  }
+
+  @include regular-screen {
+    font-size: 3rem;
+  }
+
+  @include medium-screen {
+    font-size: 3.5rem;
+  }
+
+  @include large-screen {
+    font-size: 4rem;
+  }
+}
+
+.attribution {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #76eec6;
+  margin-top: 1.2rem;
+}
+
+p,
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 2rem;
+  line-height: 1.3;
+  text-decoration: none;
+
+  @include large-screen {
+    font-size: 1.8rem;
+  }
+
+  a {
+    color: #76eec6;
+
+    &:hover,
+    :active {
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid;
+      transition: all 400ms ease;
+    }
+  }
+}
