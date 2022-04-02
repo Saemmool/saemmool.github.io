@@ -1,80 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148474343-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-148474343-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-    gtag('config', 'UA-148474343-1');
-    </script>
+			gtag("config", "UA-148474343-1");
+		</script>
 
-    <title>Saemmool Lee's Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html"><h4>Home</h4></a>
-        <a href="about.html"><h4>About</h4></a>
-    </header>
-    <main>
+		<title>Saemmool Lee's Website</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<a href="index.html"><h4>Home</h4></a>
+			<a href="about.html"><h4>About</h4></a>
+		</header>
+		<main>
+			<div class="container">
+				<section class="intro">
+					<h1>Saemmool Lee</h1>
+					<p>
+						I explore, experiment, and pioneer ways to deliver quality
+						journalism using code.
+					</p>
+				</section>
+				<section class="portfolio">
+					<a href="projects/covid_map/index.html">
+						<div class="imgbox a"></div>
+					</a>
+					<div class="imgbox b"></div>
+					<div class="imgbox c"></div>
+					<div class="imgbox d"></div>
+					<div class="imgbox e"></div>
+					<div class="imgbox f"></div>
+				</section>
+				<section class="publication">
+					<div class="publication_img"></div>
+					<div class="publication_content">
+						<h2>Publication</h2>
+						<p>Published books that I've authored</p>
+					</div>
+				</section>
+				<section class="writing">
+					<div class="writing_content">
+						<a href="writing.html">
+							<h2>Writing</h2>
+							<p>Stories that I wrote</p>
+						</a>
+					</div>
+					<div class="writing_imgbox">
+						<a href="writing.html"><img src="/images/img8.jpeg" alt="" /></a>
+					</div>
+				</section>
+				<section class="backtotop">
+					<a href="#"><p>Back to Top</p></a>
+				</section>
+				<section class="contact">
+					<ul>
+						<li>
+							<a href="mailto:diasporawriter@gmail.com"
+								><ion-icon name="mail-outline"></ion-icon
+							></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/saemmool/"
+								><ion-icon name="logo-linkedin"></ion-icon
+							></a>
+						</li>
+						<li>
+							<a href="https://github.com/saemmool"
+								><ion-icon name="logo-github"></ion-icon
+							></a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="copyright">
+				<p>&copy; Copyright 2021 Saemmool Lee</p>
+			</div>
+		</main>
 
-        <div class="container">
-            <section class="intro">
-                <h1>Saemmool Lee</h1>
-                <p>I explore, experiment, and pioneer ways to deliver quality journalism using code.</p>
-            </section>
-            <section class="portfolio">
-                <div class="imgbox a"></div>
-                <div class="imgbox b"></div>
-                <div class="imgbox c"></div>
-                <div class="imgbox d"></div>
-                <div class="imgbox e"></div>
-                <div class="imgbox f"></div>
-            </section>
-            <section class="publication">
-                <div class="publication_img"></div>
-                <div class="publication_content">
-                    <h2>Publication</h2>
-                    <p>Published books that I've authored</p>
-                </div>
-            </section>
-            <section class="writing">
-                <div class="writing_content">
-                    <a href="writing.html">
-                        <h2>Writing</h2>
-                        <p>Stories that I wrote</p>
-                    </a>
-                </div>
-                <div class="writing_imgbox">
-                    <a href="writing.html"><img src="/images/img8.jpeg" alt=""></a>
-                </div>
-            </section>
-            <section class="backtotop">
-                <a href="#"><p>Back to Top</p></a>
-            </section>
-            <section class="contact">
-                <ul>
-                    <li><a href="mailto:diasporawriter@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
-                    <li><a href="https://www.linkedin.com/in/saemmool/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="https://github.com/saemmool"><ion-icon name="logo-github"></ion-icon></a></li>
-                </ul>
-            </section>
-        </div>
-        <div class="copyright">
-            <p>&copy; Copyright 2021 Saemmool Lee</p>
-        </div>
-
-    </main>
-
-    <script src="canvas.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
+		<script src="canvas.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
 </html>

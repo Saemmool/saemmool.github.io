@@ -1,428 +1,423 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Tangerine:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Tangerine:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Raleway", sans-serif;
+	font-weight: 400;
 }
 
-
 body {
-    min-height: 100%;
+	min-height: 100%;
 }
 
 header {
-    position: absolute;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 header a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 header h4 {
-    padding: 0 40px;
-    text-transform: uppercase;
-    color: #000;
+	padding: 0 40px;
+	text-transform: uppercase;
+	color: #000;
 }
 
 main {
-    position: absolute;
-    top: 100px;
-    min-height: 100%;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	top: 100px;
+	min-height: 100%;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
-    position: relative;
-    min-height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 
 .container h1 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin: 20px;
-    text-align: center;
-    font-size: 45px;
+	font-family: "Dancing Script", cursive;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 20px;
+	text-align: center;
+	font-size: 45px;
 }
 
 section {
-    position: relative;
-    display: block;
-    align-items: center;
-    margin: auto;
+	position: relative;
+	display: block;
+	align-items: center;
+	margin: auto;
 }
 
 section.intro {
-    margin: 50px 0 100px 0;
+	margin: 50px 0 100px 0;
 }
 
 .intro p {
-    width: 50%;
-    margin: auto;
-    line-height: 1.5;
+	width: 50%;
+	margin: auto;
+	line-height: 1.5;
 }
 
 .portfolio {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 5px;
-    margin: 50px auto;
-    width: 70%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 5px;
+	margin: 50px auto;
+	width: 70%;
 }
 
 .portfolio .imgbox {
-    border: 1px solid rgba(0,0,0,0.05);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 250px;
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	height: 250px;
+	width: auto;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 .imgbox:nth-child(1) {
-    background-image: url('images/img1.JPG');
+	background-image: url("images/covid_map.png");
 }
 
 .imgbox:nth-child(2) {
-    background-image: url('images/img2.JPG');
+	background-image: url("images/img2.JPG");
 }
 .imgbox:nth-child(3) {
-    background-image: url('images/img3.jpeg');
+	background-image: url("images/img3.jpeg");
 }
 .imgbox:nth-child(4) {
-    background-image: url('images/img4.jpeg');
+	background-image: url("images/img4.jpeg");
 }
 .imgbox:nth-child(5) {
-    background-image: url('images/img5.jpeg');
+	background-image: url("images/img5.jpeg");
 }
 .imgbox:nth-child(6) {
-    background-image: url('images/img6.jpeg');
+	background-image: url("images/img6.jpeg");
 }
 
 .publication {
-    display: flex;
-    width: 70%;
-    margin: 50px auto;
+	display: flex;
+	width: 70%;
+	margin: 50px auto;
 }
 
 .publication_img {
-    height: 300px;
-    width: 600px;
-    background-image: url('images/img7.JPG');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+	height: 300px;
+	width: 600px;
+	background-image: url("images/img7.JPG");
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 .publication_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	text-align: center;
 }
 
 .publication_content h2 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 30px;
-    padding: 10px 0;
+	font-family: "Dancing Script", cursive;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 30px;
+	padding: 10px 0;
 }
 
 .writing {
-    display: flex;
-    width: 70%;
-    margin: 50px auto;
+	display: flex;
+	width: 70%;
+	margin: 50px auto;
 }
 
-
 .writing img {
-    height: 300px;
-    width: 600px;
+	height: 300px;
+	width: 600px;
 }
 
 .writing_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	text-align: center;
 }
 
 .writing a {
-    width: 100%;
-    height: auto;
-    text-decoration: none;
-    color: #000;
+	width: 100%;
+	height: auto;
+	text-decoration: none;
+	color: #000;
 }
 
 .writing_content h2 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 30px;
-    padding: 10px 0;
+	font-family: "Dancing Script", cursive;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 30px;
+	padding: 10px 0;
 }
 
 .backtotop {
-    margin: 100px 0;
+	margin: 100px 0;
 }
 
 .backtotop a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .backtotop p {
-    color: darkgrey;
+	color: darkgrey;
 }
 
 .contact {
-    margin: 50px 0;
+	margin: 50px 0;
 }
 
 .contact ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .contact ul li {
-    list-style: none;
-    padding: 30px;
+	list-style: none;
+	padding: 30px;
 }
 
 .contact ul li a {
-    color: darkgrey;
-    font-size: 20px;
+	color: darkgrey;
+	font-size: 20px;
 }
 /* copyright*/
 
 .copyright {
-    margin: 50px 0;
-    color: darkgrey;
-    position: relative;
-    text-align: center;
+	margin: 50px 0;
+	color: darkgrey;
+	position: relative;
+	text-align: center;
 }
 
 /* about */
 
 .about {
-    position: relative;
-    width: 70%;
-    margin: 50px auto;
+	position: relative;
+	width: 70%;
+	margin: 50px auto;
 }
 
 .about h1 {
-    text-align: left;
-    margin-left: 20px;
+	text-align: left;
+	margin-left: 20px;
 }
 
 .profbox {
-    position: relative;
-    display: flex;
-    margin: 50px auto;
+	position: relative;
+	display: flex;
+	margin: 50px auto;
 }
 
 .profpic {
-    position: relative;
-    height: auto;
-    width: 400px;
-    background-image: url('images/profpic.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    filter: grayscale(100%);
+	position: relative;
+	height: auto;
+	width: 400px;
+	background-image: url("images/profpic.jpg");
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	filter: grayscale(100%);
 }
 
 .proftext {
-    position: relative;
-    text-align: left;
-    padding: 10px 30px;
+	position: relative;
+	text-align: left;
+	padding: 10px 30px;
 }
 
 .about h3 {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .about h3 a {
-    color: #111;
-    font-weight: 600;
+	color: #111;
+	font-weight: 600;
 }
 
 .mystory {
-    position: relative;
-    width: 70%;
-    margin: 100px auto;
+	position: relative;
+	width: 70%;
+	margin: 100px auto;
 }
 
 .mystory h1 {
-    text-align: left;
-    margin-left: 20px;
+	text-align: left;
+	margin-left: 20px;
 }
 
 .storybox {
-    position: relative;
-    text-align: left;
-    margin: 30px 0;
+	position: relative;
+	text-align: left;
+	margin: 30px 0;
 }
 
 .storybox h3 {
-    font-weight: 600;
-    margin: 5px 0;
+	font-weight: 600;
+	margin: 5px 0;
 }
 
 .storybox a {
-    color: #000;
+	color: #000;
 }
 
 /* Writing */
 
 .writing_container {
-    position: relative;
-    min-height: 100vh;
-    width: 60%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+	position: relative;
+	min-height: 100vh;
+	width: 60%;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
 }
 
 .writing_box {
-    display: flex;
-    width: 70%;
-    margin: 50px auto;
+	display: flex;
+	width: 70%;
+	margin: 50px auto;
 }
 
 .writing_box h1 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin: 20px;
-    text-align: center;
-    font-size: 45px;
+	font-family: "Dancing Script", cursive;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 20px;
+	text-align: center;
+	font-size: 45px;
 }
 
 .writing_list {
-    text-align: left;
+	text-align: left;
 }
 
 .writing_list h3 {
-    margin: 15px 0;
-    font-weight: 600;
+	margin: 15px 0;
+	font-weight: 600;
 }
 
 .writing_list ul li {
-    list-style: none;
-    line-height: 25px;
+	list-style: none;
+	line-height: 25px;
 }
 
 .writing_list ul li a {
-    color: #000;
-    text-decoration: none;
+	color: #000;
+	text-decoration: none;
 }
 
+@media (max-width: 768px) {
+	.portfolio {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 5px;
+		margin: 50px auto;
+		width: 80%;
+	}
 
-@media(max-width: 768px) {
+	.publication {
+		width: 80%;
+		flex-direction: column-reverse;
+	}
 
-    .portfolio {
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 5px;
-        margin: 50px auto;
-        width: 80%;
-    }
+	.publication_img {
+		height: 200px;
+		width: 100%;
+	}
 
-    .publication {
-        width: 80%;
-        flex-direction: column-reverse;
-    }
+	.writing {
+		width: 80%;
+		flex-direction: column;
+	}
 
-    .publication_img {
-        height: 200px;
-        width: 100%;
-    }
-    
-    .writing {
-        width: 80%;
-        flex-direction: column;
-    }
-    
-    .writing_imgbox {
-        height: 200px;
-        width: 100%;
-    }
+	.writing_imgbox {
+		height: 200px;
+		width: 100%;
+	}
 
-    .writing_imgbox img {
-        width: 100%;
-        height: 100%;
-    }
+	.writing_imgbox img {
+		width: 100%;
+		height: 100%;
+	}
 
-    .publication_content {
-        margin-bottom: 10px;
-    }
+	.publication_content {
+		margin-bottom: 10px;
+	}
 
-    .writing_content {
-        margin-bottom: 10px;
-    }
+	.writing_content {
+		margin-bottom: 10px;
+	}
 
-    .about {
-        width: 80%;
-    }
-    
-    .about h1 {
-        margin-left: 40px;
-    }
+	.about {
+		width: 80%;
+	}
 
-    .profbox {
-        flex-direction: column;
-        width: 90%;
-    }
+	.about h1 {
+		margin-left: 40px;
+	}
 
-    .profpic {
-        height: 250px;
-        width: auto;
-    }
+	.profbox {
+		flex-direction: column;
+		width: 90%;
+	}
 
-    .proftext {
-        padding: 20px 10px;
-    }
+	.profpic {
+		height: 250px;
+		width: auto;
+	}
 
-    .mystory {
-        position: relative;
-        width: 70%;
-        margin: 50px auto;
-    }
-    
-    /* writing list */
+	.proftext {
+		padding: 20px 10px;
+	}
 
-    .writing_container {
-        position: relative;
-        min-height: 100vh;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
+	.mystory {
+		position: relative;
+		width: 70%;
+		margin: 50px auto;
+	}
 
+	/* writing list */
+
+	.writing_container {
+		position: relative;
+		min-height: 100vh;
+		width: 80%;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
 }
