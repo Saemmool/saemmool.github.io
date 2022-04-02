@@ -1515,7 +1515,7 @@ html.story .g-asset {
 }
 
 /* Sprite CSS */
-.g-sprite-img {
+/* .g-sprite-img {
 	background-image: url("https://static01.nyt.com/newsgraphics/2021/05/13/nyc-mayor-campaign-finance/6d3092a764568bfb7289158d1058a8fb049a91b3/sprite-mobile.jpg");
 	background-repeat: no-repeat;
 	background-size: 1000%;
@@ -1526,7 +1526,7 @@ html.story .g-asset {
 	.g-sprite-img {
 		background-image: url("https://static01.nyt.com/newsgraphics/2021/05/13/nyc-mayor-campaign-finance/6d3092a764568bfb7289158d1058a8fb049a91b3/sprite-desktop.jpg");
 	}
-}
+} */
 
 /* Lazy Images */
 .g-freebird-lazy {
