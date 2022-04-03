@@ -343,10 +343,11 @@ section.intro {
 
 @media (max-width: 768px) {
 	.portfolio {
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 5px;
-		margin: 50px auto;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 10px;
+		margin: 30px auto;
 		width: 80%;
+		border: #999;
 	}
 
 	.publication {
