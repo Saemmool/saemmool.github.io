@@ -1980,6 +1980,15 @@ html.story .g-asset {
 		margin-bottom: calc(30px / 2);
 	}
 }
+
+/* added by saemmool */
+
+.g-methodology {
+	padding-bottom: 50px;
+}
+
+/* finished adding */
+
 .g-methodology:before {
 	width: 120px;
 	content: "";
