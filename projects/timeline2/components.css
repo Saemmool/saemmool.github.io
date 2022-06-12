@@ -1,0 +1,111 @@
+.timeline-hed.svelte-t8amx0 {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 5px;
+	font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
+	margin-top: 10px;
+}
+.timeline-subhed.svelte-t8amx0 {
+	font-size: 15px;
+	text-align: center;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+.timeline.svelte-t8amx0 {
+	position: relative;
+	font-size: 15px;
+	line-height: 17px;
+	font-weight: 300;
+}
+#timeline_one.svelte-t8amx0 {
+	height: 1700px;
+}
+#timeline_two.svelte-t8amx0 {
+	height: 2000px;
+}
+#timeline_three.svelte-t8amx0 {
+	height: 1500px;
+}
+img.svelte-t8amx0 {
+	margin-top: 5px;
+	width: 110px;
+	height: 110px;
+}
+@media all and (max-width: 600px) {
+	.timeline.svelte-t8amx0 {
+		font-size: 13px;
+		line-height: 15px;
+	}
+	#timeline_one.svelte-t8amx0 {
+		height: 1500px;
+	}
+	#timeline_two.svelte-t8amx0 {
+		height: 1600px;
+	}
+	#timeline_three.svelte-t8amx0 {
+		height: 2200px;
+	}
+	img.svelte-t8amx0 {
+		width: 80px;
+		height: 80px;
+	}
+}
+.center-line.svelte-t8amx0 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+	border-right: 2px solid #999;
+}
+.event.svelte-t8amx0 {
+	width: 40%;
+	max-width: 350px;
+	position: absolute;
+}
+.event.left.svelte-t8amx0 {
+	text-align: right;
+	right: 50%;
+	padding-right: 10px;
+}
+.event.right.svelte-t8amx0 {
+	text-align: left;
+	left: 50%;
+	padding-left: 12px;
+}
+@media all and (max-width: 600px) {
+	.event.svelte-t8amx0 {
+		width: 50%;
+	}
+	.event.right.svelte-t8amx0 {
+		padding-left: 11px;
+	}
+	.event.left.svelte-t8amx0 {
+		padding-right: 8px;
+	}
+}
+.timestamp-dot.svelte-t8amx0 {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	margin: 0 auto;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-4px, 3px);
+}
+@media all and (max-width: 600px) {
+	.timestamp-dot.svelte-t8amx0 {
+		transform: translate(-4px, 2px);
+	}
+}
+.timestamp.svelte-t8amx0 {
+	margin-bottom: 1px;
+}
+.quote.svelte-t8amx0 {
+	color: #999;
+	font-style: italic;
+	margin-top: 2px;
+}
+
+/*# sourceMappingURL=components.css.map */

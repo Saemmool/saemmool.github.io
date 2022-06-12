@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	class="nytapp-vi-interactive"
+	xmlns:og="http://opengraphprotocol.org/schema/"
+>
+	<head>
+		<meta charset="utf-8" />
+		<title data-rh="true">Test</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			href="https://g1.nyt.com/fonts/css/web-fonts.d05a02583ca20b8afd5115f3ef8f1b8d134f743d.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<style>
+			[data-timezone] {
+				display: none;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			<main id="site-content">
+				<article id="interactive" class="interactive">
+					<header
+						id="interactive-header"
+						class="dish interactive-header css-wwcw2o ed0j4n71"
+					>
+						<h1
+							id="interactive-heading"
+							class="interactive-heading css-1l8buln e1h9rw200"
+							data-testid="headline"
+						>
+							78 Long Minutes
+						</h1>
+						<div class="css-16td4bv interactive-byline-container">
+							<p
+								id="interactive-byline"
+								class="interactive-byline ed0j4n70 css-zack8m e1jsehar1"
+							>
+								<span class="byline-prefix">By </span
+								><span class="css-1baulvz" itemProp="name"
+									><a
+										href="https://www.nytimes.com/by/keith-collins"
+										class="css-n8ff4n e1jsehar0"
+										>Keith Collins </a
+									><time
+									class="interactive-timestamp css-1g7pp1u e16638kd0"
+									datetime="2022-05-28T20:03:09-04:00"
+									>May 28, 2022</time
+								>
+							</p>
+						</div>
+
+					</header>
+					<section
+						id="school-shooting-timeline-uvalde-texas"
+						data-id="100000008372739"
+						data-source-id="100000008372739"
+						class="
+							css-l08pwh
+							interactive-minimal interactive-content interactive-size-medium
+						"
+					>
+						<div class="css-17ih8de interactive-body">
+							<!--
+
+======================================================
+
+THIS IS A GENERATED TEMPLATE FILE. DO NOT EDIT.π
+
+
+======================================================
+
+-->
+
+							<!-- critical path preloads -->
+							<link
+								rel="preload"
+								href="https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/build/js/main.js"
+								as="script"
+							/>
+							<link
+								rel="preload"
+								href="https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/build/js/freebird.js"
+								as="script"
+							/>
+
+							<!-- css generated from src/style.scss, text-balancer, and svelte component CSS -->
+
+							<link
+								id="nytg-rendered-css"
+								href="https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/style.css"
+								rel="stylesheet"
+							/>
+
+							<link
+								href="https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/build/css/components.css"
+								rel="stylesheet"
+							/>
+
+							<!-- sprites, polyfills, imports -->
+
+							<script>
+								if (!window.Promise || !window.fetch || !window.URL) {
+									document.write(
+										'<script src="https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/polyfills.js"><\/script>'
+									);
+								}
+							</script>
+							<script>
+								(function () {
+									window.NYTG = window.NYTG || {};
+									window.NYTG.ASSETS =
+										"https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/".slice(
+											0,
+											-1
+										);
+									window.NYTG.BIG_ASSETS =
+										"https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/assets/".slice(
+											0,
+											-1
+										);
+
+									var supports_import = false;
+									var can_use_import =
+										location.hostname.indexOf("preview.n" + "yt.net") == -1;
+									var shimport_url = window.NYTG.ASSETS + "/shimport@1.0.1.js";
+									var shimport_promise;
+
+									try {
+										new Function("if(0)import('')")();
+										supports_import = true;
+									} catch (e) {}
+
+									if (!can_use_import || !supports_import) {
+										shimport_promise = new Promise(function (fulfil, reject) {
+											var s = document.createElement("script");
+											s.src = shimport_url;
+											s.onload = function () {
+												fulfil(__shimport__);
+											};
+											s.onerror = reject;
+
+											document.head.appendChild(s);
+										});
+									}
+
+									window.NYTG.load = function (module) {
+										var url = new URL(module, location.href).href;
+
+										if (can_use_import && supports_import) {
+											return eval("import('" + url + "')");
+										} else {
+											return shimport_promise.then(function (shimport) {
+												return shimport.load(url);
+											});
+										}
+									};
+
+									// for --live
+									window.NYTG.subscribers = {};
+									window.NYTG.watch = function (url, cb) {
+										if (!window.NYTG.subscribers[url])
+											window.NYTG.subscribers[url] = [];
+										window.NYTG.subscribers[url].push(cb);
+										window.NYTG.load(url).then(cb);
+									};
+								})();
+							</script>
+
+							<script id="nytg-dynamic-script_template-options">
+								(function () {
+									// Check for template type: standard, minimal, or blank
+									var templateType = "template-" + ("" || "standard");
+									// Check for icon style options
+									var templateStyle =
+										"template-option-" +
+										("INCLUDE_TRANSPARENT_MASTHEAD_WITH_WHITE_ICONS,HIDE_BELOW_MAIN_CONTENT_REGION" ||
+											"black-icons");
+									// Check for dark mode flag
+									var isDarkMode = "true".match(/y|yes|true/) !== null;
+									var darkMode = isDarkMode ? " " + "template-mode-dark" : "";
+									// Check for feature style flag
+									var isFeatureStyle =
+										"".toLowerCase().match(/feature|featured|feat/) !== null;
+									var featureStyle = isFeatureStyle
+										? "template-style-feature"
+										: "template-style-standard";
+									var isNewsStyle =
+										"".toLowerCase().match(/italic|ital/) !== null;
+									var newsStyle = isNewsStyle
+										? "template-headline-style-italic"
+										: "";
+									// Set classes on body element
+									var tBody = document.body.classList.add(
+										...[
+											templateType.trim(),
+											templateStyle.trim(),
+											darkMode.trim(),
+											newsStyle.trim(),
+											featureStyle.trim(),
+										].filter((d) => !!d)
+									);
+								})();
+							</script>
+
+							<!-- story top/cover and links -->
+
+							<!-- LINKS -->
+
+							<!-- story-body -->
+
+							<div
+								class="g-story g-freebird g-max-limit"
+								data-preview-slug="2022-05-27-uvalde-waiting"
+							>
+								<!-- data preprocessed in process/process-data.js -->
+								<div class="g-container g-topline" id=""></div>
+								<p class="g-body">
+									When families learned that a gunman had entered Robb
+									Elementary School in Uvalde, Texas, at 11:33 a.m. on May 24, a
+									brutal wait began. Police on the scene did not stop the gunman
+									until well over an hour after he walked into the school,
+									raising questions about whether lives could have been saved if
+									they had acted sooner. Parents who rushed to the school were
+									held outside, where many were forced to wait to learn if their
+									children were safe.
+								</p>
+								<p class="g-body">
+									What follows is an account of each of those 78 minutes, as
+									told by video evidence, statements by witnesses and law
+									enforcement, and accounts of 911 calls.
+								</p>
+								<!-- ASSET : START -->
+
+								<div
+									role="figure"
+									aria-label="svelte"
+									class="g-asset g-svelte g-asset-margin"
+									style="max-width: 1050px"
+								>
+									<!-- Intro elements -->
+
+									<div>
+										<div class="g-svelte" data-component="1">
+											<div class="g-tl-main svelte-1azwj5v"></div>
+										</div>
+
+										<script>
+											(function (target, url, props) {
+												let component;
+
+												// TODO capture props. requires compilation in dev mode
+												NYTG.watch(url, (mod) => {
+													const Component = mod.default;
+
+													try {
+														if (component) component.$destroy();
+														console.log("destroyed component 1");
+													} catch (err) {
+														console.error(err);
+														target.innerHTML = "";
+													}
+
+													component = new Component({
+														target,
+														hydrate: !component,
+														props,
+													});
+												});
+											})(
+												document.querySelector('[data-component="1"]'),
+												NYTG.ASSETS + "/build/js/timeline.js",
+												{
+													amp: false,
+													items: [
+														{
+															time: "11:33",
+															text: [
+																{
+																	type: "text",
+																	value: "The gunman enters the school.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"He uses a back door that had been propped open by a teacher six minutes earlier. (The door is closed, but not locked, by the time the gunman enters, law enforcement officials clarified on June 1.)",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"He walks down a hallway, banging and kicking on at least one locked door before moving toward two connected classrooms, 111 and 112.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"Two teachers, Eva Mireles and Irma Garcia, had been screening the movie “Lilo & Stitch” for fourth graders in the classrooms.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"The gunman would fire more than 100 rounds.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "aerial.jpg",
+															img_position: "above",
+															clip_source:
+																"Source: Jordan Vonderhaar/Getty Images",
+															clip_notes:
+																"The door the gunman enters, and classrooms 111 and 112 highlighted.",
+															img_alt:
+																"An aerial image of Robb Elementary showing the position of the door the gunman entered, and the position of classrooms 111 and 112.",
+															max_width: "640px",
+														},
+														{
+															time: "11:35",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Three Uvalde Police Department officers enter the school through the same door. Two are grazed by shots fired by the gunman.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"Four more officers soon enter the building.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "11:37",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"More gunshots. Another 16 rounds are fired.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"Officers continue to arrive on the scene.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "11:43",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The school posts on Facebook that the school is under lockdown, and then emails parents.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "0524_1143_robb_fb.png",
+															clip_source:
+																"Source: Uvalde CISD Robb Elementary Facebook page",
+															clip_notes:
+																"https://www.facebook.com/RobbElementary/posts/pfbid02hRNBTD9ZVZ331RUdnztYd1L5wfCooYZfY44weJUJSVb3xPKJFXNiajAtqL9EGAc9l",
+															img_alt:
+																"A Facebook post with text: “Robb Elementary is under a Lockdown Status. Please know at this time Robb Elementary is under a Lockdown Status due to gunshots in the area. The students and staff are safe in the building. The building is secure in a Lockdown Status. Your cooperation is needed at this time by not visiting the campus. As soon as the Lockdown Status is lifted you will be notified.”",
+															max_width: "500px",
+														},
+														{
+															time: "11:54",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"People are gathering outside the school. Tension is building between parents and police.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "11:56",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"“Our kids, that’s what we’re worried about,” one mother can be heard saying on a livestreamed video. She adds, “Our kids are there, man! My son’s right there!”",
+																	inlineStyles: [""],
+																},
+															],
+															clip_notes: "From 2:22 on Storyful video.",
+														},
+														{
+															time: "11:58",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"A police officer pushes a man who is making a phone call outside the school, yelling at the people gathering to move across the street. “Six-year-old kids in there, they don’t know how to defend themselves from a shooter!” yells one person.",
+																	inlineStyles: [""],
+																},
+															],
+															clip: "1158_Storyful.mp4",
+															clip_source: "Source: Storyful",
+															clip_notes:
+																"Clipped from 4:22 in the video onwards to the end of the shouting",
+															max_width: "300px",
+														},
+														{
+															time: "12:03",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"It has been 30 minutes since the gunman entered.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"As many as 19 officers are in the school hallway.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"A student calls 911 and whispers that she is in room 112.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"The call lasts one minute and 23 seconds.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:05",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Some students and staff members who had been locked down in the cafeteria on the other side of the school are able to flee.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:06",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Some students in another classroom escape through a window.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "2022-05-24-uln-1205.jpg",
+															clip_source:
+																"Source: Pete Luna/Uvalde Leader-News/Handout via Reuters",
+															img_alt:
+																"A photo showing the outside of a school building. Several children are being helped out of a first floor window by two to three adults. A group of other adults, several in uniform, are standing nearby. Two children are running from the direction of the school window toward the photographer.",
+															max_width: "600px",
+														},
+														{
+															time: "12:09",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"A helicopter is flying above the school, and people are gathering on the streets nearby.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "1458_Storyful.png",
+															clip_source: "Source: Storyful",
+															clip_notes:
+																"Still image from 14:58 in video (rounded to 15 minutes for calculation)",
+															img_alt:
+																"A photo of a crowd of people standing on a street outside the school. A black car with the word “Sheriff” on the side is also parked on the street.",
+															max_width: "600px",
+														},
+														{
+															time: "12:10",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The same student calls 911 again and says multiple people are dead.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:11",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"A police officer with a megaphone announces to the crowd outside that “When the kids get moved, we’re going to move them to the back of the funeral home,” referring to Hillcrest Memorial Funeral Home across the street. “That’s where we want y’all waiting at,” he says.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "1654_Storyful.png",
+															clip_source: "Source: Storyful",
+															clip_notes: "Clipped from 16:54 in video",
+															img_alt:
+																"A photo of a police officer in uniform walking along a street outside of the school. He is speaking into a megaphone and gesturing toward the sky.",
+															max_width: "450px",
+														},
+														{
+															time: "12:13",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The same student calls 911 for the third time.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:15",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Members of the Border Patrol Tactical Unit arrive with shields.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:16",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The same student calls 911 again and says that eight to nine students are still alive.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:17",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The school district posts on Facebook that there is an active shooter at the school and asks people to stay away.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "0524_1217_robb_fb.png",
+															clip_source:
+																"Source: Robb Elementary School Facebook page",
+															clip_notes:
+																"https://www.facebook.com/RobbElementary/posts/pfbid029B2uYKZJEb9iq91nRnwiptTtkb2D5BmhuZd3k2Tb2uqY1DcnMqHTk3ZywfLbmE6Gl",
+															img_alt:
+																"A Facebook post with text: “​​There is an active shooter at Robb Elementary. Law enforcement is on site. Your cooperation is needed at this time by not visiting the campus. As soon as more information is gathered it will be shared. The rest of the district is under a Secure Status.“",
+															max_width: "500px",
+														},
+														{
+															time: "12:19",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"A different girl, in room 111, calls 911. She hangs up when another student tells her to.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:21",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Police hear the gunman fire again. They move down the hallway.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"Three shots are later heard over a 911 call.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:26",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Many students are seen walking out of the school on the other side in a livestreamed video. The man recording recognizes one of the children. “Tell your mom hi. Tell her you’re OK,” he says.",
+																	inlineStyles: [""],
+																},
+															],
+															clip: "1226_Storyful.mp4",
+															clip_source: "Source: Storyful",
+															clip_notes: "Clipped to 32:00 to 32:11",
+															max_width: "300px",
+														},
+														{
+															time: "12:30",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The school district posts on Facebook that students who made it out of the school are being taken to an auditorium at the high school on the other side of town.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "0524_1230_robb_fb.png",
+															clip_source:
+																"Source: Robb Elementary School Facebook page",
+															clip_notes:
+																'<a href="https://www.facebook.com/RobbElementary/posts/pfbid0CEB1vGduUq8bpYVC4TVzWR9Cxd6CivGMMBHXR88UJCeZ4v1qmteMaxviEa18aEmwl">https://www.facebook.com/RobbElementary/posts/pfbid0CEB1vGduUq8bpYVC4TVzWR9Cxd6CivGMMBHXR88UJCeZ4v1qmteMaxviEa18aEmwl</a>, https://www.facebook.com/UvaldeCISD/posts/5430777476955271',
+															img_alt:
+																"A Facebook post with text: “Reunification Site for Robb Students: Robb Elementary students are being transported to the John H. Harrell Auditorium for reunification. The John H. Harrell Auditorium will be under a Secure Status until all students are account for. Parents please do not pick up students at this time. You will be notified to pick up students once all are accounted for.”",
+															max_width: "500px",
+														},
+														{
+															time: "12:35",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"It’s now been one hour since police entered the building.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:36",
+															text: [
+																{
+																	type: "text",
+																	value: "The first student calls 911 again.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"She is told to stay on the line and stay quiet.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"The student tells 911 that the gunman shot the door.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:40",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The school district edits its post on Facebook to say that the students are being taken to a civic center downtown instead of the high school to reunite with their guardians.",
+																	inlineStyles: [""],
+																},
+															],
+															img_clip: "0524_1240_robb_fb.png",
+															clip_source:
+																"Source: Robb Elementary School Facebook page",
+															clip_notes:
+																'<a href="https://www.facebook.com/RobbElementary/posts/pfbid0CEB1vGduUq8bpYVC4TVzWR9Cxd6CivGMMBHXR88UJCeZ4v1qmteMaxviEa18aEmwl">https://www.facebook.com/RobbElementary/posts/pfbid0CEB1vGduUq8bpYVC4TVzWR9Cxd6CivGMMBHXR88UJCeZ4v1qmteMaxviEa18aEmwl</a>, https://www.facebook.com/UvaldeCISD/posts/5430777476955271',
+															img_alt:
+																"A Facebook post with text: “Reunification Site for Robb Students: Robb Elementary students are being transported to the Willie DeLeon Civic Center for reunification. The Civic Center will be under a Secure Status until all students are account for. Parents please do not pick up students at this time. You will be notified to pick up students once all are accounted for.”",
+															max_width: "500px",
+														},
+														{
+															time: "12:41",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"People continue to gather up and down the two roads that lead to school entrances.",
+																	inlineStyles: [""],
+																},
+															],
+															clip: "1241_Storyful.mp4",
+															clip_source: "Source: Storyful",
+															clip_notes: "Clipped to 47:18",
+															max_width: "300px",
+														},
+														{
+															time: "12:42",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"An officer carrying a shield is seen running toward the building.",
+																	inlineStyles: [""],
+																},
+															],
+															clip: "1242_Storyful.mp4",
+															clip_source: "Source: Storyful",
+															clip_notes: "Clipped to 48:32 to 48:42",
+															clip_has_audio: "false",
+															max_width: "300px",
+														},
+														{
+															time: "12:43",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The student on the line asks 911 to please send the police now.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:45",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"A man is filming the scene from outside of the school. “I’ve seen like 20 parents, maybe more, crying,” he says. “Wanting to know what’s happening to their kids. Because there’s still kids in there. And then, parents see that there’s ambulances taking the beds in.”",
+																	inlineStyles: [""],
+																},
+															],
+															clip_notes:
+																"Clipped from 51:42 in Storyful video.",
+														},
+														{
+															time: "12:46",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The student on the phone with 911 says she can hear the police next door.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:47",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The student again asks 911 to please send the police now.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:50",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"Specially trained Border Patrol officers unlock and open a classroom door using a master key given to them by a janitor.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"They enter the classroom and fire 27 times, killing the gunman.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value: "Shots are heard over the 911 call.",
+																	inlineStyles: [""],
+																},
+															],
+														},
+														{
+															time: "12:51",
+															text: [
+																{
+																	type: "text",
+																	value:
+																		"The girl in room 112 is still on the phone with 911. Officers can be heard moving children out of the classroom, including her. When the call ends, she is outside.",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value: "<br>",
+																	inlineStyles: [""],
+																},
+																{
+																	type: "text",
+																	value:
+																		"The crowd of parents surges forward as kids are carried and escorted out. A man yells out “That’s my daughter!” as a police officer runs carrying a girl dressed in pink.",
+																	inlineStyles: [""],
+																},
+															],
+															clip: "1252_Storyful_5800.mp4",
+															clip_source: "Source: Storyful",
+															clip_notes: "Clipped from 58:00 to 58:13",
+															max_width: "300px",
+														},
+													],
+												}
+											);
+										</script>
+										<!-- ASSET : END -->
+									</div>
+								</div>
+								<p class="g-body">
+									The toll — 19 students and two teachers dead, and more than a
+									dozen others wounded — would not be released until many hours
+									later.
+								</p>
+								<p class="g-body"><br /><br /><br /><br /></p>
+							</div>
+							<!-- /end story-body -->
+
+							<!-- methodology and related content sections -->
+
+							<!-- special includes for video features, opinion section -->
+							<script src="https://static01.nyt.com/video-static/vhs3/vhs.min.js"></script>
+
+							<script>
+								NYTG.watch(
+									"https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/build/js/main.js"
+								);
+								NYTG.load(
+									"https://static01.nyt.com/newsgraphics/2022/05/27/uvalde-waiting/943cc35626a4cc611edf1c5cf3bc027cf1554dba/build/js/freebird.js"
+								);
+							</script>
+							<!-- Pipeline: 2022-05-27-uvalde-waiting | June 1, 2022, 05:09PM | 943cc35626a4cc611edf1c5cf3bc027cf1554dba -->
+						</div>
+					</section>
+					<div
+						id="interactive-footer-container"
+						class="css-tbjo8i interactive-footer-container"
+					>
+						<footer id="interactive-footer" class="interactive-footer">
+							<p
+								data-testid="credit"
+								id="interactive-credit"
+								class="css-1fq2n5g interactive-credit"
+							>
+								Additional reporting was contributed by Taylor Johnston, Nailah
+								Morgan, Edgar Sandoval, Brenna Smith, Ainara Tiefenthäler and
+								Karen Zraick.
+							</p>
+						</footer>
+						<div
+							id="interactive-addendum-list"
+							class="css-1yiqkdd interactive-addendum-list"
+						></div>
+					</div>
+				</article>
+			</main>
+		</div>
+
+		<!-- RELEASE b9f1bdd432952fb816ad888af397ca761d886e18 -->
+	</body>
+</html>
