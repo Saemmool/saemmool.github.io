@@ -246,13 +246,19 @@ section.intro {
 
 .profpic {
 	position: relative;
-	height: auto;
-	width: 400px;
+	height: 290px;
+	width: 550px;
 	background-image: url("images/profpic.jpg");
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	filter: grayscale(100%);
+	filter: grayscale(30%);
+}
+
+.bottom {
+	width: 50%;
+	margin: 70px auto;
+	border-bottom: 2px lightgrey solid;
 }
 
 .proftext {
