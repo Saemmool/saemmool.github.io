@@ -246,14 +246,16 @@ section.intro {
 
 .profpic {
 	position: relative;
-	height: 290px;
+	height: auto;
 	width: 550px;
-	background-image: url("images/profpic.jpg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	filter: grayscale(30%);
+}
+
+.profpic img {
+	display: block;
+	margin: auto;
+	width: auto;
+	height: 200px;
+	object-fit: contain;
 }
 
 .bottom {
@@ -353,6 +355,24 @@ section.intro {
 }
 
 @media (max-width: 768px) {
+	.mainbox {
+		margin: 0px auto;
+		flex-wrap: wrap;
+	}
+
+	.profpic {
+		margin: 0 auto;
+		display: flex;
+	}
+
+	.profpic img {
+		margin: auto;
+		display: flex;
+		height: 180px;
+		width: 150px;
+		object-fit: cover;
+	}
+
 	.portfolio {
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 10px;
