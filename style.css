@@ -238,7 +238,7 @@ section.intro {
 	margin-left: 20px;
 }
 
-.profbox {
+.mainbox {
 	position: relative;
 	display: flex;
 	margin: 50px auto;
@@ -249,7 +249,8 @@ section.intro {
 	height: 290px;
 	width: 550px;
 	background-image: url("images/profpic.jpg");
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	filter: grayscale(30%);
@@ -261,10 +262,14 @@ section.intro {
 	border-bottom: 2px lightgrey solid;
 }
 
-.proftext {
+.maintext {
 	position: relative;
 	text-align: left;
 	padding: 10px 30px;
+}
+
+.maintext p {
+	margin-top: 5px;
 }
 
 .about h3 {
